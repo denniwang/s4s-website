@@ -23,8 +23,8 @@ const space_grotesk = Space_Grotesk({
   variable: '--font-space-grotesk'
 })
 export const metadata: Metadata = {
-  title: 'Next Temp',
-  description: 'create next app By Yahya Parvar!'
+  title: 'S4S',
+  description: 'website for the s4s consulting group'
 }
 
 export default function RootLayout({
@@ -50,12 +50,6 @@ export default function RootLayout({
           themes={[
             'light',
             'dark',
-            'instagram',
-            'facebook',
-            'discord',
-            'netflix',
-            'twilight',
-            'reddit'
           ]}
         >
           <NextIntlClientProvider

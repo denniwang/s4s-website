@@ -9,7 +9,9 @@ export const localePrefix = 'always'
 
 export const pathnames = {
   '/': '/',
-  '/about': '/about'
+  '/about': '/about',
+  '/gallery': '/gallery',
+  '/programs': '/programs',
 } satisfies Pathnames<typeof locales>
 
 export const { Link, redirect, usePathname, useRouter, getPathname } =
