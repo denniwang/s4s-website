@@ -2,14 +2,16 @@ import { useTranslations } from 'next-intl'
 import Button from './components/Button'
 import ProjectCarousel from './components/ProjectCarousel'
 import { EmblaOptionsType } from 'embla-carousel'
+import Link from 'next/link'
+import Image from 'next/image'
 
 const OPTIONS: EmblaOptionsType = { loop: true }
 const SLIDE_COUNT = 5
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
-export default function DashboardPage() {
+export default function DashboardPage({lang}) {
   function Card({ stat, children }) {
     return (
-      <div className='min-h-80 max-w-80 rounded-md bg-gray-200 p-10 shadow-md'>
+      <div className='min-h-80 max-w-80 rounded-md bg-background-secondary p-10 shadow-md'>
         <h2 className='m-4 text-8xl font-extrabold'>{stat}</h2>
         {children}
       </div>
@@ -19,35 +21,26 @@ export default function DashboardPage() {
   return (
     <div className='flex flex-col self-center'>
       <section className='flex flex-col items-center justify-center py-24'>
-        <h1 className='text-center text-7xl font-extrabold leading-tight'>
-          {t('An')}{' '}
-          <span className='bg-span-bg bg-clip-text text-transparent'>
-            {t('Booster')}
-          </span>
-          <br />
-          {t('to_Your_NextJS_Apps')}
-        </h1>
-        <div className='my-6 px-20 text-center text-2xl text-text-secondary'>
-          {t('hello world')}
-        </div>
-        <div className='mt-4 flex flex-row gap-4'>
-          <a
-            href='https://github.com/new?template_name=nextjs-template&template_owner=yahyaparvar'
-            target='_blank'
-          >
-            <Button rounded size='large'>
-              {t('Use_Template')}
-            </Button>
-          </a>
-          <a href='/about'>
-            <Button rounded size='large' variant='secondary'>
-              {t('Learn_More')}
-            </Button>
-          </a>
+        <div className='flex flex-row'>
+          <div className='flex flex-col items-center gap-5'>
+            <h1 className='max-w-xl text-center text-7xl font-extrabold leading-tight'>
+              {t('corny \n catchphrase')}{' '}
+            </h1>
+            <p>{t('hello')}</p>
+
+<Link href={t("about_link")}> 
+              <Button rounded size='large' variant='secondary'>
+                {t('Learn_More')}
+              </Button>
+</Link>
+          </div>
+          <div>
+            <Image width={400} height={400} className='rounded-md shadow-md' src='/zitong.png' />
+          </div>
         </div>
       </section>
-      <section className='flex flex-row justify-center'>
-        <div className='flex flex-row gap-9'>
+      <section className='flex flex-row justify-center '>
+        <div className='flex flex-col gap-12 lg:flex-row'>
           <Card stat='80%'>
             <p className='text-lg'>
               of high school grads <span className='underline'>WISH</span> they
@@ -75,14 +68,30 @@ export default function DashboardPage() {
         </div>
       </section>
 
-      <section className='flex flex-col self-center mt-14 bg-gray-50 px-24 py-12'>
-        <h2 className='font-extrabold text-3xl pb-5'>Student Spotlight </h2>
+      <section className='mt-14 flex flex-col self-center bg-background-secondary px-24 py-12'>
+        <h2 className='pb-5 text-3xl font-extrabold'>Student Spotlight </h2>
         <div className='flex flex-row justify-center gap-8'>
           <div className='min-w-56'>
-            <img className='rounded-md shadow-md' src='/zitong.png' />
+            <Image width={500} height={500} className='rounded-md shadow-md' src='/zitong.png' />
           </div>
           <div className='grow'>
-            <p> good job andwer we are so proud of you</p>
+            <p className='text-xl'>
+              Ultricies. Nonummy fusce torquent tristique pulvinar, dictum
+              penatibus malesuada amet taciti. Sit aliquam senectus ipsum
+              suscipit fusce sit porttitor curabitur tempor mi rutrum sed. Quam
+              nonummy. Sapien potenti in elit lacinia congue sed taciti
+              elementum Ante nascetur pharetra sapien. Facilisi pede fusce
+              nostra dui.
+             <br></br> 
+             <br></br> 
+               Congue sed lobortis montes elit conubia augue semper
+              hendrerit libero netus neque primis magnis Conubia montes odio
+              rutrum et netus posuere tellus parturient accumsan litora arcu
+              ridiculus eros cras. Tempor morbi cras donec bibendum integer
+              class ridiculus mi interdum a. Inceptos, fermentum, malesuada,
+              ante vulputate porta. Ut purus primis integer erat at viverra
+              vivamus ad. Bibendum.
+            </p>
           </div>
         </div>
       </section>
