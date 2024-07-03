@@ -12,7 +12,8 @@ interface Props {
 export const Header: FC<Props> = ({ locale }) => {
   const t = useTranslations('')
   return (
-    <div className='mx-auto flex max-w-screen-2xl flex-row items-center justify-between p-5'>
+    <div className='mx-auto w-full items-center justify-between p-5 fixed top-0 bg-background'>
+      <div className='flex flex-row '>
       <Link lang={locale} href='/'>
         <div className='flex flex-row items-center align-center'>
 
@@ -20,6 +21,7 @@ export const Header: FC<Props> = ({ locale }) => {
           <strong className='mx-2 select-none'>Students 4 Students</strong>
         </div>
       </Link>
+      <div className='flex-1'></div> 
       <div className='flex flex-row items-center gap-3'>
         <nav className='mr-10 inline-flex gap-5'>
           <Link lang={locale} href={`/about`}>
@@ -35,6 +37,7 @@ export const Header: FC<Props> = ({ locale }) => {
         <ThemeSwitch />
         <LangSwitcher />
       </div>
+</div>
     </div>
   )
 }

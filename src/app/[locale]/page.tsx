@@ -8,7 +8,7 @@ import Image from 'next/image'
 const OPTIONS: EmblaOptionsType = { loop: true }
 const SLIDE_COUNT = 5
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
-export default function DashboardPage({lang}) {
+export default function DashboardPage({ lang }) {
   function Card({ stat, children }) {
     return (
       <div className='min-h-80 max-w-80 rounded-md bg-background-secondary p-10 shadow-md'>
@@ -19,23 +19,30 @@ export default function DashboardPage({lang}) {
   }
   const t = useTranslations('')
   return (
-    <div className='flex flex-col self-center'>
-      <section className='flex flex-col items-center justify-center py-24'>
-        <div className='flex flex-row'>
+    <div className='mt-8 flex flex-col self-center text-center'>
+      <section className='flex w-full flex-col items-center justify-center py-24'>
+        <div className='flex flex-row align-bottom'>
           <div className='flex flex-col items-center gap-5'>
-            <h1 className='max-w-xl text-center text-7xl font-extrabold leading-tight'>
-              {t('corny \n catchphrase')}{' '}
+            <h1 className='max-w-2xl text-center text-7xl font-extrabold leading-tight'>
+              {t('splash_catchphrase')}{' '}
             </h1>
-            <p>{t('hello')}</p>
+            <p>{t('splash_subtitle')}</p>
 
-<Link href={t("about_link")}> 
+            <Link href={t('about_link')}>
               <Button rounded size='large' variant='secondary'>
                 {t('Learn_More')}
               </Button>
-</Link>
+            </Link>
           </div>
+          <div className='w-1/6'></div>
           <div>
-            <Image width={400} height={400} className='rounded-md shadow-md' src='/zitong.png' />
+            <Image
+              alt='splash_image'
+              width={700}
+              height={700}
+              className='rounded-md shadow-md'
+              src='/zitong.png'
+            />
           </div>
         </div>
       </section>
@@ -67,12 +74,18 @@ export default function DashboardPage({lang}) {
           </Card>
         </div>
       </section>
+        <p className='pt-10'>want to be part of the statistics? <Link href={t("products_link")}><span className='underline'>Join Now</span></Link></p>
 
-      <section className='mt-14 flex flex-col self-center bg-background-secondary px-24 py-12'>
+      <section className='mt-14 flex w-5/6 flex-col self-center bg-background-secondary px-24 py-12'>
         <h2 className='pb-5 text-3xl font-extrabold'>Student Spotlight </h2>
         <div className='flex flex-row justify-center gap-8'>
           <div className='min-w-56'>
-            <Image width={500} height={500} className='rounded-md shadow-md' src='/zitong.png' />
+            <Image
+              width={500}
+              height={500}
+              className='rounded-md shadow-md'
+              src='/zitong.png'
+            />
           </div>
           <div className='grow'>
             <p className='text-xl'>
@@ -82,15 +95,15 @@ export default function DashboardPage({lang}) {
               nonummy. Sapien potenti in elit lacinia congue sed taciti
               elementum Ante nascetur pharetra sapien. Facilisi pede fusce
               nostra dui.
-             <br></br> 
-             <br></br> 
-               Congue sed lobortis montes elit conubia augue semper
-              hendrerit libero netus neque primis magnis Conubia montes odio
-              rutrum et netus posuere tellus parturient accumsan litora arcu
-              ridiculus eros cras. Tempor morbi cras donec bibendum integer
-              class ridiculus mi interdum a. Inceptos, fermentum, malesuada,
-              ante vulputate porta. Ut purus primis integer erat at viverra
-              vivamus ad. Bibendum.
+              <br></br>
+              <br></br>
+              Congue sed lobortis montes elit conubia augue semper hendrerit
+              libero netus neque primis magnis Conubia montes odio rutrum et
+              netus posuere tellus parturient accumsan litora arcu ridiculus
+              eros cras. Tempor morbi cras donec bibendum integer class
+              ridiculus mi interdum a. Inceptos, fermentum, malesuada, ante
+              vulputate porta. Ut purus primis integer erat at viverra vivamus
+              ad. Bibendum.
             </p>
           </div>
         </div>
