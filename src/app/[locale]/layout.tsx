@@ -44,7 +44,7 @@ export default function RootLayout({
         className={`${space_grotesk.variable} ${rubik.variable} scroll-smooth`}
         suppressHydrationWarning
       >
-        <body>
+        <body className="layout-body">
           <ThemeProvider
             enableSystem
             attribute='class'

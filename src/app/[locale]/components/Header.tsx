@@ -15,7 +15,7 @@ export const Header: FC<Props> = ({ locale }) => {
   return (
     <>
     <Hamburger />
-    <div className='mx-auto w-full items-center justify-between p-5 fixed top-0 bg-background hidden md:block'>
+    <div className='mx-auto w-full items-center justify-between p-2 sticky top-0 bg-background hidden md:block'>
       <div className='flex flex-row '>
       <Link lang={locale} href='/'>
         <div className='flex flex-row items-center align-center'>
@@ -24,17 +24,17 @@ export const Header: FC<Props> = ({ locale }) => {
           <strong className='mx-2 select-none text-xs'>Students 4 Students</strong>
         </div>
       </Link>
-      <div className='flex-1'></div> 
+      <div className='flex-1'></div>
       <div className='flex flex-row items-center gap-3'>
         <nav className='mr-10 inline-flex gap-5'>
-          <Link lang={locale} href={`/about`}>
-            {t('About')}
+          <Link lang={locale} href={`/programs`}>
+            {t('Programs')}
           </Link>
           <Link lang={locale} href={`/gallery`}>
             {t('Gallery')}
           </Link>
-          <Link lang={locale} href={`/programs`}>
-            {t('Programs')}
+          <Link lang={locale} href={`/about`}>
+            {t('About')}
           </Link>
         </nav>
         <ThemeSwitch />
