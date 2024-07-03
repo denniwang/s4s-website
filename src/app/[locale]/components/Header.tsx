@@ -6,19 +6,22 @@ import GithubIcon from '../../icons/github'
 import LangSwitcher from './LangSwitcher'
 import ThemeSwitch from './ThemeSwitch'
 import Image from 'next/image'
+import Hamburger from './Hamburger'
 interface Props {
   locale: string
 }
 export const Header: FC<Props> = ({ locale }) => {
   const t = useTranslations('')
   return (
-    <div className='mx-auto w-full items-center justify-between p-5 fixed top-0 bg-background'>
+    <>
+    <Hamburger />
+    <div className='mx-auto w-full items-center justify-between p-5 fixed top-0 bg-background hidden md:block'>
       <div className='flex flex-row '>
       <Link lang={locale} href='/'>
         <div className='flex flex-row items-center align-center'>
 
-            <Image alt="logo" width={100} height={100} src='/s4s-trans.png' />
-          <strong className='mx-2 select-none'>Students 4 Students</strong>
+            <Image alt="logo" width={100} height={100} src='/s4s-trans.png' className='w-10 md:w-20'/>
+          <strong className='mx-2 select-none text-xs'>Students 4 Students</strong>
         </div>
       </Link>
       <div className='flex-1'></div> 
@@ -39,5 +42,6 @@ export const Header: FC<Props> = ({ locale }) => {
       </div>
 </div>
     </div>
+</>
   )
 }

@@ -66,7 +66,7 @@ export default function RootLayout({
                 color='var(--primary)'
                 showSpinner={false}
               />
-              <Header locale={locale} />
+              <Header locale={locale}/>
               <main className='mx-auto max-w-screen-2xl'>{children}</main>
 
               <Footer />

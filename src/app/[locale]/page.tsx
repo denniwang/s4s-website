@@ -11,7 +11,7 @@ const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 export default function DashboardPage({ lang }) {
   function Card({ stat, children }) {
     return (
-      <div className='min-h-80 max-w-80 rounded-md bg-background-secondary p-10 shadow-md'>
+      <div className='min-h-80 w-1/4 min-w-80 rounded-md bg-background-secondary p-10 shadow-md'>
         <h2 className='m-4 text-8xl font-extrabold'>{stat}</h2>
         {children}
       </div>
@@ -20,10 +20,11 @@ export default function DashboardPage({ lang }) {
   const t = useTranslations('')
   return (
     <div className='mt-8 flex flex-col self-center text-center'>
-      <section className='flex w-full flex-col items-center justify-center py-24'>
-        <div className='flex flex-row align-bottom'>
+      
+      <section className='flex w-full flex-col items-center justify-center py-0 md:py-24 my-12'>
+        <div className='flex flex-col-reverse md:flex-row align-bottom px-10'>
           <div className='flex flex-col items-center gap-5'>
-            <h1 className='max-w-2xl text-center text-7xl font-extrabold leading-tight'>
+            <h1 className='max-w-2xl text-center text-4xl font-extrabold md:text-6xl leading-tight xl:text-8xl'>
               {t('splash_catchphrase')}{' '}
             </h1>
             <p>{t('splash_subtitle')}</p>
@@ -47,7 +48,7 @@ export default function DashboardPage({ lang }) {
         </div>
       </section>
       <section className='flex flex-row justify-center '>
-        <div className='flex flex-col gap-12 lg:flex-row'>
+        <div className='flex flex-col gap-12 lg:flex-row justify-center items-center'>
           <Card stat='80%'>
             <p className='text-lg'>
               of high school grads <span className='underline'>WISH</span> they
@@ -74,21 +75,22 @@ export default function DashboardPage({ lang }) {
           </Card>
         </div>
       </section>
-        <p className='pt-10'>want to be part of the statistics? <Link href={t("products_link")}><span className='underline'>Join Now</span></Link></p>
+        <p className='pt-10'>want to be part of the statistics? <Link href={t("programs_link")}><span className='underline'>Join Now</span></Link></p>
 
-      <section className='mt-14 flex w-5/6 flex-col self-center bg-background-secondary px-24 py-12'>
-        <h2 className='pb-5 text-3xl font-extrabold'>Student Spotlight </h2>
-        <div className='flex flex-row justify-center gap-8'>
-          <div className='min-w-56'>
+      <section className='mt-14 flex flex-col self-center bg-background-secondary md:px-24 px-10 py-12'>
+        <h2 className='pb-8 text-5xl font-extrabold'>Student Spotlight </h2>
+        <div className='flex flex-col md:flex-row justify-center gap-8 items-center'>
+          <div className='max-w-96 flex-1'>
             <Image
-              width={500}
-              height={500}
+              width={1000}
+              height={600}
               className='rounded-md shadow-md'
               src='/zitong.png'
+              alt='student_spotlight'
             />
           </div>
-          <div className='grow'>
-            <p className='text-xl'>
+          <div className='flex-1'>
+            <p className='text-lg lg:text-2xl '>
               Ultricies. Nonummy fusce torquent tristique pulvinar, dictum
               penatibus malesuada amet taciti. Sit aliquam senectus ipsum
               suscipit fusce sit porttitor curabitur tempor mi rutrum sed. Quam
@@ -97,6 +99,7 @@ export default function DashboardPage({ lang }) {
               nostra dui.
               <br></br>
               <br></br>
+              <span className='hidden lg:block'>
               Congue sed lobortis montes elit conubia augue semper hendrerit
               libero netus neque primis magnis Conubia montes odio rutrum et
               netus posuere tellus parturient accumsan litora arcu ridiculus
@@ -104,6 +107,7 @@ export default function DashboardPage({ lang }) {
               ridiculus mi interdum a. Inceptos, fermentum, malesuada, ante
               vulputate porta. Ut purus primis integer erat at viverra vivamus
               ad. Bibendum.
+</span>
             </p>
           </div>
         </div>
