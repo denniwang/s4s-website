@@ -8,7 +8,7 @@ import Image from 'next/image'
 const OPTIONS: EmblaOptionsType = { loop: true }
 const SLIDE_COUNT = 5
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
-export default function DashboardPage({ lang }) {
+export default function DashboardPage({ }) {
   function Card({ stat, children }) {
     return (
       <div className='min-h-80 w-1/4 min-w-80 rounded-md bg-background-secondary p-10 shadow-md'>
