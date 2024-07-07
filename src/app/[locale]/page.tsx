@@ -9,7 +9,7 @@ const OPTIONS: EmblaOptionsType = { loop: true }
 const SLIDE_COUNT = 5
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 export default function DashboardPage({ }) {
-  function Card({ stat, children }) {
+  function Card({ stat, children }: { stat: string, children: React.ReactNode }) {
     return (
       <div className='min-h-80 w-1/4 min-w-80 rounded-md bg-background-secondary p-10 shadow-md'>
         <h2 className='m-4 text-8xl font-extrabold'>{stat}</h2>
