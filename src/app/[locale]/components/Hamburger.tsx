@@ -30,7 +30,7 @@ export default function Hamburger() {
             <span className='block h-0.5 w-8 animate-pulse bg-gray-600'></span>
           </div>
 
-          <div className={isNavOpen ? 'showMenuNav' : 'hideMenuNav'}>
+          <div className={ + isNavOpen ? 'showMenuNav bg-background-secondary' : 'hideMenuNav' }>
             <div
               className='absolute right-0 top-0 px-8 py-8'
               onClick={() => setIsNavOpen(false)}
@@ -85,7 +85,6 @@ export default function Hamburger() {
         height: 100vh;
         top: 0;
         left: 0;
-        background: white;
         z-index: 10;
         display: flex;
         flex-direction: column;

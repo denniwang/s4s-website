@@ -68,7 +68,6 @@ export default function RootLayout({
               />
               <Header locale={locale}/>
               <main className='mx-auto max-w-screen-2xl'>{children}</main>
-
               <Footer />
             </NextIntlClientProvider>
           </ThemeProvider>

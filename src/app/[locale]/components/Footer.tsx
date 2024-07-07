@@ -1,6 +1,6 @@
 export const Footer = () => {
   return (
-    <div className="flex flex-row justify-center my-10 ">
+    <div className="flex flex-row justify-center my-10 footer">
     <div className='flex flex-col w-3/4 justify-around my-5 lg:flex-row'>
       <div className='flex flex-col'>
         <h2 className='text-2xl'>S4S</h2>
