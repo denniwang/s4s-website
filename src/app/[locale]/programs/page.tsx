@@ -11,7 +11,7 @@ export default function About() {
     children: React.ReactNode
   }) {
     return (
-      <div className='h-[30vh] max-w-96 bg-gray-500 p-3'>
+      <div className='h-[30vh] max-w-96 rounded-lg bg-emerald-200 p-3'>
         {children}
         <p>{desc}</p>
       </div>
@@ -22,17 +22,32 @@ export default function About() {
       title: 'Your Projects',
       desc: 'Work on the project you want and get it done when you need it.'
     },
-    { title: 'Mentor-led', desc: 'This is a description of the program' },
-    { title: 'Relevant Tracks', desc: 'This is a description of the program' },
-    { title: '10 Sessions', desc: 'This is a description of the program' }
+    {
+      title: 'Mentor-led',
+      desc: "Get 1-on-1 advice from a mentor who's matched according to your technical needs."
+    },
+    {
+      title: 'Relevant Tracks',
+      desc: 'Simplify the decision making process by following one of our predesigned technical tracks.'
+    },
+    {
+      title: '10 Sessions',
+      desc: 'Feel confident at every stage of your project with our 10 sessions, spaced according to your needs. '
+    }
   ]
   const PJInfo2 = [
-    { title: 'Resume Boost', desc: 'This is a description of the program' },
     {
-      title: 'Discover Passionns',
-      desc: 'This is a description of the program'
+      title: 'Application Boost',
+      desc: 'Colleges prefer applicants with tangible experience. Demonstrate your expertise with a fully fleshed out project. '
     },
-    { title: 'Have Fun!', desc: 'This is a description of the program' }
+    {
+      title: 'Discover Passion',
+      desc: 'Dive into a topic your passionate about or find new ones as you work on your unique app.'
+    },
+    {
+      title: 'Have Fun!',
+      desc: "Take the projects you've always wanted to build and make them a reality!"
+    }
   ]
 
   return (
