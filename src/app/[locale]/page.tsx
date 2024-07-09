@@ -25,15 +25,15 @@ export default function DashboardPage({}) {
   }
   const t = useTranslations('')
   return (
-    <div className='mt-8 flex flex-col self-center text-center'>
-      <section className='my-12 flex w-full flex-col items-center justify-center py-0 md:py-24'>
-        <div className='flex flex-col-reverse px-10 align-bottom md:flex-row'>
-          <div className='flex flex-col items-center gap-5'>
-            <h1 className='max-w-2xl text-center text-4xl font-extrabold leading-tight md:text-6xl xl:text-8xl'>
+    <div className='flex flex-col self-center text-center'>
+      <section className='pb-12 flex w-full xl:h-svh md:h-1/2 flex-col items-center bg-background'>
+        <div className='flex flex-col-reverse pl-15 align-bottom md:flex-row h-full w-full justify-between'>
+          <div className='flex flex-col justify-center items-center gap-5'>
+            <h1 className='max-w-2xl text-center text-6xl font-extrabold leading-tight md:text-6xl xl:text-7xl'>
               {t('College started yesterday.')}
               {'  '}
             </h1>
-            <p>
+            <p className="mx-10">
               {t(
                 'You can start today. Get help with the whole admissions process, from start to end.'
               )}
@@ -45,14 +45,13 @@ export default function DashboardPage({}) {
               </Button>
             </Link>
           </div>
-          <div className='w-1/6'></div>
-          <div>
+          <div className='max-w-3xl'>
             <Image
               alt='splash_image'
-              width={700}
-              height={700}
-              className='rounded-md shadow-md'
-              src='/zitong.png'
+              width={2049}
+              height={1000}
+              className='w-full'
+              src='/main-page-graphic.png'
             />
           </div>
         </div>
