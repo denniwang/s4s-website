@@ -2,39 +2,150 @@ import { useTranslations } from 'next-intl'
 
 export default function About() {
   const t = useTranslations('')
+
+  function PJCard({
+    desc,
+    children
+  }: {
+    desc: String
+    children: React.ReactNode
+  }) {
+    return (
+      <div className='bg-gray-500 p-3 h-[30vh] max-w-96'>
+        {children}
+        <p>{desc}</p>
+      </div>
+    )
+  }
+  const PJInfo1 = [
+    { title: 'Your Projects', desc: 'This is a description of the program' },
+    { title: 'Mentor-led', desc: 'This is a description of the program' },
+    { title: 'Relevant Tracks', desc: 'This is a description of the program' },
+    { title: '10 Sessions', desc: 'This is a description of the program' },
+  ]
+  const PJInfo2 = [
+
+    { title: 'Resume Boost', desc: 'This is a description of the program' },
+    { title: 'Discover Passionns', desc: 'This is a description of the program' },
+    { title: 'Have Fun!', desc: 'This is a description of the program' }
+  ]
+
   return (
     <>
-      <section className="flex flex-row h-screen items-flex-start">
-        <div className="flex flex-col w-1/2 items-flex-start">
-          <div className="group h-1/2 program-selector">
-            <div className="flex flex-col justify-center p-5 h-full w-full bg-emerald-100 group-hover:bg-emerald-300 transition-colors duration-300">
-              <h1 className="text-9xl font-semibold text-emerald-500 group-hover:text-white duration-300 group-hover:text-8xl transition-all program-wyr">PROJECT JAM</h1>
-              <h2 className='text-l pl-5 font-semibold text-emerald-500 group-hover:text-white duration-300 group-hover:text-xl transition-all'>10 Week Guide Project Intensive</h2>
+      <main className='flex flex-col items-center gap-8'>
+        <section className='items-flex-start flex h-screen flex-row'>
+          <div className='items-flex-start flex w-1/2 flex-col'>
+            <div className='program-selector group h-1/2'>
+            <a href="#PJ">
+              <div className='flex h-full w-full flex-col justify-center bg-emerald-100 p-5 transition-colors duration-300 group-hover:bg-emerald-300'>
+                <h1 className='program-wyr text-9xl font-semibold text-emerald-500 transition-all duration-300 group-hover:text-8xl group-hover:text-white'>
+                  PROJECT JAM
+                </h1>
+                <h2 className='text-l pl-5 font-semibold text-emerald-500 transition-all duration-300 group-hover:text-xl group-hover:text-white'>
+                  10 Week Guide Project Intensive
+                </h2>
+              </div>
+</a>
+            </div>
+            <div className='program-selector group h-1/2'>
+              <div className='flex h-full w-full flex-col justify-center bg-rose-100 p-5 transition-colors duration-300 group-hover:bg-rose-300'>
+                <h1 className='program-wyr text-9xl font-semibold text-rose-500 duration-300 group-hover:text-8xl group-hover:text-white'>
+                  WRITING WONDERS
+                </h1>
+                <h2 className='text-l pl-5 font-semibold text-rose-500 transition-all duration-300 group-hover:text-xl group-hover:text-white'>
+                  Essay Editing Workshops
+                </h2>
+              </div>
             </div>
           </div>
-          <div className="group h-1/2 program-selector">
-          <div className="flex flex-col justify-center p-5 h-full w-full bg-rose-100 group-hover:bg-rose-300 transition-colors duration-300">
-            <h1 className="text-9xl font-semibold text-rose-500 group-hover:text-white duration-300 group-hover:text-8xl program-wyr">WRITING WONDERS</h1>
-            <h2 className='text-l pl-5 font-semibold text-rose-500 group-hover:text-white duration-300 group-hover:text-xl transition-all'>Essay Editing Workshops</h2>
+          <div className='group w-1/2'>
+          <a href="#BL">
+            <div className='flex h-full w-full flex-col justify-center bg-sky-100 p-5 transition-colors duration-300 group-hover:bg-sky-300'>
+              <h1 className='program-wyr text-9xl font-semibold text-sky-500 duration-300 group-hover:text-8xl group-hover:text-white'>
+                BIG LITTLE PROGRAM
+              </h1>
+              <h2 className='text-l pl-5 font-semibold text-sky-500 transition-all duration-300 group-hover:text-xl group-hover:text-white'>
+                Our Classic Mentorship Program
+              </h2>
+            </div>
+</a>
           </div>
-        </div>
-        </div>
-        <div className="group w-1/2">
-          <div className="flex flex-col justify-center p-5 h-full w-full bg-sky-100 group-hover:bg-sky-300 transition-colors duration-300">
-            <h1 className="text-9xl font-semibold text-sky-500 group-hover:text-white duration-300 group-hover:text-8xl program-wyr">BIG LITTLE PROGRAM</h1>
-            <h2 className='text-l pl-5 font-semibold text-sky-500 group-hover:text-white duration-300 group-hover:text-xl transition-all'>Our Classic Mentorship Program</h2>
+        </section>
+
+        <section id="BL" className='flex w-5/6 flex-col items-center gap-10 mt-12'>
+          <h1 className='mt-20 text-8xl font-bold'>The Big Little Program</h1>
+
+          <div className='flex flex-row gap-5'>
+            <div className='flex w-3/5 flex-col'>
+              <p className='text-lg md:text-2xl'>
+                saw that bird i need to bring it home to mommy squirrel! .
+                Pounce on unsuspecting person destroy couch. Russian blue have
+                my breakfast spaghetti yarn so lay on arms while you&apos;re
+                using the key
+              </p>
+              <p>Get started today by booking a consultation below!</p>
+              <a href='#'>
+                <button className='rounded-md bg-green-200 p-3'>
+                  Sign Up Now
+                </button>
+              </a>
+            </div>
+            <div className='flex w-2/5 flex-col gap-5'>
+              <div className='rounded-md bg-blue-200 p-3  text-xl shadow-md'>
+                <h2 className='text-2xl font-bold'>Big</h2>
+                <p className='italic'>noun - Informal</p>
+                <p>
+                  Sit as close as possible to warm fire without sitting on cold
+                  floor where is it?{' '}
+                </p>
+              </div>
+              <div className='rounded-md bg-yellow-200 p-3 text-xl shadow-md'>
+                <h2 className='text-2xl font-bold'>Little</h2>
+                <p className='italic'>noue - Informal</p>
+                <p>
+                  Sit as close as possible to warm fire without sitting on cold
+                  floor where is it?{' '}
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+
+          <div className='h-[50vh] w-full bg-blue-200'></div>
+        </section>
+        <section id="PJ" className='flex flex-col gap-4 items-center text-2xl mb-20'>
+          <h1 className='text-6xl font-bold '>Project Jam</h1>
+          <div className='flex flex-row gap-3 '>
+            {PJInfo1.map((info) => {
+              return (
+                <PJCard desc={info.desc} key={info.title}>
+                  <h2 className='font-bold'>{info.title}</h2>
+                </PJCard>
+              )
+            })} 
+          </div>
+          <div className='flex flex-row gap-3 justify-center '>
+            {PJInfo2.map((info) => {
+              return (
+                <PJCard desc={info.desc} key={info.title}>
+                  <h2 className='font-bold'>{info.title}</h2>
+                </PJCard>
+              )
+            })} 
+          </div>
+          <p>Get started today by booking a consultation below!</p>
+              <a href='#'>
+                <button className='rounded-md bg-green-200 p-3'>
+                  Sign Up Now
+                </button>
+              </a>
+        </section>
+      </main>
       <style>{`
         .footer {
           display: none;
         }
         .program-wyr {
           font-size: 9vw;
-        }
-        .layout-body {
-          overflow-y: hidden;
         }
         .program-selector {
           height: 45%;
