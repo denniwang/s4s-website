@@ -8,8 +8,14 @@ import Image from 'next/image'
 const OPTIONS: EmblaOptionsType = { loop: true }
 const SLIDE_COUNT = 5
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
-export default function DashboardPage({ }) {
-  function Card({ stat, children }: { stat: string, children: React.ReactNode }) {
+export default function DashboardPage({}) {
+  function Card({
+    stat,
+    children
+  }: {
+    stat: string
+    children: React.ReactNode
+  }) {
     return (
       <div className='min-h-80 w-1/4 min-w-80 rounded-md bg-background-secondary p-10 shadow-md'>
         <h2 className='m-4 text-8xl font-extrabold'>{stat}</h2>
@@ -20,14 +26,18 @@ export default function DashboardPage({ }) {
   const t = useTranslations('')
   return (
     <div className='mt-8 flex flex-col self-center text-center'>
-      
-      <section className='flex w-full flex-col items-center justify-center py-0 md:py-24 my-12'>
-        <div className='flex flex-col-reverse md:flex-row align-bottom px-10'>
+      <section className='my-12 flex w-full flex-col items-center justify-center py-0 md:py-24'>
+        <div className='flex flex-col-reverse px-10 align-bottom md:flex-row'>
           <div className='flex flex-col items-center gap-5'>
-            <h1 className='max-w-2xl text-center text-4xl font-extrabold md:text-6xl leading-tight xl:text-8xl'>
-              {t('splash_catchphrase')}{' '}
+            <h1 className='max-w-2xl text-center text-4xl font-extrabold leading-tight md:text-6xl xl:text-8xl'>
+              {t('College started yesterday.')}
+              {'  '}
             </h1>
-            <p>{t('splash_subtitle')}</p>
+            <p>
+              {t(
+                'You can start today. Get help with the whole admissions process, from start to end.'
+              )}
+            </p>
 
             <Link href={t('about_link')}>
               <Button rounded size='large' variant='secondary'>
@@ -48,7 +58,7 @@ export default function DashboardPage({ }) {
         </div>
       </section>
       <section className='flex flex-row justify-center '>
-        <div className='flex flex-col gap-12 lg:flex-row justify-center items-center'>
+        <div className='flex flex-col items-center justify-center gap-12 lg:flex-row'>
           <Card stat='80%'>
             <p className='text-lg'>
               of high school grads <span className='underline'>WISH</span> they
@@ -75,11 +85,16 @@ export default function DashboardPage({ }) {
           </Card>
         </div>
       </section>
-        <p className='pt-10'>want to be part of the statistics? <Link href={t("programs_link")}><span className='underline'>Join Now</span></Link></p>
+      <p className='pt-10'>
+        want to be part of the statistics?{' '}
+        <Link href={t('programs_link')}>
+          <span className='underline'>Join Now</span>
+        </Link>
+      </p>
 
-      <section className='mt-14 flex flex-col self-center bg-background-secondary md:px-24 px-10 py-12'>
+      <section className='mt-14 flex flex-col self-center bg-background-secondary px-10 py-12 md:px-24'>
         <h2 className='pb-8 text-5xl font-extrabold'>Student Spotlight </h2>
-        <div className='flex flex-col md:flex-row justify-center gap-8 items-center'>
+        <div className='flex flex-col items-center justify-center gap-8 md:flex-row'>
           <div className='max-w-96 flex-1'>
             <Image
               width={1000}
@@ -91,23 +106,20 @@ export default function DashboardPage({ }) {
           </div>
           <div className='flex-1'>
             <p className='text-lg lg:text-2xl '>
-              Ultricies. Nonummy fusce torquent tristique pulvinar, dictum
-              penatibus malesuada amet taciti. Sit aliquam senectus ipsum
-              suscipit fusce sit porttitor curabitur tempor mi rutrum sed. Quam
-              nonummy. Sapien potenti in elit lacinia congue sed taciti
-              elementum Ante nascetur pharetra sapien. Facilisi pede fusce
-              nostra dui.
+              "The Big Little Program was incredible. Going into my second year
+              of high scool, I was confused and honestly super stressed about
+              college because I had no idea what I should be doing. I knew I had
+              the ambition to get into a good college, but I just didn't know
+              where to start.
               <br></br>
               <br></br>
               <span className='hidden lg:block'>
-              Congue sed lobortis montes elit conubia augue semper hendrerit
-              libero netus neque primis magnis Conubia montes odio rutrum et
-              netus posuere tellus parturient accumsan litora arcu ridiculus
-              eros cras. Tempor morbi cras donec bibendum integer class
-              ridiculus mi interdum a. Inceptos, fermentum, malesuada, ante
-              vulputate porta. Ut purus primis integer erat at viverra vivamus
-              ad. Bibendum.
-</span>
+                My Big, Dennis, gave me invaluable advice for the whole process.
+                He helped me find clubs, extracurriculars, and competitions that
+                strengthened my profile. I felt so much more confident and
+                secure going into college, and am proud to go to Univeristy of
+                Washington for Computer Science."
+              </span>
             </p>
           </div>
         </div>
