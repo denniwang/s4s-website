@@ -105,10 +105,10 @@ export default function DashboardPage({}) {
           </div>
           <div className='flex-1'>
             <p className='text-lg lg:text-2xl '>
-              "The Big Little Program was incredible. Going into my second year
-              of high scool, I was confused and honestly super stressed about
+              &quot;The Big Little Program was incredible. Going into my second year
+              of high school, I was confused and honestly super stressed about
               college because I had no idea what I should be doing. I knew I had
-              the ambition to get into a good college, but I just didn't know
+              the ambition to get into a good college, but I just didn&apos;t know
               where to start.
               <br></br>
               <br></br>
@@ -117,7 +117,7 @@ export default function DashboardPage({}) {
                 He helped me find clubs, extracurriculars, and competitions that
                 strengthened my profile. I felt so much more confident and
                 secure going into college, and am proud to go to Univeristy of
-                Washington for Computer Science."
+                Washington for Computer Science.&quot;
               </span>
             </p>
           </div>
