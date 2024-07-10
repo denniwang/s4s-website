@@ -4,13 +4,42 @@ import Image from 'next/image'
 export default function About() {
   const t = useTranslations('')
 
+  const team = [
+    {
+      img: '/zitong.png',
+      name:"Andrew Chen",
+      school: "UW Seattle '27",
+      desc: "Andrew is a top student at UW, studying Applied Mathematics, he is passionate about mentoring the next generation and learning new things"
+    },
+    {
+      img: '/keyon.png',
+      name:"Keyon Jazayeri",
+      school: "UC Irvine '27",
+      desc: "Keyon is a stellar CS student at UCI, he loves to work on startups and practice jiu jitsu in his free time"
+    },
+
+    {
+      img: '/verma.png',
+      name:"Darsh Verma",
+      school: "UC Los Angeles '27",
+      desc: "I will ruin the couch with my claws i bet my nine lives on you-oooo-ooo-hooo so hiding behind the couch until lured out by a feathery toy, tickle my belly at your own peril i will pester for food when you're in the kitchen even if it's salad but scratch my"
+    },
+
+    {
+      img: '/wang.png',
+      name:"Dennis Wang",
+      school: "Northeastern University '27",
+      desc: "Dennis is a CS + Business major at NEU, he loves to play tennis and participate in hackathons. He aspires to be retired by 30"
+    }
+  ]
+
   function Table() {
     return (
       <div id='detailed-pricing' className='w-full overflow-x-auto'>
         <div className='min-w-max overflow-hidden'>
-          <div className='grid grid-cols-2 gap-x-16 border-b border-t border-gray-200 bg-gray-100 p-4 text-sm font-medium text-gray-900 dark:border-gray-700 dark:bg-gray-800 dark:text-white'>
-            <div className='flex items-center'>Tailwind CSS code</div>
-            <div>Community Edition</div>
+          <div className='grid grid-cols-2 gap-x-16 border-b border-t border-gray-200 bg-background-secondary p-4 text-sm font-medium text-gray-900 dark:border-gray-700 dark:text-white'>
+            <div className='flex items-center'>Students 4 Students</div>
+            <div>Other College Consultants</div>
           </div>
           <div className='grid grid-cols-2 gap-x-16 border-b border-gray-200 px-4 py-5 text-sm text-gray-700 dark:border-gray-700'>
             <div className='text-gray-500 dark:text-gray-400'>
@@ -113,26 +142,28 @@ export default function About() {
     )
   }
 
-
-  function PersonCard({img, name, college, children }: { img: string, name: string, college: string, children: React.ReactNode }){
+  function PersonCard({
+    img,
+    name,
+    college,
+    children
+  }: {
+    img: string
+    name: string
+    college: string
+    children: React.ReactNode
+  }) {
     return (
-      <div className='flex flex-col items-center gap-5 w-1/4 '>
+      <div className='flex w-1/4 flex-col items-center gap-5 '>
         <div className=''>
-          <Image
-            src={img}
-            width={500}
-            height={200}
-            alt={name}
-          />
+          <Image src={img} width={500} height={200} alt={name} />
         </div>
         <div className='flex flex-col justify-center p-2'>
-        <h2 className='text-2xl'>{name}</h2>
-        <br></br>
-        <p>{college}</p>
-        <br></br>
-          <p className=''>
-            {children}
-          </p>
+          <h2 className='text-2xl'>{name}</h2>
+          <br></br>
+          <p>{college}</p>
+          <br></br>
+          <p className=''>{children}</p>
         </div>
       </div>
     )
@@ -196,33 +227,21 @@ export default function About() {
         <h2 className='text-center text-6xl font-bold'>TL;DR</h2>
         <Table />
 
-
-        <h2 className='text-4xl'>103 - Ok but... who are we <span className='underline'>REALLY</span>?</h2>
+        <h2 className='text-4xl'>
+          103 - Ok but... who are we <span className='underline'>REALLY</span>?
+        </h2>
         <div className='flex flex-row justify-center gap-5'>
-          <PersonCard img='/zitong.png' name='Zitong Li' college='Harvard &apos;27'>
-            I will ruin the couch with my claws i bet my nine lives on
-            you-oooo-ooo-hooo so hiding behind the couch until lured out by a
-            feathery toy, tickle my belly at your own peril i will pester for
-            food when you&apos;re in the kitchen even if it&apos;s salad but
-          </PersonCard>
-          <PersonCard img='/zitong.png' name='Zitong Li' college='Harvard &apos;27'>
-            I will ruin the couch with my claws i bet my nine lives on
-            you-oooo-ooo-hooo so hiding behind the couch until lured out by a
-            feathery toy, tickle my belly at your own peril i will pester for
-            food when you&apos;re in the kitchen even if it&apos;s salad but
-          </PersonCard>
-          <PersonCard img='/zitong.png' name='Zitong Li' college='Harvard &apos;27'>
-            I will ruin the couch with my claws i bet my nine lives on
-            you-oooo-ooo-hooo so hiding behind the couch until lured out by a
-            feathery toy, tickle my belly at your own peril i will pester for
-            food when you&apos;re in the kitchen even if it&apos;s salad but
-          </PersonCard>
-          <PersonCard img='/zitong.png' name='Zitong Li' college='Harvard &apos;27'>
-            I will ruin the couch with my claws i bet my nine lives on
-            you-oooo-ooo-hooo so hiding behind the couch until lured out by a
-            feathery toy, tickle my belly at your own peril i will pester for
-            food when you&apos;re in the kitchen even if it&apos;s salad but
-          </PersonCard>
+          {team.map(person => {
+            return (
+              <PersonCard
+                img={person.img}
+                name={person.name}
+                college={person.school}
+                key={person.name}
+              >
+                {person.desc}
+              </PersonCard>)
+          })}
         </div>
       </div>
     </main>

@@ -11,7 +11,7 @@ export default function About() {
     children: React.ReactNode
   }) {
     return (
-      <div className='h-[30vh] max-w-96 rounded-lg bg-emerald-200 p-3'>
+      <div className='h-[30vh] max-w-80 rounded-lg bg-background-secondary p-3'>
         {children}
         <p>{desc}</p>
       </div>
@@ -33,9 +33,7 @@ export default function About() {
     {
       title: '10 Sessions',
       desc: 'Feel confident at every stage of your project with our 10 sessions, spaced according to your needs. '
-    }
-  ]
-  const PJInfo2 = [
+    },
     {
       title: 'Application Boost',
       desc: 'Colleges prefer applicants with tangible experience. Demonstrate your expertise with a fully fleshed out project. '
@@ -104,7 +102,7 @@ export default function About() {
                 Get personalized 1-on-1 mentorship for all your college needs.
                 From clubs and extracurriculars to essays and personal projects,
                 your Big will guide you every step of the way. Pave your path to
-                college in the way that's best for YOU.
+                college in the way that&apos;s best for YOU.
               </p>
               <p> Book a consultation below to get started!</p>
               <a href='#'>
@@ -118,7 +116,7 @@ export default function About() {
                 <h2 className='text-2xl font-bold'>Big</h2>
                 <p className='italic'>noun - Informal</p>
                 <p>
-                  Your mentor. They'll be ready 24/7 to guide you down a path
+                  Your mentor. They&apos;ll be ready 24/7 to guide you down a path
                   suited uniquely to yourself.{' '}
                 </p>
               </div>
@@ -140,17 +138,8 @@ export default function About() {
           className='mb-20 flex flex-col items-center gap-4 text-2xl'
         >
           <h1 className='text-6xl font-bold '>Project Jam</h1>
-          <div className='flex flex-row gap-3 '>
+          <div className='flex flex-col md:flex-row flex-wrap gap-3 items-center justify-center '>
             {PJInfo1.map(info => {
-              return (
-                <PJCard desc={info.desc} key={info.title}>
-                  <h2 className='font-bold'>{info.title}</h2>
-                </PJCard>
-              )
-            })}
-          </div>
-          <div className='flex flex-row justify-center gap-3 '>
-            {PJInfo2.map(info => {
               return (
                 <PJCard desc={info.desc} key={info.title}>
                   <h2 className='font-bold'>{info.title}</h2>
