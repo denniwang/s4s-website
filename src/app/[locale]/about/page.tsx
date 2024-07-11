@@ -7,29 +7,29 @@ export default function About() {
   const team = [
     {
       img: '/zitong.png',
-      name:"Andrew Chen",
+      name: 'Andrew Chen',
       school: "UW Seattle '27",
-      desc: "Andrew is a top student at UW, studying Applied Mathematics, he is passionate about mentoring the next generation and learning new things"
+      desc: 'Andrew is a top student at UW, studying Applied Mathematics, he is passionate about mentoring the next generation and learning new things'
     },
     {
       img: '/keyon.png',
-      name:"Keyon Jazayeri",
+      name: 'Keyon Jazayeri',
       school: "UC Irvine '27",
-      desc: "Keyon is a stellar CS student at UCI, he loves to work on startups and practice jiu jitsu in his free time"
+      desc: 'Keyon is a stellar student at UCI, majoring in Computer Science. He loves to work on startups and practices jiu jitsu in his free time'
     },
 
     {
       img: '/verma.png',
-      name:"Darsh Verma",
+      name: 'Darsh Verma',
       school: "UC Los Angeles '27",
       desc: "I will ruin the couch with my claws i bet my nine lives on you-oooo-ooo-hooo so hiding behind the couch until lured out by a feathery toy, tickle my belly at your own peril i will pester for food when you're in the kitchen even if it's salad but scratch my"
     },
 
     {
       img: '/wang.png',
-      name:"Dennis Wang",
+      name: 'Dennis Wang',
       school: "Northeastern University '27",
-      desc: "Dennis is a CS + Business major at NEU, he loves to play tennis and participate in hackathons. He aspires to be retired by 30"
+      desc: 'Dennis is a CS + Business major at NEU, he loves to play tennis and participate in hackathons. He aspires to be retired by 30'
     }
   ]
 
@@ -178,12 +178,12 @@ export default function About() {
         <div className='flex flex-row justify-center gap-5'>
           <div className='flex w-1/2 flex-col justify-center'>
             <p className=''>
-              I will ruin the couch with my claws i bet my nine lives on
-              you-oooo-ooo-hooo so hiding behind the couch until lured out by a
-              feathery toy, tickle my belly at your own peril i will pester for
-              food when you&apos;re in the kitchen even if it&apos;s salad but
-              scratch my tummy actually i hate you now fight me drink from the
-              toilet or kitty kitty
+              Students4Students was founded by four college students with the
+              goal of helping high schoolers get into their dream colleges. We
+              understand that college admissions are tough—we've experienced it
+              ourselves—which is why we're committed to helping applicants
+              perfect the process. There are many different factors that can
+              impact your admission, and we're here to help you ace them all.
             </p>
           </div>
           <div className='w-1/3'>
@@ -216,10 +216,15 @@ export default function About() {
           </div>
           <div className='flex w-1/2 flex-col justify-center'>
             <p className=''>
-              if you pet it i will tear up your hand lick the plastic bag lick
-              sellotape yet twitch tail in permanent irritation. Just going to
-              dip my paw in your coffee and do a taste test - oh never mind i
-              forgot i don&apos;t like coffee
+              At Students4Students, we're more than just college counselors. Our
+              mission is to help students discover their unique passions and use
+              them to craft their best possible applications. We take a
+              comprehensive approach, guiding students through every aspect of
+              the college admissions process—clubs, extracurriculars, essays,
+              academics, and anything else that might impact their journey. Our
+              mentors have recently navigated this process themselves and are
+              determined to share their experiences and insights. When join join
+              we guarantee that you'll feel confident in your path.
             </p>
           </div>
         </div>
@@ -240,7 +245,8 @@ export default function About() {
                 key={person.name}
               >
                 {person.desc}
-              </PersonCard>)
+              </PersonCard>
+            )
           })}
         </div>
       </div>
