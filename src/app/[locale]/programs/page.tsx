@@ -1,4 +1,5 @@
 import { useTranslations } from 'next-intl'
+import Image from 'next/image'
 
 export default function About() {
   const t = useTranslations('')
@@ -51,8 +52,8 @@ export default function About() {
   return (
     <>
       <main className='flex flex-col items-center gap-8'>
-        <section className='items-flex-start flex h-screen flex-row'>
-          <div className='items-flex-start flex w-1/2 flex-col'>
+        <section className='items-flex-start flex h-[92vh] flex-row'>
+          <div className='justify-between flex w-1/2 flex-col h-full'>
             <div className='program-selector group h-1/2'>
               <a href='#PJ'>
                 <div className='flex h-full w-full flex-col justify-center bg-emerald-100 p-5 transition-colors duration-300 group-hover:bg-emerald-300'>
@@ -76,7 +77,7 @@ export default function About() {
               </div>
             </div>
           </div>
-          <div className='group w-1/2'>
+          <div className='group w-1/2 h-full'>
             <a href='#BL'>
               <div className='flex h-full w-full flex-col justify-center bg-sky-100 p-5 transition-colors duration-300 group-hover:bg-sky-300'>
                 <h1 className='program-wyr text-9xl font-semibold text-sky-500 duration-300 group-hover:text-8xl group-hover:text-white'>
@@ -131,7 +132,15 @@ export default function About() {
             </div>
           </div>
 
-          <div className='h-[50vh] w-full bg-blue-200'></div>
+          <div className='h-[50vh] w-[75vw]'>
+          <Image
+              alt='splash_image'
+              width={1500}
+              height={1000}
+              className='w-full'
+              src='/blp-decor.png'
+            />
+          </div>
         </section>
         <section
           id='PJ'
@@ -154,14 +163,14 @@ export default function About() {
         </section>
       </main>
       <style>{`
+        div {
+          box-sizing: border-box;
+        }
         .footer {
           display: none;
         }
         .program-wyr {
           font-size: 9vw;
-        }
-        .program-selector {
-          height: 45%;
         }
       `}</style>
     </>
