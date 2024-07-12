@@ -180,10 +180,10 @@ export default function About() {
             <p className=''>
               Students4Students was founded by four college students with the
               goal of helping high schoolers get into their dream colleges. We
-              understand that college admissions are tough—we've experienced it
-              ourselves—which is why we're committed to helping applicants
-              perfect the process. There are many different factors that can
-              impact your admission, and we're here to help you ace them all.
+              understand that college admissions are tough—we&quot;ve experienced it
+              ourselves—which is why we&quot;re committed to helping applicants
+              perfect the process. Ther are many different factors that can
+              impact your admission, and we&quot;re here to help you ace them all.
             </p>
           </div>
           <div className='w-1/3'>
@@ -216,7 +216,7 @@ export default function About() {
           </div>
           <div className='flex w-1/2 flex-col justify-center'>
             <p className=''>
-              At Students4Students, we're more than just college counselors. Our
+              At Students4Students, we&quot;re more than just college counselors. Our
               mission is to help students discover their unique passions and use
               them to craft their best possible applications. We take a
               comprehensive approach, guiding students through every aspect of
@@ -224,7 +224,7 @@ export default function About() {
               academics, and anything else that might impact their journey. Our
               mentors have recently navigated this process themselves and are
               determined to share their experiences and insights. When join join
-              we guarantee that you'll feel confident in your path.
+              we guarantee that you&quot;ll feel confident in your path.
             </p>
           </div>
         </div>

@@ -1,13 +1,8 @@
 import { useTranslations } from 'next-intl'
 import Button from './components/Button'
-import ProjectCarousel from './components/ProjectCarousel'
-import { EmblaOptionsType } from 'embla-carousel'
 import Link from 'next/link'
 import Image from 'next/image'
 
-const OPTIONS: EmblaOptionsType = { loop: true }
-const SLIDE_COUNT = 5
-const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 export default function DashboardPage({}) {
   function Card({
     stat,
@@ -124,9 +119,6 @@ export default function DashboardPage({}) {
         </div>
       </section>
 
-      <section>
-        <ProjectCarousel slides={SLIDES} options={OPTIONS} />
-      </section>
       <section className='bg-background-secondary py-20 max-lg:py-10'>
         <div className='mx-auto grid max-w-screen-lg grid-cols-3 gap-7 px-8 py-5 max-lg:max-w-fit max-lg:grid-cols-1 max-lg:gap-10'>
           <div className='text-center'>
