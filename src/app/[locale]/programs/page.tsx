@@ -93,9 +93,9 @@ export default function About() {
 
         <section
           id='BL'
-          className='mt-12 flex w-5/6 flex-col items-center gap-10'
+          className='pt-24 flex w-5/6 flex-col items-center gap-10'
         >
-          <h1 className='mt-20 text-8xl font-bold'>The Big Little Program</h1>
+          <Image src="/blp-header.png" width={600} height={500} alt="big little program header"/>
 
           <div className='flex flex-row gap-5'>
             <div className='flex w-3/5 flex-col'>
@@ -144,9 +144,9 @@ export default function About() {
         </section>
         <section
           id='PJ'
-          className='mb-20 flex flex-col items-center gap-4 text-2xl'
+          className='pt-24 mb-20 flex flex-col items-center gap-4 text-2xl'
         >
-          <h1 className='text-6xl font-bold '>Project Jam</h1>
+          <Image src="/pj-header.png" width={600} height={500} alt="big little program header"/>
           <div className='flex flex-col md:flex-row flex-wrap gap-3 items-center justify-center '>
             {PJInfo1.map(info => {
               return (

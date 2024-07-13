@@ -45,7 +45,7 @@ const EmblaCarousel: React.FC<PropType> = props => {
         <div className='embla__container flex flex-row'>
           {slides.map(index => (
             <div
-              className='embla__slide flex w-screen flex-row items-center justify-center gap-6 bg-blue-200'
+              className='embla__slide flex w-screen flex-row items-center justify-center gap-6 '
               key={index}
             >
               <div className='embla_slide_img'>
