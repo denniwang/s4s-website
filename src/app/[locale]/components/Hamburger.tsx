@@ -1,8 +1,10 @@
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { useState } from 'react'
 
 export default function Hamburger() {
   const [isNavOpen, setIsNavOpen] = useState(false)
+  const t = useTranslations("")
 
   return (
     <div className='flex items-center border-b border-gray-400 py-8 md:hidden'>
@@ -50,13 +52,13 @@ export default function Hamburger() {
             </div>
             <ul className='flex min-h-[250px] flex-col items-center justify-between'>
               <li className='my-8 border-b border-gray-400 uppercase'>
-                <a href='/about'>About</a>
+                <a href={t("about_link")}>About</a>
               </li>
               <li className='my-8 border-b border-gray-400 uppercase'>
-                <a href='/portfolio'>Portfolio</a>
+                <a href={t("programs_link")}>Programs</a>
               </li>
               <li className='my-8 border-b border-gray-400 uppercase'>
-                <a href='/contact'>Contact</a>
+                <a href={t("gallery_link")}>Gallery</a>
               </li>
             </ul>
           </div>
