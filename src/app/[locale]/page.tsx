@@ -20,8 +20,8 @@ export default function DashboardPage({}) {
   }
   const t = useTranslations('')
   return (
-    <div className='flex flex-col self-center text-center'>
-      <section className='pb-12 flex w-full xl:h-svh md:h-1/2 flex-col items-center bg-background'>
+    <div className='flex flex-col self-center text-center '>
+      <section className='pb-12 flex w-full xl:h-svh md:h-1/2 flex-col items-center bg-background '>
         <div className='flex flex-col-reverse pl-15 align-bottom md:flex-row h-full w-full justify-between'>
           <div className='flex flex-col justify-center items-center gap-5'>
             <h1 className='max-w-2xl text-center text-6xl font-extrabold leading-tight md:text-6xl xl:text-7xl'>
@@ -40,7 +40,7 @@ export default function DashboardPage({}) {
               </Button>
             </Link>
           </div>
-          <div className='max-w-3xl'>
+          <div className='max-w-3xl flex flex-col justify-center'>
             <Image
               alt='splash_image'
               width={2049}

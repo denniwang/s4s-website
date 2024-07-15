@@ -11,8 +11,19 @@ import useEmblaCarousel from 'embla-carousel-react'
 import Image from 'next/image'
 import { VscTriangleRight } from 'react-icons/vsc'
 
+type SlideType = {
+  title: string
+  img: string
+  subtitle: string
+  desc: string
+  demo: string
+  little: string
+  big: string
+  // Add other properties as needed
+}
+
 type PropType = {
-  slides: number[]
+  slides: SlideType[]
   options?: EmblaOptionsType
 }
 
@@ -43,22 +54,22 @@ const EmblaCarousel: React.FC<PropType> = props => {
     <section className='embla w-screen'>
       <div className='embla__viewport ' ref={emblaRef}>
         <div className='embla__container flex flex-row'>
-          {slides.map(index => (
+          {slides.map(slide => (
             <div
-              className='embla__slide flex w-screen flex-row items-center justify-center gap-6 '
-              key={index}
+              className='embla__slide flex w-screen flex-row items-center justify-center gap-6'
+              key={slide.title}
             >
               <div className='embla_slide_img'>
                 <Image
-                  src='/zitong.png'
-                  width={500}
+                  src={slide.img}
                   height={500}
-                  alt='zitong'
+                  width={1900}
+                  alt={slide.title}
                 />
               </div>
-              <div className='flex flex-col gap-3 w-1/4'>
-                <h2 className='text-4xl font-bold'>Project Header</h2>
-                <p className='italic'>Project Subtitle</p>
+              <div className='flex w-1/4 flex-col gap-3'>
+                <h2 className='text-4xl font-bold'>{slide.title}</h2>
+                <p className='italic'>{slide.subtitle}</p>
                 <br></br>
                 <p className=''>
                   Put butt in owners face step on your keyboard while youre
@@ -77,28 +88,28 @@ const EmblaCarousel: React.FC<PropType> = props => {
                   </div>
                 </a>
 
-                <div className='flex flex-col gap-3 bg-blue-300 p-3 text-left'>
+                <div className='flex flex-col gap-3 bg-buttonSecondary p-3 text-left'>
                   <div className='flex flex-row items-center gap-2'>
                     <div className='h-10 w-10 overflow-hidden rounded-full'>
                       <Image
-                        src='/zitong.png'
+                        src={`/people/${slide.little}.png`}
                         width={50}
                         height={50}
-                        alt='zitong'
+                        alt={slide.little}
                       />
                     </div>
-                    <p>By: Little Ricky</p>
+                    <p>By: Little {slide.little}</p>
                   </div>
                   <div className='flex flex-row items-center gap-2'>
                     <div className='h-10 w-10 overflow-hidden rounded-full'>
                       <Image
-                        src='/zitong.png'
+                        src={`/people/${slide.big}.png`}
                         width={50}
                         height={50}
-                        alt='zitong'
+                        alt={slide.big}
                       />
                     </div>
-                    <p>Along with: Big Dennis</p>
+                    <p>Along with: Big {slide.big}</p>
                   </div>
                 </div>
               </div>

@@ -79,6 +79,7 @@
 .embla__slide {
   flex: 0 0 var(--slide-size);
   min-width: 0;
+
 }
 .embla_slide_img {
   box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
@@ -89,6 +90,7 @@
   align-items: center;
   justify-content: center;
   height: var(--slide-height);
+  max-height: var(--slide-height);
 }
 .embla__controls {
   display: grid;
