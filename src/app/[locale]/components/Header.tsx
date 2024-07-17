@@ -20,7 +20,7 @@ export const Header: FC<Props> = ({ locale }) => {
         <div className='flex flex-row items-center align-center'>
 
             <Image alt="logo" width={100} height={100} src='/s4s-trans.png' className='w-10 md:w-20'/>
-          <strong className='mx-2 select-none text-xs'>Students 4 Students</strong>
+          <strong className='mx-2 select-none text-lg'>Students 4 Students</strong>
         </div>
       </Link>
       <div className='flex-1'></div>

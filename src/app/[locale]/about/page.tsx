@@ -230,9 +230,9 @@ export default function About() {
         <h1 className='mt-10 text-center text-5xl font-bold'>About S4S</h1>
 
         <h2 className='text-4xl'>101 - Who Are We?</h2>
-        <div className='flex flex-row justify-center gap-5'>
-          <div className='flex w-1/2 flex-col justify-center'>
-            <p className=''>
+        <div className='flex flex-col justify-center gap-5 md:flex-row'>
+          <div className='flex flex-col justify-center md:w-1/2'>
+            <p className=' md:text-xl'>
               Students4Students was founded by four college students with the
               goal of helping high schoolers get into their dream colleges. We
               understand that college admissions are tough—we&quot;ve
@@ -242,7 +242,7 @@ export default function About() {
               help you ace them all.
             </p>
           </div>
-          <div className='w-1/3'>
+          <div className='md:w-1/3'>
             <Image
               src='/zitong.png'
               width={500}
@@ -261,8 +261,8 @@ export default function About() {
         </div>
 
         <h2 className='text-4xl'>102 - What makes us... different?</h2>
-        <div className='flex flex-row justify-center gap-5'>
-          <div className='w-1/3'>
+        <div className='flex flex-col justify-center gap-5 md:flex-row'>
+          <div className='md:w-1/3'>
             <Image
               src='/zitong.png'
               width={500}
@@ -270,8 +270,8 @@ export default function About() {
               alt='who are we image'
             />
           </div>
-          <div className='flex w-1/2 flex-col justify-center'>
-            <p className=''>
+          <div className='flex flex-col justify-center md:w-1/2'>
+            <p className=' md:text-xl'>
               At Students4Students, we&quot;re more than just college
               counselors. Our mission is to help students discover their unique
               passions and use them to craft their best possible applications.
@@ -285,7 +285,6 @@ export default function About() {
             </p>
           </div>
         </div>
-
         <h2 className='text-center text-6xl font-bold'>TL;DR</h2>
         <Table />
 

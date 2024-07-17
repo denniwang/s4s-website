@@ -56,14 +56,14 @@ const EmblaCarousel: React.FC<PropType> = props => {
         <div className='embla__container flex flex-row'>
           {slides.map(slide => (
             <div
-              className='embla__slide flex w-screen flex-row items-center justify-center gap-6'
+              className='embla__slide flex w-screen flex-col md:flex-row items-center justify-center gap-6 p-10 '
               key={slide.title}
             >
               <div className='embla_slide_img'>
                 <Image
                   src={slide.img}
                   height={500}
-                  width={1900}
+                  width={1000}
                   alt={slide.title}
                 />
               </div>
@@ -72,10 +72,11 @@ const EmblaCarousel: React.FC<PropType> = props => {
                 <p className='italic'>{slide.subtitle}</p>
                 <br></br>
                 <p className=''>
-                  Put butt in owners face step on your keyboard while youre
-                  gaming and then turn in a circle . Damn that dog find a way to
-                  fit in tiny box yet naughty running cat paw at beetle and eat
-                  it before it gets away cat walks in keyboard{' '}
+                  teXnology allows users to turn spoken equations into LaTeX,
+                  greatly streamlining the process of typing scientific
+                  documents. Instead of having to constantly scan the docs and
+                  looking for the proper syntax, you can read a sentence to
+                  teXnology which does the hard work for you.
                 </p>
                 <a>
                   <div className='flex h-12 flex-row items-center gap-3 bg-blue-400 px-3'>
