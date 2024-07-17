@@ -14,17 +14,8 @@ export default function About() {
       subtitle: 'a speech-to-latex editor',
       desc: 'do not try to mix old food with new one to fool me! burrow under covers, yet oooo! dangly balls! jump swat swing flies so sweetly to the floor crash move on wash belly nap for Gate keepers of hell',
       demo: 'https://github.com/hellolol2016/teXnology',
-      little: 'Ricky',
-      big: 'Bobby'
-    },
-    {
-      img: '/projects/texnology.png',
-      title: 'teXnology',
-      subtitle: 'a speech-to-latex editor',
-      desc: 'do not try to mix old food with new one to fool me! burrow under covers, yet oooo! dangly balls! jump swat swing flies so sweetly to the floor crash move on wash belly nap for Gate keepers of hell',
-      demo: 'https://github.com/hellolol2016/teXnology',
-      little: 'Ricky',
-      big: 'Bobby'
+      little: '',
+      big: ''
     }
   ]
   return (

@@ -88,7 +88,7 @@ const EmblaCarousel: React.FC<PropType> = props => {
                     </div>
                   </div>
                 </a>
-
+                {(slide.big !="" && slide.little !="") &&
                 <div className='flex flex-col gap-3 bg-buttonSecondary p-3 text-left'>
                   <div className='flex flex-row items-center gap-2'>
                     <div className='h-10 w-10 overflow-hidden rounded-full'>
@@ -113,6 +113,7 @@ const EmblaCarousel: React.FC<PropType> = props => {
                     <p>Along with: Big {slide.big}</p>
                   </div>
                 </div>
+}
               </div>
             </div>
           ))}

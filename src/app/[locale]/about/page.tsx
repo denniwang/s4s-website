@@ -32,165 +32,84 @@ export default function About() {
       desc: 'Dennis is a CS + Business major at NEU, he loves to play tennis and participate in hackathons. He aspires to be retired by 30'
     }
   ]
+
+  function TableBlock({ check, text }: { check: boolean; text: string }) {
+    return (
+      <div className='flex flex-row gap-4 text-gray-500 dark:text-gray-400  items-center '>
+        {check ? (
+          <svg
+            className='h-4 w-4 text-green-500'
+            aria-hidden='true'
+            xmlns='http://www.w3.org/2000/svg'
+            fill='none'
+            viewBox='0 0 16 12'
+          >
+            <path
+              stroke='currentColor'
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              stroke-width='2'
+              d='M1 5.917 5.724 10.5 15 1.5'
+            />
+          </svg>
+        ) : (
+          <svg
+            className='h-4 w-4 text-red-500'
+            aria-hidden='true'
+            xmlns='http://www.w3.org/2000/svg'
+            fill='none'
+            viewBox='0 0 14 14'
+          >
+            <path
+              stroke='currentColor'
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              stroke-width='2'
+              d='m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6'
+            />
+          </svg>
+        )}
+        <p className='md:text-sm text-lg'>
+        {text}
+</p>
+      </div>
+    )
+  }
   function Table() {
     return (
-      <div id='detailed-pricing' className='w-full overflow-x-auto'>
+      <div id='detailed-pricing' className='w-full overflow-x-auto '>
         <div className='min-w-max overflow-hidden'>
-          <div className='grid grid-cols-2 gap-x-16 border-b border-t border-gray-200 bg-background-secondary p-4 text-sm font-medium text-gray-900 dark:border-gray-700 dark:text-white'>
+          <div className='grid grid-cols-2 gap-x-16 border-b border-t border-gray-200 bg-background-secondary p-4 text-sm md:text-xl font-medium text-gray-900 dark:border-gray-700 dark:text-white'>
             <div className='flex items-center'>Students 4 Students</div>
             <div>Big College Consulting Companies</div>
           </div>
           <div className='grid grid-cols-2 gap-x-16 border-b border-gray-200 px-4 py-5 text-sm text-gray-700 dark:border-gray-700'>
-            <div className='text-gray-500 dark:text-gray-400'>
-              <svg
-                className='h-3 w-3 text-green-500'
-                aria-hidden='true'
-                xmlns='http://www.w3.org/2000/svg'
-                fill='none'
-                viewBox='0 0 16 12'
-              >
-                <path
-                  stroke='currentColor'
-                  stroke-linecap='round'
-                  stroke-linejoin='round'
-                  stroke-width='2'
-                  d='M1 5.917 5.724 10.5 15 1.5'
-                />
-              </svg>
-              $ Affordable Prices
-            </div>
-            <div className='text-gray-500 dark:text-gray-400'>
-              <svg
-                className='h-3 w-3 text-red-500'
-                aria-hidden='true'
-                xmlns='http://www.w3.org/2000/svg'
-                fill='none'
-                viewBox='0 0 14 14'
-              >
-                <path
-                  stroke='currentColor'
-                  stroke-linecap='round'
-                  stroke-linejoin='round'
-                  stroke-width='2'
-                  d='m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6'
-                />
-              </svg>
-              $$$ INSANE Prices
-            </div>
+            <TableBlock check={true} text='Affordable Prices' />
+            <TableBlock check={false} text='$$$ Unreasonable Prices' />
           </div>
           <div className='grid grid-cols-2 gap-x-16 border-b border-gray-200 px-4 py-5 text-sm text-gray-700 dark:border-gray-700'>
-            <div className='text-gray-500 dark:text-gray-400'>
-              <svg
-                className='h-3 w-3 text-green-500'
-                aria-hidden='true'
-                xmlns='http://www.w3.org/2000/svg'
-                fill='none'
-                viewBox='0 0 16 12'
-              >
-                <path
-                  stroke='currentColor'
-                  stroke-linecap='round'
-                  stroke-linejoin='round'
-                  stroke-width='2'
-                  d='M1 5.917 5.724 10.5 15 1.5'
-                />
-              </svg>
-              Up to date with the admissions process
-            </div>
-            <div className='text-gray-500 dark:text-gray-400'>
-              <svg
-                className='h-3 w-3 text-red-500'
-                aria-hidden='true'
-                xmlns='http://www.w3.org/2000/svg'
-                fill='none'
-                viewBox='0 0 14 14'
-              >
-                <path
-                  stroke='currentColor'
-                  stroke-linecap='round'
-                  stroke-linejoin='round'
-                  stroke-width='2'
-                  d='m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6'
-                />
-              </svg>
-              Ivy League Graduates ... from decades ago
-            </div>
+            <TableBlock
+              check={true}
+              text='Up to date with the admissions process'
+            />
+            <TableBlock
+              check={false}
+              text='Ivy League Graduate... from decades ago'
+            />
           </div>
           <div className='grid grid-cols-2 gap-x-16 border-b border-gray-200 px-4 py-5 text-sm text-gray-700 dark:border-gray-700'>
-            <div className='text-gray-500 dark:text-gray-400'>
-              <svg
-                className='h-3 w-3 text-green-500'
-                aria-hidden='true'
-                xmlns='http://www.w3.org/2000/svg'
-                fill='none'
-                viewBox='0 0 16 12'
-              >
-                <path
-                  stroke='currentColor'
-                  stroke-linecap='round'
-                  stroke-linejoin='round'
-                  stroke-width='2'
-                  d='M1 5.917 5.724 10.5 15 1.5'
-                />
-              </svg>
-              Feels like talking to an older sibling
-            </div>
-            <div className='text-gray-500 dark:text-gray-400'>
-              <svg
-                className='h-3 w-3 text-red-500'
-                aria-hidden='true'
-                xmlns='http://www.w3.org/2000/svg'
-                fill='none'
-                viewBox='0 0 14 14'
-              >
-                <path
-                  stroke='currentColor'
-                  stroke-linecap='round'
-                  stroke-linejoin='round'
-                  stroke-width='2'
-                  d='m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6'
-                />
-              </svg>
-              Impersonal, strictly business
-            </div>
+            <TableBlock
+              check={true}
+              text='Feels like talking to an older sibling'
+            />
+            <TableBlock check={false} text='Impersonal, strictly business' />
           </div>
           <div className='grid grid-cols-2 gap-x-16 border-b border-gray-200 px-4 py-5 text-sm text-gray-700 dark:border-gray-700'>
-            <div className='text-gray-500 dark:text-gray-400'>
-              <svg
-                className='h-3 w-3 text-green-500'
-                aria-hidden='true'
-                xmlns='http://www.w3.org/2000/svg'
-                fill='none'
-                viewBox='0 0 16 12'
-              >
-                <path
-                  stroke='currentColor'
-                  stroke-linecap='round'
-                  stroke-linejoin='round'
-                  stroke-width='2'
-                  d='M1 5.917 5.724 10.5 15 1.5'
-                />
-              </svg>
-              SPECIFIC guidance with Project Jam
-            </div>
-            <div className='text-gray-500 dark:text-gray-400'>
-              <svg
-                className='h-3 w-3 text-red-500'
-                aria-hidden='true'
-                xmlns='http://www.w3.org/2000/svg'
-                fill='none'
-                viewBox='0 0 14 14'
-              >
-                <path
-                  stroke='currentColor'
-                  stroke-linecap='round'
-                  stroke-linejoin='round'
-                  stroke-width='2'
-                  d='m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6'
-                />
-              </svg>
-              Provide vague resources
-            </div>
+            <TableBlock
+              check={true}
+              text='SPECIFIC guidance with Project Jam'
+            />
+            <TableBlock check={false} text='Vague resources' />
           </div>
         </div>
       </div>
@@ -216,7 +135,7 @@ export default function About() {
         <div className='flex flex-col justify-center p-2'>
           <h2 className='text-2xl'>{name}</h2>
           <br></br>
-          <p>{college}</p>
+          <p className='italic'>{college}</p>
           <br></br>
           <p className=''>{children}</p>
         </div>
