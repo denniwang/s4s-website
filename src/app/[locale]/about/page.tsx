@@ -129,8 +129,8 @@ export default function About() {
   }) {
     return (
       <div className='flex w-1/4 flex-col items-center gap-5 '>
-        <div className=''>
-          <Image src={img} width={500} height={200} alt={name} />
+        <div className='shadow-md'>
+          <Image src={img} width={500} height={200} alt={name} className='shadow-md'/>
         </div>
         <div className='flex flex-col justify-center p-2'>
           <h2 className='text-2xl'>{name}</h2>
