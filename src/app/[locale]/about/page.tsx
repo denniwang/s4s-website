@@ -32,24 +32,16 @@ export default function About() {
       desc: 'Dennis is a CS + Business major at NEU, he loves to play tennis and participate in hackathons. He aspires to be retired by 30'
     }
   ]
-
   function Table() {
     return (
       <div id='detailed-pricing' className='w-full overflow-x-auto'>
         <div className='min-w-max overflow-hidden'>
           <div className='grid grid-cols-2 gap-x-16 border-b border-t border-gray-200 bg-background-secondary p-4 text-sm font-medium text-gray-900 dark:border-gray-700 dark:text-white'>
             <div className='flex items-center'>Students 4 Students</div>
-            <div>Other College Consultants</div>
+            <div>Big College Consulting Companies</div>
           </div>
           <div className='grid grid-cols-2 gap-x-16 border-b border-gray-200 px-4 py-5 text-sm text-gray-700 dark:border-gray-700'>
             <div className='text-gray-500 dark:text-gray-400'>
-              Basic components (
-              <a href='#' className='text-blue-600 hover:underline'>
-                view all
-              </a>
-              )
-            </div>
-            <div>
               <svg
                 className='h-3 w-3 text-green-500'
                 aria-hidden='true'
@@ -65,17 +57,9 @@ export default function About() {
                   d='M1 5.917 5.724 10.5 15 1.5'
                 />
               </svg>
+              $ Affordable Prices
             </div>
-          </div>
-          <div className='grid grid-cols-2 gap-x-16 border-b border-gray-200 px-4 py-5 text-sm text-gray-700 dark:border-gray-700'>
             <div className='text-gray-500 dark:text-gray-400'>
-              Application UI (
-              <a href='#' className='text-blue-600 hover:underline'>
-                view demo
-              </a>
-              )
-            </div>
-            <div>
               <svg
                 className='h-3 w-3 text-red-500'
                 aria-hidden='true'
@@ -91,13 +75,29 @@ export default function About() {
                   d='m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6'
                 />
               </svg>
+              $$$ INSANE Prices
             </div>
           </div>
           <div className='grid grid-cols-2 gap-x-16 border-b border-gray-200 px-4 py-5 text-sm text-gray-700 dark:border-gray-700'>
             <div className='text-gray-500 dark:text-gray-400'>
-              Marketing UI pre-order
+              <svg
+                className='h-3 w-3 text-green-500'
+                aria-hidden='true'
+                xmlns='http://www.w3.org/2000/svg'
+                fill='none'
+                viewBox='0 0 16 12'
+              >
+                <path
+                  stroke='currentColor'
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                  stroke-width='2'
+                  d='M1 5.917 5.724 10.5 15 1.5'
+                />
+              </svg>
+              Up to date with the admissions process
             </div>
-            <div>
+            <div className='text-gray-500 dark:text-gray-400'>
               <svg
                 className='h-3 w-3 text-red-500'
                 aria-hidden='true'
@@ -113,13 +113,29 @@ export default function About() {
                   d='m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6'
                 />
               </svg>
+              Ivy League Graduates ... from decades ago
             </div>
           </div>
           <div className='grid grid-cols-2 gap-x-16 border-b border-gray-200 px-4 py-5 text-sm text-gray-700 dark:border-gray-700'>
             <div className='text-gray-500 dark:text-gray-400'>
-              E-commerce UI pre-order
+              <svg
+                className='h-3 w-3 text-green-500'
+                aria-hidden='true'
+                xmlns='http://www.w3.org/2000/svg'
+                fill='none'
+                viewBox='0 0 16 12'
+              >
+                <path
+                  stroke='currentColor'
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                  stroke-width='2'
+                  d='M1 5.917 5.724 10.5 15 1.5'
+                />
+              </svg>
+              Feels like talking to an older sibling
             </div>
-            <div>
+            <div className='text-gray-500 dark:text-gray-400'>
               <svg
                 className='h-3 w-3 text-red-500'
                 aria-hidden='true'
@@ -135,6 +151,45 @@ export default function About() {
                   d='m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6'
                 />
               </svg>
+              Impersonal, strictly business
+            </div>
+          </div>
+          <div className='grid grid-cols-2 gap-x-16 border-b border-gray-200 px-4 py-5 text-sm text-gray-700 dark:border-gray-700'>
+            <div className='text-gray-500 dark:text-gray-400'>
+              <svg
+                className='h-3 w-3 text-green-500'
+                aria-hidden='true'
+                xmlns='http://www.w3.org/2000/svg'
+                fill='none'
+                viewBox='0 0 16 12'
+              >
+                <path
+                  stroke='currentColor'
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                  stroke-width='2'
+                  d='M1 5.917 5.724 10.5 15 1.5'
+                />
+              </svg>
+              SPECIFIC guidance with Project Jam
+            </div>
+            <div className='text-gray-500 dark:text-gray-400'>
+              <svg
+                className='h-3 w-3 text-red-500'
+                aria-hidden='true'
+                xmlns='http://www.w3.org/2000/svg'
+                fill='none'
+                viewBox='0 0 14 14'
+              >
+                <path
+                  stroke='currentColor'
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                  stroke-width='2'
+                  d='m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6'
+                />
+              </svg>
+              Provide vague resources
             </div>
           </div>
         </div>
@@ -180,10 +235,11 @@ export default function About() {
             <p className=''>
               Students4Students was founded by four college students with the
               goal of helping high schoolers get into their dream colleges. We
-              understand that college admissions are tough—we&quot;ve experienced it
-              ourselves—which is why we&quot;re committed to helping applicants
-              perfect the process. Ther are many different factors that can
-              impact your admission, and we&quot;re here to help you ace them all.
+              understand that college admissions are tough—we&quot;ve
+              experienced it ourselves—which is why we&quot;re committed to
+              helping applicants perfect the process. Ther are many different
+              factors that can impact your admission, and we&quot;re here to
+              help you ace them all.
             </p>
           </div>
           <div className='w-1/3'>
@@ -216,15 +272,16 @@ export default function About() {
           </div>
           <div className='flex w-1/2 flex-col justify-center'>
             <p className=''>
-              At Students4Students, we&quot;re more than just college counselors. Our
-              mission is to help students discover their unique passions and use
-              them to craft their best possible applications. We take a
-              comprehensive approach, guiding students through every aspect of
-              the college admissions process—clubs, extracurriculars, essays,
-              academics, and anything else that might impact their journey. Our
-              mentors have recently navigated this process themselves and are
-              determined to share their experiences and insights. When join join
-              we guarantee that you&quot;ll feel confident in your path.
+              At Students4Students, we&quot;re more than just college
+              counselors. Our mission is to help students discover their unique
+              passions and use them to craft their best possible applications.
+              We take a comprehensive approach, guiding students through every
+              aspect of the college admissions process—clubs, extracurriculars,
+              essays, academics, and anything else that might impact their
+              journey. Our mentors have recently navigated this process
+              themselves and are determined to share their experiences and
+              insights. When join join we guarantee that you&quot;ll feel
+              confident in your path.
             </p>
           </div>
         </div>
