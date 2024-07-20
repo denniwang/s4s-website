@@ -16,6 +16,15 @@ export default function About() {
       demo: 'https://github.com/hellolol2016/teXnology',
       little: '',
       big: ''
+    },
+    {
+      img: '/projects/gymeater.png',
+      title: 'gymeater',
+      subtitle: 'a tool to make working out easier',
+      desc: 'description',
+      demo: 'https://github.com/LexTruong/gymeater',
+      little: '',
+      big: ''
     }
   ]
   return (
