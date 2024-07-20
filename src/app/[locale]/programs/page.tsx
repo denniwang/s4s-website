@@ -23,10 +23,10 @@ export default function About() {
     icon: React.ReactNode
   }) {
     return (
-      <div className='h-[30vh] max-w-80 rounded-lg bg-background-secondary p-3 shadow-md text-center flex flex-col items-center gap-3 p-3' >
+      <div className='flex h-[30vh] max-w-80 flex-col items-center gap-3 rounded-lg bg-background-secondary p-3 p-3 text-center shadow-md'>
         {icon}
         {children}
-        <p className='md:text-md' >{desc}</p>
+        <p className='md:text-md'>{desc}</p>
       </div>
     )
   }
@@ -68,6 +68,29 @@ export default function About() {
     }
   ]
 
+  function WWPoint({ title, desc }: { title: string; desc: string }) {
+    return (
+      <div className='flex flex-col gap-2 '>
+        <h2 className='text-xl font-bold'>{title}</h2>
+        <p className='text-lg'>{desc}</p>
+      </div>
+    )
+  }
+  const WWInfo = [
+    {
+      title: 'Asyncronous collaboration',
+      desc: "Our writing experts aren't awake 24/7, but our asyncronous collaboration model allows for you to reach all your deadlines on time!"
+    },
+    {
+      title: 'Asyncronous collaboration',
+      desc: "Our writing experts aren't awake 24/7, but our asyncronous collaboration model allows for you to reach all your deadlines on time!"
+    },
+    {
+      title: 'Asyncronous collaboration',
+      desc: "Our writing experts aren't awake 24/7, but our asyncronous collaboration model allows for you to reach all your deadlines on time!"
+    }
+  ]
+
   return (
     <>
       <main className='flex flex-col items-center gap-8'>
@@ -86,14 +109,16 @@ export default function About() {
               </a>
             </div>
             <div className='program-selector group h-1/2'>
-              <div className='flex h-full w-full flex-col justify-center bg-rose-100 p-5 transition-colors duration-300 group-hover:bg-rose-300'>
-                <h1 className='program-wyr text-9xl font-semibold text-rose-500 duration-300 group-hover:text-8xl group-hover:text-white'>
-                  WRITING WONDERS
-                </h1>
-                <h2 className='text-l pl-5 font-semibold text-rose-500 transition-all duration-300 group-hover:text-xl group-hover:text-white'>
-                  Essay Editing Workshops
-                </h2>
-              </div>
+              <a href='#WW'>
+                <div className='flex h-full w-full flex-col justify-center bg-rose-100 p-5 transition-colors duration-300 group-hover:bg-rose-300'>
+                  <h1 className='program-wyr text-9xl font-semibold text-rose-500 duration-300 group-hover:text-8xl group-hover:text-white'>
+                    WRITING WONDERS
+                  </h1>
+                  <h2 className='text-l pl-5 font-semibold text-rose-500 transition-all duration-300 group-hover:text-xl group-hover:text-white'>
+                    Essay Editing Workshops
+                  </h2>
+                </div>
+              </a>
             </div>
           </div>
           <div className='group h-full w-1/2'>
@@ -122,7 +147,7 @@ export default function About() {
           />
 
           <div className='flex flex-row gap-5'>
-            <div className='flex w-3/5 flex-col'>
+            <div className='flex w-3/5 flex-col gap-3'>
               <p className='text-lg md:text-2xl'>
                 Get personalized 1-on-1 mentorship for all your college needs.
                 From clubs and extracurriculars to essays and personal projects,
@@ -130,9 +155,12 @@ export default function About() {
                 college in the way that&apos;s best for YOU.
               </p>
               <p> Book a consultation below to get started!</p>
-              <a href='https://calendly.com/studs4students/15-min-free-intro-session' target='_blank'>
+              <a
+                href='https://calendly.com/studs4students/15-min-free-intro-session'
+                target='_blank'
+              >
                 <button className='rounded-md bg-green-200 p-3'>
-                  Sign Up Now
+                  Book Consultation Now!
                 </button>
               </a>
             </div>
@@ -173,10 +201,10 @@ export default function About() {
           <Image
             src='/pj-header.png'
             width={600}
-            height={500}
+            height={600}
             alt='big little program header'
           />
-          <div className='flex flex-col flex-wrap items-center justify-center gap-3 md:flex-row '>
+          <div className='mt-5 flex flex-col flex-wrap items-center justify-center gap-3 md:flex-row '>
             <IconContext.Provider
               value={{ size: '4rem', className: 'global-class-name' }}
             >
@@ -190,9 +218,101 @@ export default function About() {
             </IconContext.Provider>
           </div>
           <p>Get started today by booking a consultation below!</p>
-          <a href='https://calendly.com/studs4students/15-min-free-intro-session' target='_blank'>
-            <button className='rounded-md bg-green-200 p-3'>Sign Up Now</button>
+          <a
+            href='https://calendly.com/studs4students/15-min-free-intro-session'
+            target='_blank'
+          >
+            <button className='rounded-md bg-green-200 p-3'>
+              Book Consultation Now!
+            </button>
           </a>
+        </section>
+
+        <section id='WW' className='mt-10 flex w-5/6 flex-col py-24'>
+          <div className='w-min'>
+            <h1 className=' animate-typing w-96 overflow-hidden whitespace-nowrap border-r-4 border-r-gray-700 py-4 pr-9 text-7xl font-bold text-text-secondary'>
+              Writing Wonders
+            </h1>
+          </div>
+          <div className=' flex w-5/6 flex-row'>
+            <div className='h-5 w-5 rounded-full bg-background-secondary'></div>{' '}
+            <p>Some perks for you</p> <div className='flex-1'></div>
+          </div>
+          <div className='flex flex-row'>
+            <div className='mt-5 flex w-1/2 flex-col gap-3 px-3'>
+              {WWInfo.map(info => {
+                return (
+                  <WWPoint
+                    key={info.title}
+                    title={info.title}
+                    desc={info.desc}
+                  />
+                )
+              })}
+
+              <a
+                href='https://calendly.com/studs4students/15-min-free-intro-session'
+                target='_blank'
+              >
+                <button className='rounded-md bg-green-200 p-3'>
+                  Book Consultation Now!
+                </button>
+              </a>
+            </div>
+
+            <table className='w-full text-left text-sm text-gray-500 shadow-lg dark:text-gray-400 rtl:text-right'>
+              <thead className='bg-gray-100 text-xs uppercase text-gray-700 dark:bg-gray-700 dark:text-gray-400'>
+                <tr>
+                  <th scope='col' className='rounded-s-lg px-6 py-3'>
+                    Feature
+                  </th>
+                  <th scope='col' className='px-6 py-3'></th>
+                  <th scope='col' className='rounded-e-lg px-6 py-3'></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className='bg-white dark:bg-gray-800'>
+                  <th
+                    scope='row'
+                    className='whitespace-nowrap px-6 py-4 font-medium text-gray-900 dark:text-white'
+                  >
+                    Asyncronous Collaboration
+                  </th>
+                  <td className='px-6 py-4'></td>
+                  <td className='px-6 py-4'>FREE</td>
+                </tr>
+                <tr className='bg-white dark:bg-gray-800'>
+                  <th
+                    scope='row'
+                    className='whitespace-nowrap px-6 py-4 font-medium text-gray-900 dark:text-white'
+                  >
+                    Expert Review
+                  </th>
+                  <td className='px-6 py-4'></td>
+                  <td className='px-6 py-4'>FREE</td>
+                </tr>
+                <tr className='bg-white dark:bg-gray-800'>
+                  <th
+                    scope='row'
+                    className='whitespace-nowrap px-6 py-4 font-medium text-gray-900 dark:text-white'
+                  >
+                    Relevant Information
+                  </th>
+                  <td className='px-6 py-4'></td>
+                  <td className='px-6 py-4'>FREE</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr className='font-semibold text-gray-900 dark:text-white'>
+                  <th scope='row' className='px-6 py-3 text-base'>
+                    Total
+                  </th>
+                  <td className='px-6 py-3'></td>
+                  <td className='px-6 py-3'>FREE</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
         </section>
       </main>
       <style>{`

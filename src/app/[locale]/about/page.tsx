@@ -156,7 +156,7 @@ export default function About() {
               goal of helping high schoolers get into their dream colleges. We
               understand that college admissions are tough—we&quot;ve
               experienced it ourselves—which is why we&quot;re committed to
-              helping applicants perfect the process. Ther are many different
+              helping applicants perfect the process. There are many different
               factors that can impact your admission, and we&quot;re here to
               help you ace them all.
             </p>

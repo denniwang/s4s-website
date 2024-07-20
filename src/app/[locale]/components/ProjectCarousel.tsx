@@ -56,7 +56,7 @@ const EmblaCarousel: React.FC<PropType> = props => {
         <div className='embla__container flex flex-row'>
           {slides.map(slide => (
             <div
-              className='embla__slide flex w-screen flex-col md:flex-row items-center justify-center gap-6 p-10 '
+              className='embla__slide flex w-screen flex-col items-center justify-center gap-6 p-10 md:flex-row '
               key={slide.title}
             >
               <div className='embla_slide_img'>
@@ -71,13 +71,7 @@ const EmblaCarousel: React.FC<PropType> = props => {
                 <h2 className='text-4xl font-bold'>{slide.title}</h2>
                 <p className='italic'>{slide.subtitle}</p>
                 <br></br>
-                <p className=''>
-                  teXnology allows users to turn spoken equations into LaTeX,
-                  greatly streamlining the process of typing scientific
-                  documents. Instead of having to constantly scan the docs and
-                  looking for the proper syntax, you can read a sentence to
-                  teXnology which does the hard work for you.
-                </p>
+                <p className=''>{slide.desc}</p>
                 <a>
                   <div className='flex h-12 flex-row items-center gap-3 bg-blue-400 px-3'>
                     <p>See for yourself!</p>
@@ -88,32 +82,32 @@ const EmblaCarousel: React.FC<PropType> = props => {
                     </div>
                   </div>
                 </a>
-                {(slide.big !="" && slide.little !="") &&
-                <div className='flex flex-col gap-3 bg-buttonSecondary p-3 text-left'>
-                  <div className='flex flex-row items-center gap-2'>
-                    <div className='h-10 w-10 overflow-hidden rounded-full'>
-                      <Image
-                        src={`/people/${slide.little}.png`}
-                        width={50}
-                        height={50}
-                        alt={slide.little}
-                      />
+                {slide.big != '' && slide.little != '' && (
+                  <div className='flex flex-col gap-3 bg-buttonSecondary p-3 text-left'>
+                    <div className='flex flex-row items-center gap-2'>
+                      <div className='h-10 w-10 overflow-hidden rounded-full'>
+                        <Image
+                          src={`/people/${slide.little}.png`}
+                          width={50}
+                          height={50}
+                          alt={slide.little}
+                        />
+                      </div>
+                      <p>By: Little {slide.little}</p>
                     </div>
-                    <p>By: Little {slide.little}</p>
-                  </div>
-                  <div className='flex flex-row items-center gap-2'>
-                    <div className='h-10 w-10 overflow-hidden rounded-full'>
-                      <Image
-                        src={`/people/${slide.big}.png`}
-                        width={50}
-                        height={50}
-                        alt={slide.big}
-                      />
+                    <div className='flex flex-row items-center gap-2'>
+                      <div className='h-10 w-10 overflow-hidden rounded-full'>
+                        <Image
+                          src={`/people/${slide.big}.png`}
+                          width={50}
+                          height={50}
+                          alt={slide.big}
+                        />
+                      </div>
+                      <p>Along with: Big {slide.big}</p>
                     </div>
-                    <p>Along with: Big {slide.big}</p>
                   </div>
-                </div>
-}
+                )}
               </div>
             </div>
           ))}

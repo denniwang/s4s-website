@@ -43,7 +43,27 @@ const config = {
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out'
+        'accordion-up': 'accordion-up 0.2s ease-out',
+        typing: 'typing 3s steps(20) infinite alternate, blink .9s infinite'
+      },
+      keyframes: {
+        typing: {
+          '0%': {
+            width: '0%',
+            visibility: 'hidden'
+          },
+          '100%': {
+            width: '100%'
+          }
+        },
+        blink: {
+          '50%': {
+            borderColor: 'transparent'
+          },
+          '100%': {
+            borderColor: 'white'
+          }
+        }
       }
     }
   },

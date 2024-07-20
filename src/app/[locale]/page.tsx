@@ -2,6 +2,7 @@ import { useTranslations } from 'next-intl'
 import Button from './components/Button'
 import Link from 'next/link'
 import Image from 'next/image'
+import Testimony from './components/Testimony'
 
 export default function DashboardPage({}) {
   function Card({
@@ -20,17 +21,17 @@ export default function DashboardPage({}) {
   }
   const t = useTranslations('')
   return (
-    <div className='flex flex-col self-center text-center '>
-      <section className='pb-12 flex w-full xl:h-svh md:h-1/2 flex-col items-center bg-background '>
-        <div className='flex flex-col-reverse pl-15 align-bottom md:flex-row h-full w-full justify-between'>
-          <div className='flex flex-col justify-center items-center gap-5'>
+    <div className='mt-10 flex flex-col self-center text-center md:mt-1'>
+      <section className='flex w-full flex-col items-center bg-background pb-12  md:h-1/2 xl:h-svh '>
+        <div className='pl-15 flex h-full w-full flex-col-reverse justify-between align-bottom md:flex-row'>
+          <div className='flex flex-col items-center justify-center gap-5'>
             <h1 className='max-w-2xl text-center text-6xl font-extrabold leading-tight md:text-6xl xl:text-7xl'>
               {t('College started yesterday.')}
               {'  '}
             </h1>
-            <p className="mx-10">
+            <p className='mx-10 text-lg'>
               {t(
-                'You can start today. Get help with the whole admissions process, from start to end.'
+                'You can start today. Get help with the whole admissions process, from start to finish.'
               )}
             </p>
 
@@ -40,7 +41,7 @@ export default function DashboardPage({}) {
               </Button>
             </Link>
           </div>
-          <div className='max-w-3xl flex flex-col justify-center'>
+          <div className='flex max-w-3xl flex-col justify-center'>
             <Image
               alt='splash_image'
               width={2049}
@@ -79,46 +80,14 @@ export default function DashboardPage({}) {
           </Card>
         </div>
       </section>
-      <p className='pt-10'>
+      <p className='py-10 '>
         want to be part of the statistics?{' '}
         <Link href={t('programs_link')}>
           <span className='underline'>Join Now</span>
         </Link>
       </p>
 
-      <section className='mt-14 flex flex-col self-center bg-background-secondary px-10 py-12 md:px-24'>
-        <h2 className='pb-8 text-5xl font-extrabold'>Student Spotlight </h2>
-        <div className='flex flex-col items-center justify-center gap-8 md:flex-row'>
-          <div className='max-w-96 flex-1'>
-            <Image
-              width={1000}
-              height={600}
-              className='rounded-md shadow-md'
-              src='/zitong.png'
-              alt='student_spotlight'
-            />
-          </div>
-          <div className='flex-1'>
-            <p className='text-lg lg:text-2xl '>
-              &quot;The Big Little Program was incredible. Going into my second year
-              of high school, I was confused and honestly super stressed about
-              college because I had no idea what I should be doing. I knew I had
-              the ambition to get into a good college, but I just didn&apos;t know
-              where to start.
-              <br></br>
-              <br></br>
-              <span className='hidden lg:block'>
-                My Big, Dennis, gave me invaluable advice for the whole process.
-                He helped me find clubs, extracurriculars, and competitions that
-                strengthened my profile. I felt so much more confident and
-                secure going into college, and am proud to go to Univeristy of
-                Washington for Computer Science.&quot;
-              </span>
-            </p>
-          </div>
-        </div>
-      </section>
-
+      <Testimony />
     </div>
   )
 }

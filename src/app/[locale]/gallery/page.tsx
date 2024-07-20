@@ -6,13 +6,12 @@ export default function About() {
   const t = useTranslations('')
 
   const OPTIONS: EmblaOptionsType = { loop: true }
-  const SLIDE_COUNT = 5
   const SLIDES = [
     {
       img: '/projects/texnology.png',
       title: 'teXnology',
       subtitle: 'a speech-to-latex editor',
-      desc: 'do not try to mix old food with new one to fool me! burrow under covers, yet oooo! dangly balls! jump swat swing flies so sweetly to the floor crash move on wash belly nap for Gate keepers of hell',
+      desc: 'teXnology allows users to turn spoken equations into LaTeX, greatly streamlining the process of typing scientific documents. Instead of having to constantly scan the docs and looking for the proper syntax, you can read a sentence to teXnology which does the hard work for you.',
       demo: 'https://github.com/hellolol2016/teXnology',
       little: '',
       big: ''
