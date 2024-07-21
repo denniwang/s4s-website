@@ -35,7 +35,7 @@ export default function About() {
 
   function TableBlock({ check, text }: { check: boolean; text: string }) {
     return (
-      <div className='flex flex-row gap-4 text-gray-500 dark:text-gray-400  items-center '>
+      <div className='flex flex-row items-center gap-4 text-gray-500  dark:text-gray-400 '>
         {check ? (
           <svg
             className='h-4 w-4 text-green-500'
@@ -69,17 +69,15 @@ export default function About() {
             />
           </svg>
         )}
-        <p className='md:text-sm text-lg'>
-        {text}
-</p>
+        <p className='w-2/3 text-lg md:text-sm'>{text}</p>
       </div>
     )
   }
   function Table() {
     return (
-      <div id='detailed-pricing' className='w-full overflow-x-auto '>
-        <div className='min-w-max overflow-hidden'>
-          <div className='grid grid-cols-2 gap-x-16 border-b border-t border-gray-200 bg-background-secondary p-4 text-sm md:text-xl font-medium text-gray-900 dark:border-gray-700 dark:text-white'>
+      <div id='detailed-pricing' className='w-full '>
+        <div className='overflow-hidden'>
+          <div className='grid grid-cols-2 gap-x-16 border-b border-t border-gray-200 bg-background-secondary p-4 text-sm font-medium text-gray-900 dark:border-gray-700 dark:text-white md:text-xl'>
             <div className='flex items-center'>Students 4 Students</div>
             <div>Big College Consulting Companies</div>
           </div>
@@ -128,9 +126,15 @@ export default function About() {
     children: React.ReactNode
   }) {
     return (
-      <div className='flex w-1/4 flex-col items-center gap-5 '>
+      <div className='flex w-4/5 flex-col  items-center gap-5 lg:w-1/5 '>
         <div className='shadow-md'>
-          <Image src={img} width={500} height={200} alt={name} className='shadow-md'/>
+          <Image
+            src={img}
+            width={500}
+            height={200}
+            alt={name}
+            className='shadow-md'
+          />
         </div>
         <div className='flex flex-col justify-center p-2'>
           <h2 className='text-2xl'>{name}</h2>
@@ -145,7 +149,7 @@ export default function About() {
 
   return (
     <main className='flex flex-row justify-center'>
-      <div className='flex w-3/5 flex-col justify-center gap-8'>
+      <div className='flex w-11/12 flex-col justify-center gap-8 md:w-4/5'>
         <h1 className='mt-10 text-center text-5xl font-bold'>About S4S</h1>
 
         <h2 className='text-4xl'>101 - Who Are We?</h2>
@@ -210,7 +214,7 @@ export default function About() {
         <h2 className='text-4xl'>
           103 - Ok but... who are we <span className='underline'>REALLY</span>?
         </h2>
-        <div className='flex flex-row justify-center gap-5'>
+        <div className='flex flex-col items-center justify-center justify-center gap-5 md:flex-row md:items-start'>
           {team.map(person => {
             return (
               <PersonCard

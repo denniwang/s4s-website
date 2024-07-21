@@ -44,17 +44,17 @@ export default function About() {
     {
       icon: <PiTargetBold />,
       title: 'Relevant Tracks',
-      desc: 'Simplify the decision making process by following one of our predesigned technical tracks.'
+      desc: 'Simplify the design process by following one of our predesigned technical tracks.'
     },
     {
       icon: <FaCalendarAlt />,
       title: '10 Sessions',
-      desc: 'Feel confident at every stage of your project with our 10 sessions, spaced according to your needs. '
+      desc: 'Feel confident at every stage of your project with 10 sessions spaced according to your needs. '
     },
     {
       icon: <FaRegLightbulb />,
       title: 'Application Boost',
-      desc: 'Colleges prefer applicants with tangible experience. Demonstrate your expertise with a fully fleshed out project. '
+      desc: 'Colleges look for tangible experience. Demonstrate expertise with a completed project. '
     },
     {
       icon: <FaHeartCircleBolt />,
@@ -159,13 +159,13 @@ export default function About() {
                 href='https://calendly.com/studs4students/15-min-free-intro-session'
                 target='_blank'
               >
-                <button className='rounded-md bg-green-200 p-3'>
+                <button className='rounded-md bg-green-200 p-3 dark:bg-emerald-700'>
                   Book Consultation Now!
                 </button>
               </a>
             </div>
             <div className='flex w-2/5 flex-col gap-5'>
-              <div className='rounded-md bg-blue-200 p-3  text-xl shadow-md'>
+              <div className='rounded-md bg-blue-200 p-3  text-xl shadow-md dark:bg-blue-800'>
                 <h2 className='text-2xl font-bold'>Big</h2>
                 <p className='italic'>noun - Informal</p>
                 <p>
@@ -173,7 +173,7 @@ export default function About() {
                   path suited uniquely to yourself.{' '}
                 </p>
               </div>
-              <div className='rounded-md bg-yellow-200 p-3 text-xl shadow-md'>
+              <div className='rounded-md bg-yellow-200 p-3 text-xl shadow-md dark:bg-amber-700'>
                 <h2 className='text-2xl font-bold'>Little</h2>
                 <p className='italic'>noun - Informal</p>
                 <p>
@@ -222,7 +222,7 @@ export default function About() {
             href='https://calendly.com/studs4students/15-min-free-intro-session'
             target='_blank'
           >
-            <button className='rounded-md bg-green-200 p-3'>
+            <button className='rounded-md bg-green-200 p-3 dark:bg-emerald-700'>
               Book Consultation Now!
             </button>
           </a>
@@ -234,7 +234,7 @@ export default function About() {
               Writing Wonders
             </h1>
           </div>
-          <div className=' flex w-5/6 flex-row'>
+          <div className=' flex w-5/6 flex-row gap-4'>
             <div className='h-5 w-5 rounded-full bg-background-secondary'></div>{' '}
             <p>Some perks for you</p> <div className='flex-1'></div>
           </div>
@@ -254,17 +254,17 @@ export default function About() {
                 href='https://calendly.com/studs4students/15-min-free-intro-session'
                 target='_blank'
               >
-                <button className='rounded-md bg-green-200 p-3'>
+                <button className='rounded-md bg-green-200 p-3 dark:bg-emerald-700'>
                   Book Consultation Now!
                 </button>
               </a>
             </div>
 
-            <table className='w-full text-left text-sm text-gray-500 shadow-lg dark:text-gray-400 lg:w-1/2 rtl:text-right'>
+            <table className='w-full rounded-lg text-left text-sm text-gray-500 shadow-lg dark:text-gray-400 lg:w-1/2 rtl:text-right'>
               <thead className='bg-gray-100 text-xs uppercase text-gray-700 dark:bg-gray-700 dark:text-gray-400'>
                 <tr>
                   <th scope='col' className='rounded-s-lg px-6 py-3'>
-                    Feature
+                    Writing Wonders Add-On&apos;s
                   </th>
                   <th scope='col' className='px-6 py-3'></th>
                   <th scope='col' className='rounded-e-lg px-6 py-3'></th>
@@ -302,7 +302,7 @@ export default function About() {
                   <td className='px-6 py-4'>FREE</td>
                 </tr>
               </tbody>
-              <tfoot>
+              <tfoot className='dark:bg-background-secondary'>
                 <tr className='font-semibold text-gray-900 dark:text-white'>
                   <th scope='row' className='px-6 py-3 text-base'>
                     Total
