@@ -42,7 +42,7 @@ export default function About() {
       desc: "Get 1-on-1 advice from a mentor who's matched according to your technical needs."
     },
     {
-      icon: <TbTargetArrow />,
+      icon: <TbTargetArrow size='90px' />,
       title: 'Relevant Tracks',
       desc: 'Simplify the decision making process by following one of our predesigned technical tracks.'
     },
@@ -52,7 +52,7 @@ export default function About() {
       desc: 'Feel confident at every stage of your project with our 10 sessions, spaced according to your needs. '
     },
     {
-      icon: <AiOutlineRise />,
+      icon: <AiOutlineRise size='90px' />,
       title: 'Application Boost',
       desc: 'Colleges prefer applicants with tangible experience. Demonstrate your expertise with a fully fleshed out project. '
     },
@@ -230,7 +230,7 @@ export default function About() {
 
         <section id='WW' className='mt-10 flex w-5/6 flex-col py-24'>
           <div className='w-min'>
-            <h1 className=' animate-typing w-96 overflow-hidden whitespace-nowrap border-r-4 border-r-gray-700 py-4 pr-9 text-7xl font-bold text-text-secondary'>
+            <h1 className=' w-96 animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-gray-700 py-4 pr-9 text-7xl font-bold text-text-secondary'>
               Writing Wonders
             </h1>
           </div>
