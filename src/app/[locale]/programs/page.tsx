@@ -78,22 +78,22 @@ export default function About() {
   }
   const WWInfo = [
     {
-      title: 'Asyncronous collaboration',
-      desc: "Our writing experts aren't awake 24/7, but our asyncronous collaboration model allows for you to reach all your deadlines on time!"
+      title: 'Lifetime Writing Skills',
+      desc: 'Our expert tutors provide personalized writing workshops and feedback sessions, ensuring each student hones their writing skills to perfection.'
     },
     {
-      title: 'Asyncronous collaboration',
-      desc: "Our writing experts aren't awake 24/7, but our asyncronous collaboration model allows for you to reach all your deadlines on time!"
+      title: 'Craft a unique narrative',
+      desc: 'We work closely with students to uncover their unique stories and experiences, guiding them to craft narratives that resonate with admissions officers.'
     },
     {
-      title: 'Asyncronous collaboration',
-      desc: "Our writing experts aren't awake 24/7, but our asyncronous collaboration model allows for you to reach all your deadlines on time!"
+      title: 'Boost Creativity',
+      desc: 'Our programs include creative thinking exercises and workshops that inspire students to explore new ideas and approaches, ensuring their applications are both imaginative and impactful.'
     }
   ]
 
   return (
     <>
-      <main className='flex flex-col items-center gap-8'>
+      <main className='flex w-full flex-col items-center gap-8'>
         <section className='items-flex-start flex h-[92vh] flex-row'>
           <div className='flex h-full w-1/2 flex-col justify-between'>
             <div className='program-selector group h-1/2'>
@@ -206,7 +206,7 @@ export default function About() {
           />
           <div className='mt-5 flex flex-col flex-wrap items-center justify-center gap-3 md:flex-row '>
             <IconContext.Provider
-              value={{ size: '4rem', className: 'global-class-name' }}
+              value={{ size: '80px', className: 'global-class-name' }}
             >
               {PJInfo1.map(info => {
                 return (
@@ -238,8 +238,8 @@ export default function About() {
             <div className='h-5 w-5 rounded-full bg-background-secondary'></div>{' '}
             <p>Some perks for you</p> <div className='flex-1'></div>
           </div>
-          <div className='flex flex-row'>
-            <div className='mt-5 flex w-1/2 flex-col gap-3 px-3'>
+          <div className='flex flex-col gap-8 lg:flex-row'>
+            <div className='mt-5 flex w-full flex-col gap-3 px-3 lg:w-1/2'>
               {WWInfo.map(info => {
                 return (
                   <WWPoint
@@ -260,7 +260,7 @@ export default function About() {
               </a>
             </div>
 
-            <table className='w-full text-left text-sm text-gray-500 shadow-lg dark:text-gray-400 rtl:text-right'>
+            <table className='w-full text-left text-sm text-gray-500 shadow-lg dark:text-gray-400 lg:w-1/2 rtl:text-right'>
               <thead className='bg-gray-100 text-xs uppercase text-gray-700 dark:bg-gray-700 dark:text-gray-400'>
                 <tr>
                   <th scope='col' className='rounded-s-lg px-6 py-3'>
@@ -276,7 +276,7 @@ export default function About() {
                     scope='row'
                     className='whitespace-nowrap px-6 py-4 font-medium text-gray-900 dark:text-white'
                   >
-                    Asyncronous Collaboration
+                    Lifelong Writing Skills
                   </th>
                   <td className='px-6 py-4'></td>
                   <td className='px-6 py-4'>FREE</td>
@@ -286,7 +286,7 @@ export default function About() {
                     scope='row'
                     className='whitespace-nowrap px-6 py-4 font-medium text-gray-900 dark:text-white'
                   >
-                    Expert Review
+                    Craft your story with a unique narrative
                   </th>
                   <td className='px-6 py-4'></td>
                   <td className='px-6 py-4'>FREE</td>
@@ -296,7 +296,7 @@ export default function About() {
                     scope='row'
                     className='whitespace-nowrap px-6 py-4 font-medium text-gray-900 dark:text-white'
                   >
-                    Relevant Information
+                    Boost your creativity
                   </th>
                   <td className='px-6 py-4'></td>
                   <td className='px-6 py-4'>FREE</td>
