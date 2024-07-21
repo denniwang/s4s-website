@@ -3,9 +3,9 @@ import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { MdWorkHistory } from 'react-icons/md'
 import { FaHandHoldingHand } from 'react-icons/fa6'
-import { TbTargetArrow } from 'react-icons/tb'
+import { PiTargetBold } from 'react-icons/pi'
 import { FaCalendarAlt } from 'react-icons/fa'
-import { AiOutlineRise } from 'react-icons/ai'
+import { FaRegLightbulb } from 'react-icons/fa'
 import { FaHeartCircleBolt } from 'react-icons/fa6'
 import { FaSmileWink } from 'react-icons/fa'
 import { IconContext } from 'react-icons'
@@ -42,7 +42,7 @@ export default function About() {
       desc: "Get 1-on-1 advice from a mentor who's matched according to your technical needs."
     },
     {
-      icon: <TbTargetArrow size='90px' />,
+      icon: <PiTargetBold />,
       title: 'Relevant Tracks',
       desc: 'Simplify the decision making process by following one of our predesigned technical tracks.'
     },
@@ -52,7 +52,7 @@ export default function About() {
       desc: 'Feel confident at every stage of your project with our 10 sessions, spaced according to your needs. '
     },
     {
-      icon: <AiOutlineRise size='90px' />,
+      icon: <FaRegLightbulb />,
       title: 'Application Boost',
       desc: 'Colleges prefer applicants with tangible experience. Demonstrate your expertise with a fully fleshed out project. '
     },
