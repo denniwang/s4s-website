@@ -30,6 +30,7 @@ const config = {
         'button-text': 'var(--button-text)',
         'text-secondary': 'var(--text-secondary)',
         'background-secondary': 'var(--background-secondary)',
+        'background-card': 'var(--background-card)',
         secondary: 'var(--secondary)',
         button: 'var(--button)',
         selected: 'var(--selected)',
@@ -44,7 +45,8 @@ const config = {
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        typing: 'typing 5s steps(20) infinite alternate, blink .9s infinite'
+        typing: 'typing 5s steps(20) infinite alternate, blink .9s infinite',
+        'slide-in': 'slide-in 1s forwards'
       },
       keyframes: {
         typing: {
@@ -66,6 +68,10 @@ const config = {
           '100%': {
             borderColor: 'white'
           }
+        },
+        'slide-in': {
+          '0%': { transform: 'translateX(-100%)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' }
         }
       }
     }

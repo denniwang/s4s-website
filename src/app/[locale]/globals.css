@@ -4,13 +4,14 @@
 
 @layer base {
   :root {
-    --primary: #333366;
-    --secondary: #097fa5;
-    --background: #ededed;
-    --background-secondary: #c8dde3;
-    --button: #097fa5;
+    --primary: #094067;
+    --secondary: #5f6c7bf;
+    --background: #fffffe;
+    --background-secondary: #d8eefe;
+    --background-card: #094067;
+    --button: #3da9fc;
     --button-text: #fff;
-    --text-secondary: #3c3c3c;
+    --text-secondary: #f7c59f;
     --dropdown: #e0f4ff;
     --dropdown-hover: #b3e5ff;
     --button-secondary: #e7e7e7;
@@ -131,4 +132,38 @@
 .embla__button__svg {
   width: 35%;
   height: 35%;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateY(-40%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in-1 {
+  animation: slide-in 1s forwards;
+  animation-delay: 0s;
+}
+
+.animate-slide-in-2 {
+  animation: slide-in 1s forwards;
+  animation-delay: 0.5s;
+}
+
+.animate-slide-in-3 {
+  animation: slide-in 1s forwards;
+  animation-delay: 1s;
+}
+
+.animate-slide-in {
+  transform: translateX(0);
+  opacity: 1;
+  transition:
+    transform 1s ease-out,
+    opacity 1s ease-out;
 }

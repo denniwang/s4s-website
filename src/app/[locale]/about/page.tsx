@@ -21,8 +21,8 @@ export default function About() {
     {
       img: '/verma.png',
       name: 'Darsh Verma',
-      school: "UC Los Angeles '27",
-      desc: "I will ruin the couch with my claws i bet my nine lives on you-oooo-ooo-hooo so hiding behind the couch until lured out by a feathery toy, tickle my belly at your own peril i will pester for food when you're in the kitchen even if it's salad but scratch my"
+      school: "UCLA '27",
+      desc: 'Darsh is a math and CS major at UCLA, and loves working out, playing cricket, and cooking in his free time. He is on track to solving the Riemann Hypothesis by the end of his career.'
     },
 
     {
@@ -195,7 +195,7 @@ export default function About() {
           </div>
           <div className='flex flex-col justify-center md:w-1/2'>
             <p className=' md:text-xl'>
-              At Students4Students, we&quot;re more than just college
+              At Students4Students, we&apos;re more than just college
               counselors. Our mission is to help students discover their unique
               passions and use them to craft their best possible applications.
               We take a comprehensive approach, guiding students through every
@@ -203,7 +203,7 @@ export default function About() {
               essays, academics, and anything else that might impact their
               journey. Our mentors have recently navigated this process
               themselves and are determined to share their experiences and
-              insights. When join join we guarantee that you&quot;ll feel
+              insights. When join join we guarantee that you&apos;ll feel
               confident in your path.
             </p>
           </div>

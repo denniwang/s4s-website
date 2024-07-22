@@ -159,7 +159,7 @@ export default function About() {
                 href='https://calendly.com/studs4students/15-min-free-intro-session'
                 target='_blank'
               >
-                <button className='rounded-md bg-green-200 p-3 dark:bg-emerald-700'>
+                <button className='rounded-md bg-green-200 p-3 hover:shadow-sm dark:bg-emerald-700'>
                   Book Consultation Now!
                 </button>
               </a>
@@ -222,7 +222,7 @@ export default function About() {
             href='https://calendly.com/studs4students/15-min-free-intro-session'
             target='_blank'
           >
-            <button className='rounded-md bg-green-200 p-3 dark:bg-emerald-700'>
+            <button className='rounded-md bg-green-200 p-3 hover:shadow-sm dark:bg-emerald-700'>
               Book Consultation Now!
             </button>
           </a>
@@ -254,7 +254,7 @@ export default function About() {
                 href='https://calendly.com/studs4students/15-min-free-intro-session'
                 target='_blank'
               >
-                <button className='rounded-md bg-green-200 p-3 dark:bg-emerald-700'>
+                <button className='rounded-md bg-green-200 p-3 hover:shadow-sm dark:bg-emerald-700'>
                   Book Consultation Now!
                 </button>
               </a>
@@ -318,9 +318,6 @@ export default function About() {
       <style>{`
         div {
           box-sizing: border-box;
-        }
-        .footer {
-          display: none;
         }
         .program-wyr {
           font-size: 9vw;

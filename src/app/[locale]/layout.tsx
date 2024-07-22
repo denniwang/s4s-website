@@ -9,6 +9,7 @@ import { Inter, Rubik, Space_Grotesk } from 'next/font/google'
 import NextTopLoader from 'nextjs-toploader'
 import { Header } from './components/Header'
 import './globals.css'
+import { PopupWidget } from "react-calendly";
 import { Footer } from './components/Footer'
 
 const inter = Inter({
@@ -40,11 +41,11 @@ export default function RootLayout({
     <>
       <title>Students 4 Students</title>
       <meta content='Students 4 Students' property='og:title' />
-      <meta content='College started yesterday. You can start today.' property='og:description' />
       <meta
-        content='https://stu4stu.org/en'
-        property='og:url'
+        content='College started yesterday. You can start today.'
+        property='og:description'
       />
+      <meta content='https://stu4stu.org/en' property='og:url' />
       <meta content='https://embed.com/embedimage.png' property='og:image' />
       <meta content='#43B581' data-react-helmet='true' name='theme-color' />
       <html
@@ -76,7 +77,7 @@ export default function RootLayout({
                 showSpinner={false}
               />
               <Header locale={locale} />
-              <main className='mx-auto max-w-screen-2xl'>{children}</main>
+              <main className='mx-auto '>{children}</main>
               <Footer />
             </NextIntlClientProvider>
           </ThemeProvider>
