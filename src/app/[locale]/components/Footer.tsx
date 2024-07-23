@@ -18,21 +18,21 @@ export const Footer = () => {
             <a
               href='https://www.instagram.com/students.4students/'
               target='_blank'
-              className='rounded-full bg-background-secondary p-2 hover:bg-button'
+              className='hover:bg-b rounded-full bg-background-secondary p-2 transition-colors duration-150 hover:bg-blue-400'
             >
               <FaInstagram size='20px' />
             </a>
             <a
               href='https://linktr.ee/stu4stu'
               target='_blank'
-              className='hover:bg-b rounded-full bg-background-secondary p-2'
+              className='hover:bg-b rounded-full bg-background-secondary p-2 transition-colors duration-150 hover:bg-blue-400'
             >
               <SiLinktree size='20px' />
             </a>
             <a
               href='https://www.tiktok.com/@students.4students'
               target='_blank'
-              className='rounded-full bg-background-secondary p-2 hover:bg-blue-500'
+              className='hover:bg-b rounded-full bg-background-secondary p-2 transition-colors duration-150 hover:bg-blue-400'
             >
               <FaTiktok size='20px' />
             </a>

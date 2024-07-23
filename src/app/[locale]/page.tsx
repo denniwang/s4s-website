@@ -19,7 +19,7 @@ export default function DashboardPage({}) {
   }) {
     return (
       <div
-        className={`bg-background-card min-h-80 w-1/4 min-w-80 rounded-md p-10 text-background shadow-lg animate-slide-in-${index}`}
+        className={`min-h-80 w-1/4 min-w-80 transform rounded-md bg-background-card p-10 text-background shadow-md transition duration-500 hover:scale-125 `}
       >
         <h2 className='m-4 text-8xl font-extrabold '>{stat}</h2>
         {children}
@@ -58,45 +58,64 @@ export default function DashboardPage({}) {
                 src='/main-page-graphic.png'
               />
             </div>
+              >
+                {t('Learn_More')}
+              </Button>
+            </Link>
           </div>
-        </section>
-        <section className='mt-24 flex flex-row justify-center'>
-          <div className='flex flex-col items-center justify-center gap-12 lg:flex-row'>
-            <Card stat='80%' index={1}>
-              <p className='text-lg'>
-                of high school grads <span className='underline'>WISH</span>{' '}
-                they started applications earlier
-              </p>
-            </Card>
-            <Card stat='' index={2}>
-              <h2 className='m-4 text-8xl font-extrabold'>
-                4<span className='text-7xl'>x</span>
-              </h2>
-              <p className='text-lg'>
-                students&apos; chances of getting accepted into top schools.{' '}
-                <span>GUARANTEED</span>{' '}
-              </p>
-            </Card>
-            <Card stat='' index={3}>
-              <h2 className='m-4 text-8xl font-extrabold'>
-                9<span className='text-5xl'>/10</span>
-              </h2>
-              <p className='text-lg'>
-                of all competitive applications have done academic research or
-                personal projects
-              </p>
-            </Card>
+          <div className='w-full flex-col lg:w-6/12 '>
+            <Image
+              alt='splash_image'
+              width={2049}
+              height={1000}
+              className='w-full'
+              src='/main-page-graphic.png'
+            />
           </div>
-        </section>
-        <p className='py-10 text-xl '>
+        </div>
+      </section>
+      <section className='mt-24 flex flex-row justify-center'>
+        <div className='flex flex-col items-center justify-center gap-12 lg:flex-row'>
+          <Card stat='80%' index={1}>
+            <p className='text-lg'>
+              of high school grads <span className='underline'>WISH</span> they
+              started applications earlier
+            </p>
+          </Card>
+          <Card stat='' index={2}>
+            <h2 className='m-4 text-8xl font-extrabold'>
+              4<span className='text-7xl'>x</span>
+            </h2>
+            <p className='text-lg'>
+              students&apos; chances of getting accepted into top schools.{' '}
+              <span>GUARANTEED</span>{' '}
+            </p>
+          </Card>
+          <Card stat='' index={3}>
+            <h2 className='m-4 text-8xl font-extrabold'>
+              9<span className='text-5xl'>/10</span>
+            </h2>
+            <p className='text-lg'>
+              of all competitive applications have done academic research or
+              personal projects
+            </p>
+          </Card>
+        </div>
+      </section>
+      <div className='flex w-full flex-row justify-center'>
+        <p className='relative m-6 w-max py-10 text-center text-xl '>
           Want to be part of the statistics?{' '}
           <Link href={t('programs_link')}>
-            <span className='underline'>Join Now</span>
+            <span className='group'>
+              <span className='relative  px-1 group-hover:text-white'>
+                <span className='relative z-10'>Book a free consultation!</span>
+                <span className='absolute bottom-0 left-0 z-0 h-0.5 w-full bg-primary transition-all group-hover:h-full '></span>
+              </span>
+            </span>
           </Link>
         </p>
-
-        <Spotlight />
       </div>
-    </>
+      <Spotlight />
+    </div>
   )
 }

@@ -9,6 +9,7 @@ import { FaRegLightbulb } from 'react-icons/fa'
 import { FaHeartCircleBolt } from 'react-icons/fa6'
 import { FaSmileWink } from 'react-icons/fa'
 import { IconContext } from 'react-icons'
+import Button from '../components/Button'
 
 export default function About() {
   const t = useTranslations('')
@@ -91,6 +92,23 @@ export default function About() {
     }
   ]
 
+  function ConsultationButton() {
+    return (
+      <a
+        href='https://calendly.com/studs4students/15-min-free-intro-session'
+        target='_blank'
+      >
+        <Button
+          rounded
+          size='large'
+          className='duration-400 transform border transition-all hover:scale-110 hover:shadow-lg'
+        >
+          Book consultation now!
+        </Button>
+      </a>
+    )
+  }
+
   return (
     <>
       <main className='flex w-full flex-col items-center gap-8'>
@@ -155,14 +173,7 @@ export default function About() {
                 college in the way that&apos;s best for YOU.
               </p>
               <p> Book a consultation below to get started!</p>
-              <a
-                href='https://calendly.com/studs4students/15-min-free-intro-session'
-                target='_blank'
-              >
-                <button className='rounded-md bg-green-200 p-3 hover:shadow-sm dark:bg-emerald-700'>
-                  Book Consultation Now!
-                </button>
-              </a>
+              <ConsultationButton />
             </div>
             <div className='flex w-2/5 flex-col gap-5'>
               <div className='rounded-md bg-blue-200 p-3  text-xl shadow-md dark:bg-blue-800'>
@@ -204,7 +215,7 @@ export default function About() {
             height={600}
             alt='big little program header'
           />
-          <div className='mt-5 flex flex-col flex-wrap items-center justify-center gap-3 md:flex-row '>
+          <div className='mt-5 flex flex-col flex-wrap items-center justify-center gap-3 md:flex-row lg:w-4/5 '>
             <IconContext.Provider
               value={{ size: '80px', className: 'global-class-name' }}
             >
@@ -218,19 +229,12 @@ export default function About() {
             </IconContext.Provider>
           </div>
           <p>Get started today by booking a consultation below!</p>
-          <a
-            href='https://calendly.com/studs4students/15-min-free-intro-session'
-            target='_blank'
-          >
-            <button className='rounded-md bg-green-200 p-3 hover:shadow-sm dark:bg-emerald-700'>
-              Book Consultation Now!
-            </button>
-          </a>
+          <ConsultationButton />
         </section>
 
         <section id='WW' className='mt-10 flex w-5/6 flex-col py-24'>
           <div className='w-min'>
-            <h1 className=' w-96 animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-gray-700 py-4 pr-9 text-7xl font-bold text-text-secondary'>
+            <h1 className=' w-96 animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-gray-700 py-4 pr-9 text-7xl font-bold '>
               Writing Wonders
             </h1>
           </div>
@@ -250,14 +254,7 @@ export default function About() {
                 )
               })}
 
-              <a
-                href='https://calendly.com/studs4students/15-min-free-intro-session'
-                target='_blank'
-              >
-                <button className='rounded-md bg-green-200 p-3 hover:shadow-sm dark:bg-emerald-700'>
-                  Book Consultation Now!
-                </button>
-              </a>
+              <ConsultationButton />
             </div>
 
             <table className='w-full rounded-lg text-left text-sm text-gray-500 shadow-lg dark:text-gray-400 lg:w-1/2 rtl:text-right'>
