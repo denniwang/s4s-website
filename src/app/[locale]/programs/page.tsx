@@ -176,16 +176,18 @@ export default function About() {
               <ConsultationButton />
             </div>
             <div className='flex w-2/5 flex-col gap-5'>
-              <div className='rounded-md bg-blue-200 p-3  text-xl shadow-md dark:bg-blue-800'>
+              <div className='rounded-md  bg-stone-100 p-3 text-xl shadow-md dark:bg-background-secondary'>
                 <h2 className='text-2xl font-bold'>Big</h2>
+                <p>/big/</p>
                 <p className='italic'>noun - Informal</p>
                 <p>
                   Your mentor. They&apos;ll be ready 24/7 to guide you down a
                   path suited uniquely to yourself.{' '}
                 </p>
               </div>
-              <div className='rounded-md bg-yellow-200 p-3 text-xl shadow-md dark:bg-amber-700'>
+              <div className='rounded-md bg-stone-100 p-3 text-xl shadow-md dark:bg-background-secondary'>
                 <h2 className='text-2xl font-bold'>Little</h2>
+                <p>/&apos;lid(ə)l/</p>
                 <p className='italic'>noun - Informal</p>
                 <p>
                   The mentee - this will be you! Feels confident and secure in
