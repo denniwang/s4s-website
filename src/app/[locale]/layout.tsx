@@ -9,7 +9,7 @@ import { Inter, Rubik, Space_Grotesk } from 'next/font/google'
 import NextTopLoader from 'nextjs-toploader'
 import { Header } from './components/Header'
 import './globals.css'
-import { PopupWidget } from "react-calendly";
+import { PopupWidget } from 'react-calendly'
 import { Footer } from './components/Footer'
 
 const inter = Inter({
@@ -26,7 +26,7 @@ const space_grotesk = Space_Grotesk({
 })
 export const metadata: Metadata = {
   title: 'Students 4 Students',
-  description: 'College started yesterday. You can start today.'
+  description: 'Real college help. From students, for students.'
 }
 
 export default function RootLayout({
@@ -42,9 +42,10 @@ export default function RootLayout({
       <title>Students 4 Students</title>
       <meta content='Students 4 Students' property='og:title' />
       <meta
-        content='College started yesterday. You can start today.'
+        content='Real college help. From students, for students.'
         property='og:description'
       />
+      <link rel='icon' href='/favicon.ico' />
       <meta content='https://stu4stu.org/en' property='og:url' />
       <meta content='https://embed.com/embedimage.png' property='og:image' />
       <meta content='#43B581' data-react-helmet='true' name='theme-color' />
