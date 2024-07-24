@@ -51,7 +51,7 @@ const EmblaCarousel: React.FC<PropType> = props => {
   } = usePrevNextButtons(emblaApi, onNavButtonClick)
 
   return (
-    <section className='embla w-screen'>
+    <section className='embla w-screen '>
       <div className='embla__viewport ' ref={emblaRef}>
         <div className='embla__container flex flex-row'>
           {slides.map(slide => (
@@ -59,12 +59,12 @@ const EmblaCarousel: React.FC<PropType> = props => {
               className='embla__slide flex w-screen flex-col items-center justify-center gap-6 p-10 md:flex-row '
               key={slide.title}
             >
-              <div className='embla_slide_img'>
+              <div className='relative size-full h-[90vh] object-cover '>
                 <Image
                   src={slide.img}
-                  height={500}
-                  width={1000}
                   alt={slide.title}
+                  layout='fill'
+                  objectFit='cover'
                 />
               </div>
               <div className='flex w-1/4 flex-col gap-3'>

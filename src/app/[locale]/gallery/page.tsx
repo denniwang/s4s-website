@@ -27,9 +27,7 @@ export default function About() {
     }
   ]
   return (
-    <main>
-      <h1>Project Gallery</h1>
-
+    <main className='bg-black overflow-hidden'>
       <ProjectCarousel slides={SLIDES} options={OPTIONS} />
     </main>
   )

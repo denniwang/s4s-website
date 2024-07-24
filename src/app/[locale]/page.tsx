@@ -42,7 +42,7 @@ export default function DashboardPage({}) {
               )}
             </p>
 
-            <Link href={t('about_link')}>
+            <Link href={t('programs_link')}>
               <Button
                 rounded
                 size='large'
@@ -94,14 +94,17 @@ export default function DashboardPage({}) {
       <div className='flex w-full flex-row justify-center'>
         <p className='relative m-6 w-max py-10 text-center text-xl '>
           Want to be part of the statistics?{' '}
-          <Link href={t('programs_link')}>
+          <a
+            href='https://calendly.com/studs4students/15-min-free-intro-session'
+            target='_blank'
+          >
             <span className='group'>
               <span className='relative  px-1 group-hover:text-white'>
                 <span className='relative z-10'>Book a free consultation!</span>
                 <span className='absolute bottom-0 left-0 z-0 h-0.5 w-full bg-primary transition-all group-hover:h-full '></span>
               </span>
             </span>
-          </Link>
+          </a>
         </p>
       </div>
       <Spotlight />

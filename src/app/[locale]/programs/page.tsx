@@ -164,7 +164,7 @@ export default function About() {
             alt='big little program header'
           />
 
-          <div className='flex flex-row gap-5'>
+          <div className='flex gap-12 space-x-24'>
             <div className='flex w-3/5 flex-col gap-3'>
               <p className='text-lg md:text-2xl'>
                 Get personalized 1-on-1 mentorship for all your college needs.
@@ -172,13 +172,15 @@ export default function About() {
                 your Big will guide you every step of the way. Pave your path to
                 college in the way that&apos;s best for YOU.
               </p>
-              <p> Book a consultation below to get started!</p>
-              <ConsultationButton />
+              <div className='flex w-auto flex-col items-center justify-center'>
+                <p> Book a consultation below to get started!</p>
+                <ConsultationButton />
+              </div>
             </div>
             <div className='flex w-2/5 flex-col gap-5'>
               <div className='rounded-md  bg-stone-100 p-3 text-xl shadow-md dark:bg-background-secondary'>
-                <h2 className='text-2xl font-bold'>Big</h2>
-                <p>/big/</p>
+                <h2 className='inline text-3xl font-bold'>Big</h2>
+                <p className='inline text-lg'> &bull; /big/</p>
                 <p className='italic'>noun - Informal</p>
                 <p>
                   Your mentor. They&apos;ll be ready 24/7 to guide you down a
@@ -186,8 +188,8 @@ export default function About() {
                 </p>
               </div>
               <div className='rounded-md bg-stone-100 p-3 text-xl shadow-md dark:bg-background-secondary'>
-                <h2 className='text-2xl font-bold'>Little</h2>
-                <p>/&apos;lid(ə)l/</p>
+                <h2 className='inline text-3xl font-bold'>Little</h2>
+                <p className='inline text-lg'> &bull; /&apos;lid(ə)l/</p>
                 <p className='italic'>noun - Informal</p>
                 <p>
                   The mentee - this will be you! Feels confident and secure in
