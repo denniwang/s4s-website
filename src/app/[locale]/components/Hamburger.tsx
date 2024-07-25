@@ -7,7 +7,7 @@ export default function Hamburger() {
   const t = useTranslations('')
 
   return (
-    <div className='flex items-center border-b border-gray-400 py-8 md:hidden'>
+    <div className='flex items-center border-b border-gray-400 py-8 md:hidden mb-[-3.5vh]'>
       <div className='ml-8'>
         <a href='/'>
           <Image
@@ -53,7 +53,7 @@ export default function Hamburger() {
                 <line x1='6' y1='6' x2='18' y2='18' />
               </svg>
             </div>
-            <ul className='flex min-h-[250px] flex-col items-center justify-between'>
+            <ul className='flex min-h-[250px] flex-col items-center justify-between text-3xl'>
               <li className='my-8  border-gray-400 uppercase'>
                 <a
                   href='https://calendly.com/studs4students/15-min-free-intro-session'

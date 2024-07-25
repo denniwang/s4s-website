@@ -35,7 +35,7 @@ export default function About() {
 
   function TableBlock({ check, text }: { check: boolean; text: string }) {
     return (
-      <div className='flex flex-row items-center gap-4 text-gray-500  dark:text-gray-400 '>
+      <div className='flex flex-row items-center gap-4 text-gray-500  dark:text-gray-400 md:w-3/4 w-full '>
         {check ? (
           <svg
             className='h-4 w-4 text-green-500'
@@ -69,7 +69,7 @@ export default function About() {
             />
           </svg>
         )}
-        <p className='w-2/3 text-lg md:text-sm'>{text}</p>
+        <p className='w-full text-xl md:text-2xl'>{text}</p>
       </div>
     )
   }
@@ -77,7 +77,7 @@ export default function About() {
     return (
       <div id='detailed-pricing' className='w-full '>
         <div className='overflow-hidden'>
-          <div className='grid grid-cols-2 gap-x-16 border-b border-t border-gray-200 bg-background-secondary p-4 text-sm font-medium text-gray-900 dark:border-gray-700 dark:text-white md:text-xl'>
+          <div className='grid grid-cols-2 gap-x-16 border-b border-t border-gray-200 bg-background-secondary p-4 text-xl font-medium text-gray-900 dark:border-gray-700 dark:text-white md:text-2xl '>
             <div className='flex items-center'>Students 4 Students</div>
             <div>Big College Consulting Companies</div>
           </div>

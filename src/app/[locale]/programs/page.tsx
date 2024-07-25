@@ -35,7 +35,7 @@ export default function About() {
     {
       icon: <MdWorkHistory />,
       title: 'Your Projects',
-      desc: 'Work on the project you want and get it done when you need it.'
+      desc: 'Work on a tailored project you\'re interested in and get it done when you need it.'
     },
     {
       icon: <FaHandHoldingHand />,
@@ -65,14 +65,14 @@ export default function About() {
     {
       icon: <FaSmileWink />,
       title: 'Have Fun!',
-      desc: "Take the projects you've always wanted to build and make them a reality!"
+      desc: "Take the projects you've always wanted to build and make them a reality, along with a mentor!"
     }
   ]
 
   function WWPoint({ title, desc }: { title: string; desc: string }) {
     return (
       <div className='flex flex-col gap-2 '>
-        <h2 className='text-xl font-bold'>{title}</h2>
+        <h2 className='text-xl font-bold'> &bull; {title}</h2>
         <p className='text-lg'>{desc}</p>
       </div>
     )
@@ -120,7 +120,7 @@ export default function About() {
                   <h1 className='program-wyr text-9xl font-semibold text-emerald-500 transition-all duration-300 group-hover:text-8xl group-hover:text-white'>
                     PROJECT JAM
                   </h1>
-                  <h2 className='text-l pl-5 font-semibold text-emerald-500 transition-all duration-300 group-hover:text-xl group-hover:text-white'>
+                  <h2 className='text-2xl pl-5 font-semibold text-emerald-500 transition-all duration-300 group-hover:text-xl group-hover:text-white'>
                     10 Week Guide Project Intensive
                   </h2>
                 </div>
@@ -132,7 +132,7 @@ export default function About() {
                   <h1 className='program-wyr text-9xl font-semibold text-rose-500 duration-300 group-hover:text-8xl group-hover:text-white'>
                     WRITING WONDERS
                   </h1>
-                  <h2 className='text-l pl-5 font-semibold text-rose-500 transition-all duration-300 group-hover:text-xl group-hover:text-white'>
+                  <h2 className='text-2xl pl-5 font-semibold text-rose-500 transition-all duration-300 group-hover:text-xl group-hover:text-white'>
                     Essay Editing Workshops
                   </h2>
                 </div>
@@ -145,7 +145,7 @@ export default function About() {
                 <h1 className='program-wyr text-9xl font-semibold text-sky-500 duration-300 group-hover:text-8xl group-hover:text-white'>
                   BIG LITTLE PROGRAM
                 </h1>
-                <h2 className='text-l pl-5 font-semibold text-sky-500 transition-all duration-300 group-hover:text-xl group-hover:text-white'>
+                <h2 className='text-2xl pl-5 font-semibold text-sky-500 transition-all duration-300 group-hover:text-xl group-hover:text-white'>
                   Our Classic Mentorship Program
                 </h2>
               </div>
@@ -221,7 +221,7 @@ export default function About() {
           />
           <div className='mt-5 flex flex-col flex-wrap items-center justify-center gap-3 md:flex-row lg:w-4/5 '>
             <IconContext.Provider
-              value={{ size: '80px', className: 'global-class-name' }}
+              value={{ size: '70px', className: 'global-class-name' }}
             >
               {PJInfo1.map(info => {
                 return (
@@ -243,8 +243,6 @@ export default function About() {
             </h1>
           </div>
           <div className=' flex w-5/6 flex-row gap-4'>
-            <div className='h-5 w-5 rounded-full bg-background-secondary'></div>{' '}
-            <p>Some perks for you</p> <div className='flex-1'></div>
           </div>
           <div className='flex flex-col gap-8 lg:flex-row'>
             <div className='mt-5 flex w-full flex-col gap-3 px-3 lg:w-1/2'>
@@ -261,10 +259,10 @@ export default function About() {
               <ConsultationButton />
             </div>
 
-            <table className='w-full rounded-lg text-left text-sm text-gray-500 shadow-lg dark:text-gray-400 lg:w-1/2 rtl:text-right'>
+            <table className='w-full rounded-lg text-left text-lg text-gray-500 shadow-lg dark:text-gray-400 lg:w-1/2 rtl:text-right'>
               <thead className='bg-gray-100 text-xs uppercase text-gray-700 dark:bg-gray-700 dark:text-gray-400'>
                 <tr>
-                  <th scope='col' className='rounded-s-lg px-6 py-3'>
+                  <th scope='col' className='rounded-s-lg px-6 py-3 text-2xl'> 
                     Writing Wonders Add-On&apos;s
                   </th>
                   <th scope='col' className='px-6 py-3'></th>
@@ -287,17 +285,17 @@ export default function About() {
                     scope='row'
                     className='whitespace-nowrap px-6 py-4 font-medium text-gray-900 dark:text-white'
                   >
-                    Craft your story with a unique narrative
+                    24/7 Writing Help
                   </th>
                   <td className='px-6 py-4'></td>
                   <td className='px-6 py-4'>FREE</td>
                 </tr>
-                <tr className='bg-white dark:bg-gray-800'>
+                <tr className='bg-white dark:bg-gray-800 border-b'>
                   <th
                     scope='row'
                     className='whitespace-nowrap px-6 py-4 font-medium text-gray-900 dark:text-white'
                   >
-                    Boost your creativity
+                    Personalized and tailordered feedback 
                   </th>
                   <td className='px-6 py-4'></td>
                   <td className='px-6 py-4'>FREE</td>
@@ -309,7 +307,7 @@ export default function About() {
                     Total
                   </th>
                   <td className='px-6 py-3'></td>
-                  <td className='px-6 py-3'>FREE</td>
+                  <td className='px-6 py-3 text-button'>FREE</td>
                 </tr>
               </tfoot>
             </table>

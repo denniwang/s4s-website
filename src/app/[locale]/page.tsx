@@ -3,8 +3,6 @@ import Button from './components/Button'
 import Link from 'next/link'
 import Image from 'next/image'
 import Testimony from './components/Testimony'
-import { PopupWidget } from 'react-calendly'
-import { PopupButton } from 'react-calendly'
 import Spotlight from './components/Spotlight'
 
 export default function DashboardPage({}) {
@@ -36,7 +34,7 @@ export default function DashboardPage({}) {
               Real college help. <span className='underline'>From</span>{' '}
               students, <span className='underline'>for</span> students.{' '}
             </h1>
-            <p className='mx-10 text-lg'>
+            <p className='mx-10 text-3xl w-3/4'>
               {t(
                 'Get help with the whole admissions process, from start to finish.'
               )}
@@ -46,9 +44,11 @@ export default function DashboardPage({}) {
               <Button
                 rounded
                 size='large'
-                className='duration-400 transform border transition-all hover:scale-110 hover:shadow-lg'
+                className='duration-400 transform border transition-all hover:scale-110 hover:shadow-lg '
               >
+                <p  className='text-3xl'>
                 {t('Learn_More')}
+</p>
               </Button>
             </Link>
           </div>
@@ -66,7 +66,7 @@ export default function DashboardPage({}) {
       <section className='mt-24 flex flex-row justify-center'>
         <div className='flex flex-col items-center justify-center gap-12 lg:flex-row'>
           <Card stat='80%' index={1}>
-            <p className='text-lg'>
+            <p className='text-2xl'>
               of high school grads <span className='underline'>WISH</span> they
               started applications earlier
             </p>
@@ -75,7 +75,7 @@ export default function DashboardPage({}) {
             <h2 className='m-4 text-8xl font-extrabold'>
               4<span className='text-7xl'>x</span>
             </h2>
-            <p className='text-lg'>
+            <p className='text-2xl'>
               students&apos; chances of getting accepted into top schools.{' '}
               <span>GUARANTEED</span>{' '}
             </p>
@@ -84,7 +84,7 @@ export default function DashboardPage({}) {
             <h2 className='m-4 text-8xl font-extrabold'>
               9<span className='text-5xl'>/10</span>
             </h2>
-            <p className='text-lg'>
+            <p className='text-2xl'>
               of all competitive applications have done academic research or
               personal projects
             </p>
@@ -92,7 +92,7 @@ export default function DashboardPage({}) {
         </div>
       </section>
       <div className='flex w-full flex-row justify-center'>
-        <p className='relative m-6 w-max py-10 text-center text-xl '>
+        <p className='relative m-6 w-max py-10 text-center text-3xl '>
           Want to be part of the statistics?{' '}
           <a
             href='https://calendly.com/studs4students/15-min-free-intro-session'

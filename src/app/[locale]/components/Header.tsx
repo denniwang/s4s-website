@@ -39,11 +39,8 @@ export const Header: FC<Props> = ({ locale }) => {
               >
                 <span className='group'>
                   <span className='relative  px-1 group-hover:text-white'>
-                    <span className='z-10 lg:relative'>
+                    <span className='z-10 lg:relative whitespace-nowrap'>
                       *LIMITED TIME* FREE CONSULTATION
-                    </span>
-                    <span className='relative z-10  lg:hidden'>
-                      FREE CONSULTATION
                     </span>
                     <span className='absolute bottom-0 left-0 z-0 h-0.5 w-full bg-text-secondary transition-all group-hover:h-full '></span>
                   </span>
