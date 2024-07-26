@@ -1,9 +1,12 @@
+'use client'
 import { useTranslations } from 'next-intl'
 import Button from './components/Button'
 import Link from 'next/link'
 import Image from 'next/image'
 import Testimony from './components/Testimony'
 import Spotlight from './components/Spotlight'
+import Modal from './components/Modal'
+import React from 'react'
 
 export default function DashboardPage({}) {
   function Card({
@@ -25,8 +28,9 @@ export default function DashboardPage({}) {
     )
   }
   const t = useTranslations('')
+  const [showModal, setShowModal] = React.useState(true)
   return (
-    <div className='mt-10 flex flex-col self-center text-center md:mt-1'>
+    <main className='mt-10 flex flex-col self-center text-center md:mt-1'>
       <section className='flex w-full flex-col items-center bg-background pb-12  md:h-1/2 '>
         <div className='pl-15 flex h-full w-full flex-col-reverse items-center justify-between align-bottom lg:flex-row'>
           <div className='flex flex-col items-center gap-5 lg:w-1/2'>
@@ -34,7 +38,7 @@ export default function DashboardPage({}) {
               Real college help. <span className='underline'>From</span>{' '}
               students, <span className='underline'>for</span> students.{' '}
             </h1>
-            <p className='mx-10 text-3xl w-3/4'>
+            <p className='mx-10 w-3/4 text-3xl'>
               {t(
                 'Get help with the whole admissions process, from start to finish.'
               )}
@@ -46,12 +50,11 @@ export default function DashboardPage({}) {
                 size='large'
                 className='duration-400 transform border transition-all hover:scale-110 hover:shadow-lg '
               >
-                <p  className='text-3xl'>
-                {t('Learn_More')}
-</p>
+                <p className='text-3xl'>{t('Learn_More')}</p>
               </Button>
             </Link>
           </div>
+          <Modal showModal={showModal} setShowModal={setShowModal} />
           <div className='w-full flex-col lg:w-6/12 '>
             <Image
               alt='splash_image'
@@ -108,6 +111,6 @@ export default function DashboardPage({}) {
         </p>
       </div>
       <Spotlight />
-    </div>
+    </main>
   )
 }

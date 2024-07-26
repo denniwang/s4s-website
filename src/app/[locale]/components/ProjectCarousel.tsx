@@ -56,10 +56,10 @@ const EmblaCarousel: React.FC<PropType> = props => {
         <div className='embla__container flex flex-row'>
           {slides.map(slide => (
             <div
-              className='embla__slide flex w-screen flex-col items-center justify-center gap-6 p-10 md:flex-row '
+              className='embla__slide flex w-screen flex-col items-center justify-center gap-6 px-5 md:flex-row'
               key={slide.title}
             >
-              <div className='relative size-full h-[90vh] object-cover '>
+              <div className='relative size-full h-[45vh] object-cover md:h-[85vh] '>
                 <Image
                   src={slide.img}
                   alt={slide.title}
@@ -67,7 +67,7 @@ const EmblaCarousel: React.FC<PropType> = props => {
                   objectFit='cover'
                 />
               </div>
-              <div className='flex w-1/4 flex-col gap-3'>
+              <div className='flex w-5/6 flex-col gap-3 md:w-1/4'>
                 <h2 className='text-4xl font-bold'>{slide.title}</h2>
                 <p className='italic'>{slide.subtitle}</p>
                 <br></br>

@@ -31,34 +31,35 @@ export const Header: FC<Props> = ({ locale }) => {
             </div>
           </Link>
           <div className='flex-1'></div>
-          <div className='flex flex-row items-center gap-3'>
+          <div className='md:text-md flex flex-row items-center gap-3 text-sm'>
             <nav className='mr-10 inline-flex gap-5'>
-              <a
-                href='https://calendly.com/studs4students/15-min-free-intro-session'
-                target='_blank'
-              >
-                <span className='group'>
-                  <span className='relative  px-1 group-hover:text-white'>
-                    <span className='z-10 lg:relative whitespace-nowrap'>
-                      *LIMITED TIME* FREE CONSULTATION
-                    </span>
-                    <span className='absolute bottom-0 left-0 z-0 h-0.5 w-full bg-text-secondary transition-all group-hover:h-full '></span>
-                  </span>
-                </span>
-              </a>
-
+              <Link lang={locale} href={`/about`}>
+                {t('About')}
+              </Link>
               <Link lang={locale} href={`/programs`}>
                 {t('Programs')}
               </Link>
               <Link lang={locale} href={`/gallery`}>
                 {t('Gallery')}
               </Link>
-              <Link lang={locale} href={`/about`}>
-                {t('About')}
-              </Link>
+
+              <a
+                href='https://calendly.com/studs4students/15-min-free-intro-session'
+                target='_blank'
+              >
+                <span className='group'>
+                  <span className='relative  px-1 group-hover:text-white'>
+                    <span className='z-10 hidden lg:relative lg:inline'>
+                      *LIMITED TIME* FREE CONSULTATION
+                    </span>
+                    <span className='relative z-10  lg:hidden '>
+                      FREE CONSULTATION
+                    </span>
+                    <span className='absolute bottom-0 left-0 z-0 h-0.5 w-full bg-text-secondary transition-all group-hover:h-full '></span>
+                  </span>
+                </span>
+              </a>
             </nav>
-            <ThemeSwitch />
-            <LangSwitcher />
           </div>
         </div>
       </div>

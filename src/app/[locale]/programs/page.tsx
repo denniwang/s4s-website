@@ -112,8 +112,8 @@ export default function About() {
   return (
     <>
       <main className='flex w-full flex-col items-center gap-8'>
-        <section className='items-flex-start flex h-[92vh] flex-row'>
-          <div className='flex h-full w-1/2 flex-col justify-between'>
+        <section className='items-flex-start flex h-[92vh] w-full flex-col md:flex-row'>
+          <div className='flex h-full w-full flex-col justify-between md:w-1/2'>
             <div className='program-selector group h-1/2'>
               <a href='#PJ'>
                 <div className='flex h-full w-full flex-col justify-center bg-emerald-100 p-5 transition-colors duration-300 group-hover:bg-emerald-300'>
@@ -139,7 +139,7 @@ export default function About() {
               </a>
             </div>
           </div>
-          <div className='group h-full w-1/2'>
+          <div className='group h-full w-full md:w-1/2'>
             <a href='#BL'>
               <div className='flex h-full w-full flex-col justify-center bg-sky-100 p-5 transition-colors duration-300 group-hover:bg-sky-300'>
                 <h1 className='program-wyr text-9xl font-semibold text-sky-500 duration-300 group-hover:text-8xl group-hover:text-white'>
