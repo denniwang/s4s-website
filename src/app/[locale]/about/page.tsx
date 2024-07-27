@@ -35,7 +35,7 @@ export default function About() {
 
   function TableBlock({ check, text }: { check: boolean; text: string }) {
     return (
-      <div className='flex flex-row items-center gap-4 text-gray-500  dark:text-gray-400 md:w-3/4 w-full '>
+      <div className='flex w-full w-full flex-row items-center gap-4  px-3 text-gray-500 dark:text-gray-400 md:w-3/4 '>
         {check ? (
           <svg
             className='h-4 w-4 text-green-500'
@@ -69,15 +69,15 @@ export default function About() {
             />
           </svg>
         )}
-        <p className='w-full text-xl md:text-2xl'>{text}</p>
+        <p className='w-full text-lg md:text-xl lg:text-2xl'>{text}</p>
       </div>
     )
   }
   function Table() {
     return (
-      <div id='detailed-pricing' className='w-full '>
-        <div className='overflow-hidden'>
-          <div className='grid grid-cols-2 gap-x-16 border-b border-t border-gray-200 bg-background-secondary p-4 text-xl font-medium text-gray-900 dark:border-gray-700 dark:text-white md:text-2xl '>
+      <div className='flex w-full flex-row items-center justify-center'>
+        <div className='w-full overflow-hidden  rounded-md shadow-lg lg:w-3/4'>
+          <div className='grid grid-cols-2 gap-x-16 border-b border-t border-gray-200 bg-background-secondary p-4 px-6 text-xl font-medium text-gray-900 dark:border-gray-700 dark:text-white md:text-2xl '>
             <div className='flex items-center'>Students 4 Students</div>
             <div>Big College Consulting Companies</div>
           </div>
@@ -178,7 +178,9 @@ export default function About() {
         <div className='flex flex-row justify-center'>
           <span className='text-bold text-6xl '>&ldquo;</span>
           <p className='pt-4'>
-            Sit by the fire. Tuxedo cats always looking dapper meowwww
+            Our goal has always been to go that extra mile in helping our
+            students present themselves at their very best, whether its through
+            round-the-clock access to Bigs or
           </p>
           <span className='text-bold text-6xl'>&quot;</span>
         </div>
