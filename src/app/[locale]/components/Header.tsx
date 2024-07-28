@@ -14,7 +14,7 @@ export const Header: FC<Props> = ({ locale }) => {
   return (
     <>
       <Hamburger />
-      <div className='sticky top-0 z-20 mx-auto hidden w-full items-center justify-between bg-gradient-to-t from-background to-background-secondary p-2 md:block'>
+      <div className='sticky top-0 z-20 mx-auto hidden w-full items-center justify-between bg-gradient-to-t from-background to-background-secondary p-2 shadow-md shadow-background md:block'>
         <div className='flex flex-row '>
           <Link lang={locale} href='/'>
             <div className='align-center flex flex-row items-center'>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Button from './Button'
 
 export default function Modal({
@@ -8,6 +8,10 @@ export default function Modal({
   showModal: boolean
   setShowModal: React.Dispatch<React.SetStateAction<boolean>>
 }) {
+  function noModal() {
+    setShowModal(false)
+    sessionStorage.setItem('modal', 'false')
+  }
   return (
     <>
       <button
@@ -48,7 +52,7 @@ export default function Modal({
                   <button
                     className='background-transparent mb-1 mr-1 px-6 text-sm font-bold uppercase text-red-500 outline-none transition-all duration-150 ease-linear focus:outline-none md:py-2'
                     type='button'
-                    onClick={() => setShowModal(false)}
+                    onClick={noModal}
                   >
                     Miss out
                   </button>

@@ -6,7 +6,7 @@ import Image from 'next/image'
 import Testimony from './components/Testimony'
 import Spotlight from './components/Spotlight'
 import Modal from './components/Modal'
-import React from 'react'
+import React, { useEffect } from 'react'
 
 export default function DashboardPage({}) {
   function Card({
@@ -28,7 +28,15 @@ export default function DashboardPage({}) {
     )
   }
   const t = useTranslations('')
-  const [showModal, setShowModal] = React.useState(true)
+  const [showModal, setShowModal] = React.useState(false)
+
+  useEffect(() => {
+    if (sessionStorage.getItem('modal') != 'false') {
+      setShowModal(true)
+      console.log('stopped showing modal')
+    }
+    console.log('finished checking modal')
+  }, [])
   return (
     <main className='mt-10 flex flex-col self-center text-center md:mt-1'>
       <section className='flex w-full flex-col items-center bg-background pb-12  md:h-1/2 '>
