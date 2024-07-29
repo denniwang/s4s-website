@@ -16,8 +16,6 @@
     --dropdown-hover: #b3e5ff;
     --button-secondary: #e7e7e7;
     --selected: #9ec6ff;
-    --logo-shadow: #053949;
-    --logo-body: #00d8fe;
     --span-bg: linear-gradient(to right, #4e4e9e, #097fa5, #3e87ed);
   }
   .dark {
@@ -32,8 +30,6 @@
     --dropdown-hover: #454545;
     --button-secondary: #1d1d1d;
     --selected: #324e70;
-    --logo-shadow: #0a2e36;
-    --logo-body: #097fa5;
     --span-bg: linear-gradient(to right, #8c00ff, #0fb4e1, #a1d930, #ae0000);
   }
 }

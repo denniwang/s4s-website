@@ -18,18 +18,18 @@ export default function Spotlight() {
           <div className='h-0.5 w-60 bg-primary md:h-60 md:w-0.5'></div>
           <div className='flex-1'>
             <p className='inline-block text-lg lg:text-2xl '>
-              &quot;The Big Little Program was incredible. Going into my final
-              year of high school, I was confused and honestly super stressed
-              about college because I had no idea what I should be doing.{' '}
-              <span className='inline lg:hidden'>&quot;</span>
-              <br></br>
-              <br></br>
               <span className='hidden lg:block'>
-                My Big, Dennis, gave me invaluable advice for the whole process.
-                He helped me find clubs, extracurriculars, and competitions that
-                strengthened my profile. I felt so much more confident and
-                secure since we started meeting.&quot;
+                &quot;The Big Little Program was incredible. Going into my final
+                year of high school, I was confused and honestly super stressed
+                about college because I had no idea what I should be doing.{' '}
               </span>
+              <br></br>
+              <br></br>
+              <span className='inline lg:hidden'>&quot;</span>
+              My Big, Dennis, gave me invaluable advice for the entire
+              application process. He helped me find clubs, extracurriculars,
+              and competitions that strengthened my profile. I felt so much more
+              confident and secure since we started meeting.&quot;
             </p>
 
             <h2 className='pt-3 text-right text-xl font-bold'>
