@@ -72,7 +72,7 @@ const EmblaCarousel: React.FC<PropType> = props => {
                 <p className='italic'>{slide.subtitle}</p>
                 <br></br>
                 <p className=''>{slide.desc}</p>
-                <a>
+                <a href={slide.demo} target='_blank'>
                   <div className='flex h-12 flex-row items-center gap-3 bg-blue-400 px-3'>
                     <p>See for yourself!</p>
                     <div className='flex-1'></div>
