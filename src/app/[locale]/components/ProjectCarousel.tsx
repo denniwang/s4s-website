@@ -116,8 +116,18 @@ const EmblaCarousel: React.FC<PropType> = props => {
 
       <div className='embla__controls'>
         <div className='embla__buttons'>
-          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+          <div className='scale-105 rounded-full transition-all duration-150 hover:bg-background-secondary'>
+            <PrevButton
+              onClick={onPrevButtonClick}
+              disabled={prevBtnDisabled}
+            />
+          </div>
+          <div className='scale-105 rounded-full p-1 transition-all duration-150 hover:bg-background-secondary'>
+            <NextButton
+              onClick={onNextButtonClick}
+              disabled={nextBtnDisabled}
+            />
+          </div>
         </div>
       </div>
     </section>

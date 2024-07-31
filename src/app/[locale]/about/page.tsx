@@ -9,7 +9,7 @@ export default function About() {
       img: '/andrew.jpg',
       name: 'Andrew Chen',
       school: "UW Seattle '27",
-      desc: 'Andrew is a top student at UW, studying Applied Mathematics, he is passionate about mentoring the next generation and learning new things.'
+      desc: "Andrew is a computer science TA and an applied math major at the University of Washington. Ever laughed or cringed at any of our TikToks? He's the guy to blame."
     },
     {
       img: '/keyon.jpg',
@@ -154,23 +154,44 @@ export default function About() {
 
   return (
     <main className='flex flex-row justify-center'>
-      <div className='flex w-11/12 flex-col justify-center gap-8 md:w-4/5'>
+      <div className='flex w-11/12 flex-col justify-center gap-8 lg:w-4/5'>
         <h1 className='mt-10 text-center text-5xl font-bold'>About S4S</h1>
 
         <h2 className='text-4xl font-bold'>101 - Who Are We?</h2>
-        <div className='flex flex-col justify-center gap-5 md:flex-row'>
-          <div className='flex flex-col justify-center md:w-1/2'>
+        <div className='flex flex-col justify-center gap-5 lg:flex-row'>
+          <div className='flex flex-col items-center justify-center lg:w-2/5'>
             <p className=' md:text-xl'>
-              Students4Students was founded by five college students with the
-              goal of helping high schoolers get into their dream colleges. We
-              understand that college admissions are tough—we&apos;ve
-              experienced it ourselves—which is why we&apos;re committed to
-              helping applicants perfect the process. There are many different
-              factors that can impact your admission, and we&apos;re here to
-              help you ace them all.
+              <span>
+                {' '}
+                &bull; S4S was founded by FIVE{' '}
+                <span className='transform font-bold transition-all duration-300 hover:text-2xl  hover:text-button hover:underline'>
+                  successful
+                </span>{' '}
+                university students!
+              </span>
+              <br></br>
+              <br></br>
+              <span>
+                &bull; We want to help high schoolers get into their dream
+                colleges by providing{' '}
+                <span className='transform font-bold transition-all duration-300 hover:text-2xl  hover:text-button hover:underline'>
+                  relevant, up-to-date advice, specific resources, and diverse
+                  networking.
+                </span>
+              </span>
+              <br></br>
+              <br></br>
+              <span>
+                &bull; College admissions are incredibly tough, especially for
+                first-generation students, and we&apos;re here to help you{' '}
+                <span className='transform font-bold transition-all duration-300 hover:text-2xl hover:text-button hover:underline'>
+                  ace
+                </span>{' '}
+                the process!
+              </span>
             </p>
           </div>
-          <div className='md:w-1/2'>
+          <div className='w-4/6 overflow-hidden rounded-lg shadow-[10px_10px_0px_0px_rgba(9,64,103,0.9)] lg:w-1/3'>
             <Image
               src='/whoarewe.jpg'
               width={1000}
@@ -180,12 +201,10 @@ export default function About() {
           </div>
         </div>
 
-        <div className='flex flex-row justify-center'>
+        <div className='flex flex-row justify-center '>
           <span className='text-bold text-6xl '>&ldquo;</span>
-          <p className='pt-4'>
-            Our goal has always been to go that extra mile in helping our
-            students present themselves at their very best, whether its through
-            round-the-clock access to Bigs or
+          <p className='pt-4 text-center text-3xl'>
+            Our approach in one word? Comprehensive.
           </p>
           <span className='text-bold text-6xl'>&quot;</span>
         </div>
@@ -193,12 +212,12 @@ export default function About() {
         <h2 className='text-4xl font-bold'>
           102 - What makes us... different?
         </h2>
-        <div className='flex flex-col justify-center gap-5 md:flex-row'>
-          <div className='md:w-1/3'>
+        <div className='flex flex-col justify-center gap-8 lg:flex-row'>
+          <div className=' relative mr-5 w-full overflow-hidden rounded-full shadow-[10px_10px_0px_0px_rgba(9,64,103,0.9)] lg:w-1/4 '>
             <Image
-              src='/zitong.png'
+              src='/different.jpg'
+              height={500}
               width={500}
-              height={200}
               alt='who are we image'
             />
           </div>
