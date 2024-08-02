@@ -1,56 +1,68 @@
-import { useTranslations } from 'next-intl'
+'use client'
 import Image from 'next/image'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import { useEffect } from 'react'
 
 export default function About() {
-  const t = useTranslations('')
-
   const team = [
     {
       img: '/andrew.jpg',
       name: 'Andrew Chen',
       school: "UW Seattle '27",
-      desc: "Andrew is a computer science TA and an applied math major at the University of Washington. Ever laughed or cringed at any of our TikToks? He's the guy to blame."
+      desc: "Andrew is a computer science TA and an applied math major at the University of Washington. Ever laughed or cringed at any of our TikToks? He's the guy to blame.",
+      delay: 0
     },
     {
       img: '/keyon.jpg',
       name: 'Keyon Jazayeri',
       school: "UC Irvine '27",
-      desc: 'Keyon is a stellar student at UCI, majoring in Computer Science. He loves to work on startups and practices jiu jitsu in his free time.'
+      desc: 'Keyon is a stellar student at UCI, majoring in Computer Science. He loves to work on startups and practices jiu jitsu in his free time.',
+      delay: 100
     },
 
     {
       img: '/darsh.jpg',
       name: 'Darsh Verma',
       school: "UCLA '27",
-      desc: 'Darsh is a math and CS major at UCLA, and loves working out, playing cricket, and cooking in his free time. He is on track to solving the Riemann Hypothesis by the end of his career.'
+      desc: 'Darsh is a math and CS major at UCLA, and loves working out, playing cricket, and cooking in his free time. He is on track to solving the Riemann Hypothesis by the end of his career.',
+      delay: 200
     },
 
     {
       img: '/dennis.jpg',
       name: 'Dennis Wang',
       school: "Northeastern University '27",
-      desc: 'Dennis is a CS + Business major at NEU, he loves to play tennis and participate in hackathons. He aspires to be retired by 30.'
+      desc: 'Dennis is a CS + Business major at NEU, he loves to play tennis and participate in hackathons. He aspires to be retired by 30.',
+      delay: 300
     },
     {
       img: '/kashish.jpg',
       name: 'Kashish Sachdeva',
       school: "UCLA '27",
-      desc: 'Kashish is a Pre-Law student at UCLA, she is an expert in the college admissions process and loves to help students express themselves through writing.'
+      desc: 'Kashish is a Pre-Law student at UCLA, she is an expert in the college admissions process and loves to help students express themselves through writing.',
+      delay: 400
     }
   ]
   function PersonCard({
     img,
     name,
     college,
-    children
+    children,
+    delay
   }: {
     img: string
     name: string
     college: string
     children: React.ReactNode
+    delay: number
   }) {
     return (
-      <div className='space-between flex w-4/5 flex-col items-center gap-5 lg:w-1/5 '>
+      <div
+        className='space-between animate-hidden flex w-4/5 flex-col items-center gap-5 lg:w-1/5 '
+        data-aos='fade-right'
+        data-aos-delay={delay}
+      >
         <div className='shadow-md'>
           <Image
             src={img}
@@ -113,7 +125,10 @@ export default function About() {
   }
   function Table() {
     return (
-      <div className='text-text flex w-full flex-row items-center justify-center'>
+      <div
+        className='text-text flex w-full flex-row items-center justify-center'
+        data-aos='flip-down'
+      >
         <div className='w-full overflow-hidden  rounded-md shadow-lg lg:w-3/4'>
           <div className='grid grid-cols-2 gap-x-16 border-b border-t border-gray-200 bg-background-secondary p-4 px-6 text-xl font-medium text-primary dark:border-gray-700 dark:text-white md:text-2xl '>
             <div className='flex items-center'>Students 4 Students</div>
@@ -151,6 +166,10 @@ export default function About() {
       </div>
     )
   }
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 })
+  }, [])
 
   return (
     <main className='flex flex-row justify-center'>
@@ -191,7 +210,10 @@ export default function About() {
               </span>
             </p>
           </div>
-          <div className='w-4/6 overflow-hidden rounded-lg shadow-[10px_10px_0px_0px_rgba(9,64,103,0.9)] lg:w-1/3'>
+          <div
+            data-aos='zoom-in-left'
+            className='h-min w-4/6 overflow-hidden rounded-lg shadow-[10px_10px_0px_0px_rgba(9,64,103,0.9)] lg:w-1/3'
+          >
             <Image
               src='/whoarewe.jpg'
               width={1000}
@@ -213,7 +235,10 @@ export default function About() {
           102 - What makes us... different?
         </h2>
         <div className='flex flex-col justify-center gap-8 lg:flex-row'>
-          <div className=' relative mr-5 w-full overflow-hidden rounded-full shadow-[10px_10px_0px_0px_rgba(9,64,103,0.9)] lg:w-1/4 '>
+          <div
+            className=' relative mr-5 w-full overflow-hidden rounded-full shadow-[10px_10px_0px_0px_rgba(9,64,103,0.9)] lg:w-1/4 '
+            data-aos='fade-right'
+          >
             <Image
               src='/different.jpg'
               height={500}
@@ -242,7 +267,7 @@ export default function About() {
         <h2 className='text-4xl font-bold'>
           103 - Ok but... who are we <span className='underline'>REALLY</span>?
         </h2>
-        <div className='flex flex-col items-center justify-center justify-center gap-5 md:flex-row md:items-start'>
+        <div className='flex flex-col items-center justify-center gap-5 md:flex-row md:items-start'>
           {team.map(person => {
             return (
               <PersonCard
@@ -250,6 +275,7 @@ export default function About() {
                 name={person.name}
                 college={person.school}
                 key={person.name}
+                delay={person.delay}
               >
                 {person.desc}
               </PersonCard>

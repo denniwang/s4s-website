@@ -162,3 +162,18 @@
     transform 1s ease-out,
     opacity 1s ease-out;
 }
+
+.animate-hidden {
+  opacity: 0;
+  transition: all 1s;
+}
+
+.animate-show {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion) {
+  .animate-hidden {
+    transition: none;
+  }
+}

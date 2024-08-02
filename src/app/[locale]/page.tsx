@@ -27,7 +27,6 @@ export default function DashboardPage({}) {
       </div>
     )
   }
-  const t = useTranslations('')
   const [showModal, setShowModal] = React.useState(false)
 
   useEffect(() => {
@@ -47,18 +46,16 @@ export default function DashboardPage({}) {
               students, <span className='underline'>for</span> students.{' '}
             </h1>
             <p className='mx-10 w-3/4 text-3xl'>
-              {t(
-                'Get help with the whole admissions process, from start to finish.'
-              )}
+              Get help with the whole admissions process, from start to finish.
             </p>
 
-            <Link href={t('programs_link')}>
+            <Link href='/en/about'>
               <Button
                 rounded
                 size='large'
                 className='duration-400 transform border transition-all hover:scale-110 hover:shadow-lg '
               >
-                <p className='text-3xl'>{t('Learn_More')}</p>
+                <p className='text-3xl'>Learn More</p>
               </Button>
             </Link>
           </div>

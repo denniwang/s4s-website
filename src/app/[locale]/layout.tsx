@@ -36,7 +36,6 @@ export default function RootLayout({
   children: React.ReactNode
   params: { locale: string }
 }) {
-  const messages = useMessages()
   return (
     <>
       <title>Students 4 Students</title>
@@ -62,10 +61,7 @@ export default function RootLayout({
             defaultTheme='light'
             themes={['light', 'dark']}
           >
-            <NextIntlClientProvider
-              locale={locale}
-              messages={messages as AbstractIntlMessages}
-            >
+            <NextIntlClientProvider locale={locale}>
               <NextTopLoader
                 initialPosition={0.08}
                 crawlSpeed={200}
