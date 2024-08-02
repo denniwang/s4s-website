@@ -7,6 +7,8 @@ import Testimony from './components/Testimony'
 import Spotlight from './components/Spotlight'
 import Modal from './components/Modal'
 import React, { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 export default function DashboardPage({}) {
   function Card({
@@ -21,6 +23,8 @@ export default function DashboardPage({}) {
     return (
       <div
         className={`min-h-80 w-1/4 min-w-80 transform rounded-md bg-background-card p-10 text-background shadow-md transition duration-500 hover:scale-110 `}
+        data-aos='fade-up'
+        data-aos-delay={index * 100}
       >
         <h2 className='m-4 text-8xl font-extrabold '>{stat}</h2>
         {children}
@@ -28,6 +32,10 @@ export default function DashboardPage({}) {
     )
   }
   const [showModal, setShowModal] = React.useState(false)
+  useEffect(() => {
+    AOS.init({ duration: 1000 })
+    console.log('AOS init')
+  }, [])
 
   useEffect(() => {
     if (sessionStorage.getItem('modal') != 'false') {
@@ -37,7 +45,7 @@ export default function DashboardPage({}) {
     console.log('finished checking modal')
   }, [])
   return (
-    <main className='mt-10 flex flex-col self-center text-center md:mt-1'>
+    <main className='mt-10 flex flex-col self-center overflow-hidden text-center md:mt-1'>
       <section className='flex w-full flex-col items-center bg-background pb-12  md:h-1/2 '>
         <div className='pl-15 flex h-full w-full flex-col-reverse items-center justify-between align-bottom lg:flex-row'>
           <div className='flex flex-col items-center gap-5 lg:w-1/2'>
@@ -115,7 +123,9 @@ export default function DashboardPage({}) {
           </a>
         </p>
       </div>
-      <Spotlight />
+      <div data-aos='flip-up'>
+        <Spotlight />
+      </div>
     </main>
   )
 }
