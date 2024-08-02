@@ -234,9 +234,9 @@ export default function About() {
         <h2 className='text-4xl font-bold'>
           102 - What makes us... different?
         </h2>
-        <div className='flex flex-col justify-center gap-8 lg:flex-row'>
+        <div className='flex flex-col items-center justify-center gap-8 lg:flex-row'>
           <div
-            className=' relative mr-5 w-full overflow-hidden rounded-full shadow-[10px_10px_0px_0px_rgba(9,64,103,0.9)] lg:w-1/4 '
+            className=' relative mr-5 h-min w-1/2 overflow-hidden rounded-full shadow-[10px_10px_0px_0px_rgba(9,64,103,0.9)] lg:w-1/4 '
             data-aos='fade-right'
           >
             <Image

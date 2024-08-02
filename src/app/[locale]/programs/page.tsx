@@ -35,7 +35,7 @@ export default function About() {
     {
       icon: <MdWorkHistory />,
       title: 'Your Projects',
-      desc: 'Work on a tailored project you\'re interested in and get it done when you need it.'
+      desc: "Work on a tailored project you're interested in and get it done when you need it."
     },
     {
       icon: <FaHandHoldingHand />,
@@ -120,7 +120,7 @@ export default function About() {
                   <h1 className='program-wyr text-9xl font-semibold text-emerald-500 transition-all duration-300 group-hover:text-8xl group-hover:text-white'>
                     PROJECT JAM
                   </h1>
-                  <h2 className='text-2xl pl-5 font-semibold text-emerald-500 transition-all duration-300 group-hover:text-xl group-hover:text-white'>
+                  <h2 className='pl-5 text-2xl font-semibold text-emerald-500 transition-all duration-300 group-hover:text-xl group-hover:text-white'>
                     10 Week Guide Project Intensive
                   </h2>
                 </div>
@@ -132,7 +132,7 @@ export default function About() {
                   <h1 className='program-wyr text-9xl font-semibold text-rose-500 duration-300 group-hover:text-8xl group-hover:text-white'>
                     WRITING WONDERS
                   </h1>
-                  <h2 className='text-2xl pl-5 font-semibold text-rose-500 transition-all duration-300 group-hover:text-xl group-hover:text-white'>
+                  <h2 className='pl-5 text-2xl font-semibold text-rose-500 transition-all duration-300 group-hover:text-xl group-hover:text-white'>
                     Essay Editing Workshops
                   </h2>
                 </div>
@@ -145,7 +145,7 @@ export default function About() {
                 <h1 className='program-wyr text-9xl font-semibold text-sky-500 duration-300 group-hover:text-8xl group-hover:text-white'>
                   BIG LITTLE PROGRAM
                 </h1>
-                <h2 className='text-2xl pl-5 font-semibold text-sky-500 transition-all duration-300 group-hover:text-xl group-hover:text-white'>
+                <h2 className='pl-5 text-2xl font-semibold text-sky-500 transition-all duration-300 group-hover:text-xl group-hover:text-white'>
                   Our Classic Mentorship Program
                 </h2>
               </div>
@@ -166,13 +166,13 @@ export default function About() {
 
           <div className='flex gap-12 space-x-24'>
             <div className='flex w-3/5 flex-col gap-3'>
-              <p className='text-lg md:text-2xl'>
+              <p className='text-center text-lg leading-loose md:text-2xl'>
                 Get personalized 1-on-1 mentorship for all your college needs.
                 From clubs and extracurriculars to essays and personal projects,
                 your Big will guide you every step of the way. Pave your path to
                 college in the way that&apos;s best for YOU.
               </p>
-              <div className='flex w-auto flex-col items-center justify-center'>
+              <div className='flex w-auto flex-col items-center justify-center gap-5'>
                 <p> Book a consultation below to get started!</p>
                 <ConsultationButton />
               </div>
@@ -242,8 +242,7 @@ export default function About() {
               Writing Wonders
             </h1>
           </div>
-          <div className=' flex w-5/6 flex-row gap-4'>
-          </div>
+          <div className=' flex w-5/6 flex-row gap-4'></div>
           <div className='flex flex-col gap-8 lg:flex-row'>
             <div className='mt-5 flex w-full flex-col gap-3 px-3 lg:w-1/2'>
               {WWInfo.map(info => {
@@ -262,7 +261,7 @@ export default function About() {
             <table className='w-full rounded-lg text-left text-lg text-gray-500 shadow-lg dark:text-gray-400 lg:w-1/2 rtl:text-right'>
               <thead className='bg-gray-100 text-xs uppercase text-gray-700 dark:bg-gray-700 dark:text-gray-400'>
                 <tr>
-                  <th scope='col' className='rounded-s-lg px-6 py-3 text-2xl'> 
+                  <th scope='col' className='rounded-s-lg px-6 py-3 text-2xl'>
                     Writing Wonders Add-On&apos;s
                   </th>
                   <th scope='col' className='px-6 py-3'></th>
@@ -290,12 +289,12 @@ export default function About() {
                   <td className='px-6 py-4'></td>
                   <td className='px-6 py-4'>FREE</td>
                 </tr>
-                <tr className='bg-white dark:bg-gray-800 border-b'>
+                <tr className='border-b bg-white dark:bg-gray-800'>
                   <th
                     scope='row'
                     className='whitespace-nowrap px-6 py-4 font-medium text-gray-900 dark:text-white'
                   >
-                    Personalized and tailordered feedback 
+                    Personalized and tailordered feedback
                   </th>
                   <td className='px-6 py-4'></td>
                   <td className='px-6 py-4'>FREE</td>
