@@ -10,6 +10,9 @@ import { FaHeartCircleBolt } from 'react-icons/fa6'
 import { FaSmileWink } from 'react-icons/fa'
 import { IconContext } from 'react-icons'
 import Button from '../components/Button'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import { useEffect } from 'react'
 
 export default function About() {
   const t = useTranslations('')
@@ -24,7 +27,10 @@ export default function About() {
     icon: React.ReactNode
   }) {
     return (
-      <div className='flex h-[30vh] max-w-80 flex-col items-center gap-3 rounded-lg bg-background-secondary p-3 p-3 text-center shadow-md'>
+      <div
+        data-aos='zoom-in-up'
+        className='flex h-[30vh] max-w-80 flex-col items-center gap-3 rounded-lg bg-background-secondary  p-3 text-center shadow-md'
+      >
         {icon}
         {children}
         <p className='md:text-md'>{desc}</p>
@@ -109,6 +115,10 @@ export default function About() {
     )
   }
 
+  useEffect(() => {
+    AOS.init({ duration: 1000 })
+  }, [])
+
   return (
     <>
       <main className='flex w-full flex-col items-center gap-8'>
@@ -166,35 +176,54 @@ export default function About() {
 
           <div className='flex gap-12 space-x-24'>
             <div className='flex w-3/5 flex-col gap-3'>
-              <p className='text-center text-lg leading-loose md:text-2xl'>
+              <p className='text-center text-lg leading-loose md:text-3xl'>
                 Get personalized 1-on-1 mentorship for all your college needs.
-                From clubs and extracurriculars to essays and personal projects,
-                your Big will guide you every step of the way. Pave your path to
-                college in the way that&apos;s best for YOU.
+                From{' '}
+                <span className='transform font-bold transition-all duration-300 hover:text-4xl  hover:text-button hover:underline'>
+                  clubs
+                </span>{' '}
+                and{' '}
+                <span className='transform font-bold transition-all duration-300 hover:text-4xl  hover:text-button hover:underline'>
+                  extracurriculars
+                </span>{' '}
+                to{' '}
+                <span className='transform font-bold transition-all duration-300 hover:text-4xl  hover:text-button hover:underline'>
+                  essays
+                </span>{' '}
+                and{' '}
+                <span className='transform font-bold transition-all duration-300 hover:text-4xl  hover:text-button hover:underline'>
+                  personal projects
+                </span>{' '}
+                , your Big will guide you every step of the way. Pave your path
+                to college in the way that&apos;s best for YOU.
               </p>
-              <div className='flex w-auto flex-col items-center justify-center gap-5'>
+              <div className='flex w-auto flex-col items-center justify-center gap-5 text-xl'>
                 <p> Book a consultation below to get started!</p>
                 <ConsultationButton />
               </div>
             </div>
             <div className='flex w-2/5 flex-col gap-5'>
-              <div className='rounded-md  bg-stone-100 p-3 text-xl shadow-md dark:bg-background-secondary'>
-                <h2 className='inline text-3xl font-bold'>Big</h2>
-                <p className='inline text-lg'> &bull; /big/</p>
-                <p className='italic'>noun - Informal</p>
-                <p>
-                  Your mentor. They&apos;ll be ready 24/7 to guide you down a
-                  path suited uniquely to yourself.{' '}
-                </p>
+              <div data-aos='flip-left'>
+                <div className='transform rounded-md bg-stone-100 p-3 text-xl shadow-md transition-all duration-200 hover:scale-105 hover:shadow-lg dark:bg-background-secondary'>
+                  <h2 className='inline text-3xl font-bold'>Big</h2>
+                  <p className='inline text-lg'> &bull; /big/</p>
+                  <p className='italic'>noun - Informal</p>
+                  <p>
+                    Your mentor. They&apos;ll be ready 24/7 to guide you down a
+                    path suited uniquely to yourself.{' '}
+                  </p>
+                </div>
               </div>
-              <div className='rounded-md bg-stone-100 p-3 text-xl shadow-md dark:bg-background-secondary'>
-                <h2 className='inline text-3xl font-bold'>Little</h2>
-                <p className='inline text-lg'> &bull; /&apos;lid(ə)l/</p>
-                <p className='italic'>noun - Informal</p>
-                <p>
-                  The mentee - this will be you! Feels confident and secure in
-                  their college pathway.
-                </p>
+              <div data-aos='flip-left'>
+                <div className='transform rounded-md bg-stone-100 p-3 text-xl shadow-md transition-all duration-200 hover:scale-105 hover:shadow-lg dark:bg-background-secondary'>
+                  <h2 className='inline text-3xl font-bold'>Little</h2>
+                  <p className='inline text-lg'> &bull; /&apos;lid(ə)l/</p>
+                  <p className='italic'>noun - Informal</p>
+                  <p>
+                    The mentee - this will be you! Feels confident and secure in
+                    their college pathway.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -258,7 +287,10 @@ export default function About() {
               <ConsultationButton />
             </div>
 
-            <table className='w-full rounded-lg text-left text-lg text-gray-500 shadow-lg dark:text-gray-400 lg:w-1/2 rtl:text-right'>
+            <table
+              className='w-full rounded-lg text-left text-lg text-gray-500 shadow-lg dark:text-gray-400 lg:w-1/2 rtl:text-right'
+              data-aos='flip-right'
+            >
               <thead className='bg-gray-100 text-xs uppercase text-gray-700 dark:bg-gray-700 dark:text-gray-400'>
                 <tr>
                   <th scope='col' className='rounded-s-lg px-6 py-3 text-2xl'>

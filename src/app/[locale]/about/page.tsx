@@ -128,6 +128,7 @@ export default function About() {
       <div
         className='text-text flex w-full flex-row items-center justify-center'
         data-aos='flip-down'
+        data-aos-delay='300'
       >
         <div className='w-full overflow-hidden  rounded-md shadow-lg lg:w-3/4'>
           <div className='grid grid-cols-2 gap-x-16 border-b border-t border-gray-200 bg-background-secondary p-4 px-6 text-xl font-medium text-primary dark:border-gray-700 dark:text-white md:text-2xl '>
