@@ -85,7 +85,7 @@ export default function About() {
 
   function TableBlock({ check, text }: { check: boolean; text: string }) {
     return (
-      <div className='flex w-full w-full flex-row items-center gap-4  px-3 text-background-card dark:text-gray-400 md:w-3/4 '>
+      <div className='flex w-full flex-row items-center gap-4 text-background-card dark:text-gray-400 md:w-3/4 md:px-3 '>
         {check ? (
           <svg
             className='h-6 w-6 text-green-500'
@@ -119,7 +119,7 @@ export default function About() {
             />
           </svg>
         )}
-        <p className='w-full text-lg md:text-xl lg:text-2xl'>{text}</p>
+        <p className='text-md w-full md:text-xl lg:text-2xl'>{text}</p>
       </div>
     )
   }
@@ -130,16 +130,16 @@ export default function About() {
         data-aos='flip-down'
         data-aos-delay='300'
       >
-        <div className='w-full overflow-hidden  rounded-md shadow-lg lg:w-3/4'>
-          <div className='grid grid-cols-2 gap-x-16 border-b border-t border-gray-200 bg-background-secondary p-4 px-6 text-xl font-medium text-primary dark:border-gray-700 dark:text-white md:text-2xl '>
+        <div className='w-full overflow-hidden  rounded-md shadow-lg xl:w-3/4'>
+          <div className='grid grid-cols-2 gap-x-16 border-b border-t border-gray-200 bg-background-secondary p-4 px-6 text-lg font-medium text-primary dark:border-gray-700 dark:text-white md:text-2xl '>
             <div className='flex items-center'>Students 4 Students</div>
             <div>Big College Consulting Companies</div>
           </div>
-          <div className='grid grid-cols-2 gap-x-16 border-b border-gray-200 px-4 py-5 text-sm  dark:border-gray-700'>
+          <div className='grid grid-cols-2 gap-x-16 border-b border-gray-200 px-2 py-2 text-sm dark:border-gray-700 md:px-4  md:py-5'>
             <TableBlock check={true} text='Affordable Prices' />
-            <TableBlock check={false} text='$$$ Unreasonable Prices' />
+            <TableBlock check={false} text='$$$ Difficult Prices' />
           </div>
-          <div className='grid grid-cols-2 gap-x-16 border-b border-gray-200 px-4 py-5 text-sm  dark:border-gray-700'>
+          <div className='grid grid-cols-2 gap-x-16 border-b border-gray-200 px-2 py-2 text-sm dark:border-gray-700 md:px-4  md:py-5'>
             <TableBlock
               check={true}
               text='Up to date with the admissions process'
@@ -149,14 +149,14 @@ export default function About() {
               text='Ivy League Graduate... from decades ago'
             />
           </div>
-          <div className='grid grid-cols-2 gap-x-16 border-b border-gray-200 px-4 py-5 text-sm dark:border-gray-700'>
+          <div className='grid grid-cols-2 gap-x-16 border-b border-gray-200 px-2 py-2 text-sm dark:border-gray-700 md:px-4 md:py-5'>
             <TableBlock
               check={true}
               text='Feels like talking to an older sibling'
             />
             <TableBlock check={false} text='Impersonal, strictly business' />
           </div>
-          <div className='grid grid-cols-2 gap-x-16 border-b border-gray-200 px-4 py-5 text-sm dark:border-gray-700'>
+          <div className='grid grid-cols-2 gap-x-16 border-b border-gray-200 px-2 py-2 text-sm dark:border-gray-700 md:px-4 md:py-5'>
             <TableBlock
               check={true}
               text='SPECIFIC guidance with Project Jam'
@@ -237,7 +237,7 @@ export default function About() {
         </h2>
         <div className='flex flex-col items-center justify-center gap-8 lg:flex-row'>
           <div
-            className=' relative mr-5 h-min w-1/2 overflow-hidden rounded-full shadow-[10px_10px_0px_0px_rgba(9,64,103,0.9)] lg:w-1/4 '
+            className=' relative mr-5 h-min w-5/6 overflow-hidden rounded-full shadow-[10px_10px_0px_0px_rgba(9,64,103,0.9)] md:w-1/2 lg:w-1/4 '
             data-aos='fade-right'
           >
             <Image
@@ -247,7 +247,7 @@ export default function About() {
               alt='who are we image'
             />
           </div>
-          <div className='flex flex-col justify-center md:w-1/2'>
+          <div className='flex flex-col justify-center lg:w-1/2'>
             <p className=' md:text-xl'>
               At Students4Students, we&apos;re more than just college
               counselors. Our mission is to help students discover their unique
