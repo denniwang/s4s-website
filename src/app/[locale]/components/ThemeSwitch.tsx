@@ -35,7 +35,7 @@ export default function ThemeSwitch() {
   }
 
   return (
-    <div ref={ref} className='relative inline-block text-left'>
+    <div ref={ref} className='relative inline-block text-left '>
       <Button
         size='small'
         type='button'

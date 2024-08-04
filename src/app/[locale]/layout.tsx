@@ -9,6 +9,7 @@ import { Inter, Rubik, Space_Grotesk } from 'next/font/google'
 import NextTopLoader from 'nextjs-toploader'
 import { Header } from './components/Header'
 import './globals.css'
+import { PopupWidget } from 'react-calendly'
 import { Footer } from './components/Footer'
 
 const inter = Inter({
@@ -24,8 +25,8 @@ const space_grotesk = Space_Grotesk({
   variable: '--font-space-grotesk'
 })
 export const metadata: Metadata = {
-  title: 'S4S',
-  description: 'website for the s4s consulting group'
+  title: 'Students 4 Students',
+  description: 'Real college help. From students, for students.'
 }
 
 export default function RootLayout({
@@ -35,26 +36,32 @@ export default function RootLayout({
   children: React.ReactNode
   params: { locale: string }
 }) {
-  const messages = useMessages()
   return (
     <>
+      <title>Students 4 Students</title>
+      <meta content='Students 4 Students' property='og:title' />
+      <meta
+        content='Real college help. From students, for students.'
+        property='og:description'
+      />
+      <link rel='icon' href='/favicon.ico' />
+      <meta content='https://stu4stu.org/en' property='og:url' />
+      <meta content='https://embed.com/embedimage.png' property='og:image' />
+      <meta content='#43B581' data-react-helmet='true' name='theme-color' />
       <html
         lang={locale}
         dir={locale === 'ar' || locale == 'fa' ? 'rtl' : 'ltr'}
         className={`${space_grotesk.variable} ${rubik.variable} scroll-smooth`}
         suppressHydrationWarning
       >
-        <body className="layout-body">
+        <body className='layout-body'>
           <ThemeProvider
             enableSystem
             attribute='class'
             defaultTheme='light'
             themes={['light', 'dark']}
           >
-            <NextIntlClientProvider
-              locale={locale}
-              messages={messages as AbstractIntlMessages}
-            >
+            <NextIntlClientProvider locale={locale}>
               <NextTopLoader
                 initialPosition={0.08}
                 crawlSpeed={200}
@@ -66,8 +73,8 @@ export default function RootLayout({
                 color='var(--primary)'
                 showSpinner={false}
               />
-              <Header locale={locale}/>
-              <main className='mx-auto max-w-screen-2xl'>{children}</main>
+              <Header locale={locale} />
+              <main className='mx-auto '>{children}</main>
               <Footer />
             </NextIntlClientProvider>
           </ThemeProvider>

@@ -1,28 +1,29 @@
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { useState } from 'react'
 
 export default function Hamburger() {
   const [isNavOpen, setIsNavOpen] = useState(false)
+  const t = useTranslations('')
 
   return (
-    <div className='flex items-center border-b border-gray-400 py-8 md:hidden'>
+    <div className='flex items-center border-b border-gray-400 py-8 md:hidden mb-[-3.5vh]'>
       <div className='ml-8'>
-      <a href='/' >
-        <Image
-          alt='logo'
-          width={100}
-          height={100}
-          src='/s4s-trans.png'
-          className='w-10 md:w-20'
-        />
-      </a>
-
-</div>
-        <div className='flex-grow'></div>
-      <nav >
+        <a href='/'>
+          <Image
+            alt='logo'
+            width={100}
+            height={100}
+            src='/s4s-trans.png'
+            className='w-10 md:w-20'
+          />
+        </a>
+      </div>
+      <div className='flex-grow'></div>
+      <nav>
         <section className='MOBILE-MENU flex lg:hidden'>
           <div
-            className='HAMBURGER-ICON space-y-2 mr-8'
+            className='HAMBURGER-ICON mr-8 space-y-2'
             onClick={() => setIsNavOpen(prev => !prev)}
           >
             <span className='block h-0.5 w-8 animate-pulse bg-gray-600'></span>
@@ -30,7 +31,11 @@ export default function Hamburger() {
             <span className='block h-0.5 w-8 animate-pulse bg-gray-600'></span>
           </div>
 
-          <div className={ + isNavOpen ? 'showMenuNav bg-background-secondary' : 'hideMenuNav' }>
+          <div
+            className={
+              +isNavOpen ? 'showMenuNav bg-background-secondary' : 'hideMenuNav'
+            }
+          >
             <div
               className='absolute right-0 top-0 px-8 py-8'
               onClick={() => setIsNavOpen(false)}
@@ -48,29 +53,44 @@ export default function Hamburger() {
                 <line x1='6' y1='6' x2='18' y2='18' />
               </svg>
             </div>
-            <ul className='flex min-h-[250px] flex-col items-center justify-between'>
-              <li className='my-8 border-b border-gray-400 uppercase'>
-                <a href='/about'>About</a>
+            <ul className='flex min-h-[250px] flex-col items-center justify-between text-3xl'>
+              <li className='my-8  border-gray-400 uppercase'>
+                <a
+                  href='https://calendly.com/studs4students/15-min-free-intro-session'
+                  target='_blank'
+                >
+                  <span className='group'>
+                    <span className='relative  px-1 group-hover:text-white'>
+                      <span className='relative z-10'>
+                        *LIMITED TIME* FREE CONSULTATION
+                      </span>
+                      <span className='absolute bottom-0 left-0 z-0 h-0.5 w-full bg-text-secondary transition-all group-hover:h-full '></span>
+                    </span>
+                  </span>
+                </a>
               </li>
               <li className='my-8 border-b border-gray-400 uppercase'>
-                <a href='/portfolio'>Portfolio</a>
+                <a href={t('about_link')}>About</a>
               </li>
               <li className='my-8 border-b border-gray-400 uppercase'>
-                <a href='/contact'>Contact</a>
+                <a href={t('programs_link')}>Programs</a>
+              </li>
+              <li className='my-8 border-b border-gray-400 uppercase'>
+                <a href={t('gallery_link')}>Gallery</a>
               </li>
             </ul>
           </div>
         </section>
 
-        <ul className='DESKTOP-MENU hidden space-x-8 mr-4 lg:flex'>
+        <ul className='DESKTOP-MENU mr-4 hidden space-x-8 lg:flex'>
           <li>
-            <a href='/about'>About</a>
+            <a href={t('about_link')}>About</a>
           </li>
           <li>
-            <a href='/portfolio'>Portfolio</a>
+            <a href={t('programs_link')}>Programs</a>
           </li>
           <li>
-            <a href='/contact'>Contact</a>
+            <a href={t('gallery_link')}>Contact</a>
           </li>
         </ul>
       </nav>

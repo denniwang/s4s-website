@@ -4,19 +4,18 @@
 
 @layer base {
   :root {
-    --primary: #333366;
-    --secondary: #097fa5;
-    --background: #ededed;
-    --background-secondary: #c8dde3;
-    --button: #097fa5;
+    --primary: #094067;
+    --secondary: #5f6c7bf;
+    --background: #fffffe;
+    --background-secondary: #d8eefe;
+    --background-card: #094067;
+    --button: #3da9fc;
     --button-text: #fff;
-    --text-secondary: #3c3c3c;
+    --text-secondary: #ef4565;
     --dropdown: #e0f4ff;
     --dropdown-hover: #b3e5ff;
     --button-secondary: #e7e7e7;
     --selected: #9ec6ff;
-    --logo-shadow: #053949;
-    --logo-body: #00d8fe;
     --span-bg: linear-gradient(to right, #4e4e9e, #097fa5, #3e87ed);
   }
   .dark {
@@ -31,8 +30,6 @@
     --dropdown-hover: #454545;
     --button-secondary: #1d1d1d;
     --selected: #324e70;
-    --logo-shadow: #0a2e36;
-    --logo-body: #097fa5;
     --span-bg: linear-gradient(to right, #8c00ff, #0fb4e1, #a1d930, #ae0000);
   }
 }
@@ -60,13 +57,12 @@
   }
 }
 
-
 .embla {
-  max-width: 48rem;
+  max-width: 90rem;
   margin: auto;
-  --slide-height: 19rem;
+  --slide-height: 52rem;
   --slide-spacing: 1.5rem;
-  --slide-size: 80%;
+  --slide-size: 100%;
 }
 .embla__viewport {
   overflow: hidden;
@@ -75,14 +71,12 @@
   backface-visibility: hidden;
   display: flex;
   touch-action: pan-y pinch-zoom;
-  margin-left: calc(var(--slide-spacing) * -1);
 }
 .embla__slide {
   flex: 0 0 var(--slide-size);
   min-width: 0;
-  padding-left: var(--slide-spacing);
 }
-.embla__slide__number {
+.embla_slide_img {
   box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
   border-radius: 1.8rem;
   font-size: 4rem;
@@ -91,17 +85,17 @@
   align-items: center;
   justify-content: center;
   height: var(--slide-height);
+  max-height: var(--slide-height);
 }
 .embla__controls {
   display: grid;
   grid-template-columns: auto 1fr;
   justify-content: space-between;
   gap: 1.2rem;
-  margin-top: 1.8rem;
 }
 .embla__buttons {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 0.5fr);
   gap: 0.6rem;
   align-items: center;
 }
@@ -118,8 +112,8 @@
   padding: 0;
   margin: 0;
   box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
-  width: 3.6rem;
-  height: 3.6rem;
+  width: 2.6rem;
+  height: 2.6rem;
   z-index: 1;
   border-radius: 50%;
   color: var(--text-body);
@@ -133,4 +127,53 @@
 .embla__button__svg {
   width: 35%;
   height: 35%;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateY(-40%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in-1 {
+  animation: slide-in 1s forwards;
+  animation-delay: 0s;
+}
+
+.animate-slide-in-2 {
+  animation: slide-in 1s forwards;
+  animation-delay: 0.5s;
+}
+
+.animate-slide-in-3 {
+  animation: slide-in 1s forwards;
+  animation-delay: 1s;
+}
+
+.animate-slide-in {
+  transform: translateX(0);
+  opacity: 1;
+  transition:
+    transform 1s ease-out,
+    opacity 1s ease-out;
+}
+
+.animate-hidden {
+  opacity: 0;
+  transition: all 1s;
+}
+
+.animate-show {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion) {
+  .animate-hidden {
+    transition: none;
+  }
 }
