@@ -296,10 +296,7 @@ export default function About() {
         <div id='WW' className='h-2'></div>
         <section className='mt-10 flex w-5/6 flex-col py-24'>
           <div className='w-min'>
-            <h1
-              id='WWANCHOR'
-              className=' w-96 animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-gray-700 py-4 pr-9 text-3xl font-bold md:text-7xl'
-            >
+            <h1 className=' w-96 animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-gray-700 py-4 pr-9 text-3xl font-bold md:text-7xl'>
               Writing Wonders
             </h1>
           </div>
@@ -322,7 +319,7 @@ export default function About() {
             <table
               className=' rounded-lg text-left text-lg text-gray-500 shadow-lg dark:text-gray-400 lg:w-1/2 rtl:text-right'
               data-aos='flip-right'
-              data-aos-anchor='#WWANCHOR'
+              data-aos-anchor='#WW'
             >
               <thead className='bg-gray-100 text-xs uppercase text-gray-700 dark:bg-gray-700 dark:text-gray-400'>
                 <tr>
