@@ -212,7 +212,7 @@ export default function About() {
             <div className='mb-4 block h-0.5 w-[30vw] bg-background-card md:hidden'></div>
 
             <div className='flex flex-col gap-5 md:w-2/5'>
-              <div data-aos='flip-left'>
+              <div data-aos='flip-left' data-aos-anchor='#BL'>
                 <div className='transform rounded-md bg-stone-100 p-3 text-xl shadow-md transition-all duration-200 hover:scale-105 hover:shadow-lg dark:bg-background-secondary'>
                   <h2 className='inline text-3xl font-bold'>Big</h2>
                   <p className='inline text-lg'> &bull; /big/</p>
@@ -223,7 +223,11 @@ export default function About() {
                   </p>
                 </div>
               </div>
-              <div data-aos='flip-left'>
+              <div
+                data-aos='flip-left'
+                data-aos-anchor='#BL'
+                data-aos-delay='100'
+              >
                 <div className='transform rounded-md bg-stone-100 p-3 text-xl shadow-md transition-all duration-200 hover:scale-105 hover:shadow-lg dark:bg-background-secondary'>
                   <h2 className='inline text-3xl font-bold'>Little</h2>
                   <p className='inline text-lg'> &bull; /&apos;lid(ə)l/</p>
