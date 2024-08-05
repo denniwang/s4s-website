@@ -121,7 +121,7 @@ export default function About() {
 
   return (
     <>
-      <main className='flex w-full flex-col items-center gap-8'>
+      <main className='mt-8 flex w-full flex-col items-center gap-8 md:mt-0'>
         <section className='items-flex-start flex h-[92vh] w-full flex-col md:flex-row'>
           <div className='flex h-full w-full flex-col justify-between md:w-1/2'>
             <div className='program-selector group h-1/2'>
@@ -174,35 +174,37 @@ export default function About() {
             alt='big little program header'
           />
 
-          <div className='flex gap-12 space-x-24'>
-            <div className='flex w-3/5 flex-col gap-3'>
+          <div className='flex flex-col items-center gap-1 md:flex-row  md:space-x-24 lg:gap-12'>
+            <div className='flex flex-col gap-3 md:w-3/5'>
               <p className='text-center text-lg leading-loose md:text-3xl'>
                 Get personalized 1-on-1 mentorship for all your college needs.
                 From{' '}
-                <span className='transform font-bold transition-all duration-300 hover:text-4xl  hover:text-button hover:underline'>
+                <span className='transform font-bold transition-all duration-300 hover:text-button  hover:underline md:hover:text-4xl'>
                   clubs
                 </span>{' '}
                 and{' '}
-                <span className='transform font-bold transition-all duration-300 hover:text-4xl  hover:text-button hover:underline'>
+                <span className='transform font-bold transition-all duration-300 hover:text-button  hover:underline md:hover:text-4xl'>
                   extracurriculars
                 </span>{' '}
                 to{' '}
-                <span className='transform font-bold transition-all duration-300 hover:text-4xl  hover:text-button hover:underline'>
+                <span className='transform font-bold transition-all duration-300 hover:text-button  hover:underline md:hover:text-4xl'>
                   essays
                 </span>{' '}
                 and{' '}
-                <span className='transform font-bold transition-all duration-300 hover:text-4xl  hover:text-button hover:underline'>
+                <span className='transform font-bold transition-all duration-300 hover:text-button  hover:underline md:hover:text-4xl'>
                   personal projects
                 </span>{' '}
                 , your Big will guide you every step of the way. Pave your path
                 to college in the way that&apos;s best for YOU.
               </p>
-              <div className='flex w-auto flex-col items-center justify-center gap-5 text-xl'>
+              <div className='flex hidden w-auto flex-col items-center justify-center gap-5 text-center underline md:block md:text-xl'>
                 <p> Book a consultation below to get started!</p>
                 <ConsultationButton />
               </div>
             </div>
-            <div className='flex w-2/5 flex-col gap-5'>
+            <div className='block h-0.5 w-64 bg-background-card md:hidden'></div>
+
+            <div className='flex flex-col gap-5 md:w-2/5'>
               <div data-aos='flip-left'>
                 <div className='transform rounded-md bg-stone-100 p-3 text-xl shadow-md transition-all duration-200 hover:scale-105 hover:shadow-lg dark:bg-background-secondary'>
                   <h2 className='inline text-3xl font-bold'>Big</h2>
@@ -228,7 +230,12 @@ export default function About() {
             </div>
           </div>
 
-          <div className='h-[50vh] w-[75vw]'>
+          <div className='block flex w-auto flex-col items-center justify-center gap-5 text-center underline md:hidden md:text-xl'>
+            <p> Book a consultation below to get started!</p>
+            <ConsultationButton />
+          </div>
+
+          <div className='h-[50vh]  w-full md:w-[75vw] '>
             <Image
               alt='splash_image'
               width={1500}
@@ -242,12 +249,14 @@ export default function About() {
           id='PJ'
           className='mb-20 flex flex-col items-center gap-4 pt-24 text-2xl'
         >
-          <Image
-            src='/pj-header.png'
-            width={600}
-            height={600}
-            alt='big little program header'
-          />
+          <div className='flex w-[90vw] flex-row items-center justify-center text-center'>
+            <Image
+              src='/pj-header.png'
+              width={600}
+              height={600}
+              alt='big little program header'
+            />
+          </div>
           <div className='mt-5 flex flex-col flex-wrap items-center justify-center gap-3 md:flex-row lg:w-4/5 '>
             <IconContext.Provider
               value={{ size: '70px', className: 'global-class-name' }}
@@ -261,13 +270,15 @@ export default function About() {
               })}
             </IconContext.Provider>
           </div>
-          <p>Get started today by booking a consultation below!</p>
+          <p className='px-2 text-center'>
+            Get started today by booking a consultation below!
+          </p>
           <ConsultationButton />
         </section>
 
         <section id='WW' className='mt-10 flex w-5/6 flex-col py-24'>
           <div className='w-min'>
-            <h1 className=' w-96 animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-gray-700 py-4 pr-9 text-7xl font-bold '>
+            <h1 className=' w-96 animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-gray-700 py-4 pr-9 text-3xl font-bold md:text-7xl'>
               Writing Wonders
             </h1>
           </div>
@@ -288,7 +299,7 @@ export default function About() {
             </div>
 
             <table
-              className='w-full rounded-lg text-left text-lg text-gray-500 shadow-lg dark:text-gray-400 lg:w-1/2 rtl:text-right'
+              className=' rounded-lg text-left text-lg text-gray-500 shadow-lg dark:text-gray-400 lg:w-1/2 rtl:text-right'
               data-aos='flip-right'
             >
               <thead className='bg-gray-100 text-xs uppercase text-gray-700 dark:bg-gray-700 dark:text-gray-400'>
@@ -304,7 +315,7 @@ export default function About() {
                 <tr className='bg-white dark:bg-gray-800'>
                   <th
                     scope='row'
-                    className='whitespace-nowrap px-6 py-4 font-medium text-gray-900 dark:text-white'
+                    className='font-lg px-6 py-4 text-gray-900 dark:text-white md:font-medium'
                   >
                     Lifelong Writing Skills
                   </th>
@@ -314,7 +325,7 @@ export default function About() {
                 <tr className='bg-white dark:bg-gray-800'>
                   <th
                     scope='row'
-                    className='whitespace-nowrap px-6 py-4 font-medium text-gray-900 dark:text-white'
+                    className='px-6 py-4 text-gray-900 dark:text-white md:font-medium'
                   >
                     24/7 Writing Help
                   </th>
@@ -324,7 +335,7 @@ export default function About() {
                 <tr className='border-b bg-white dark:bg-gray-800'>
                   <th
                     scope='row'
-                    className='whitespace-nowrap px-6 py-4 font-medium text-gray-900 dark:text-white'
+                    className='px-6 py-4 text-gray-900 dark:text-white md:font-medium'
                   >
                     Personalized and tailordered feedback
                   </th>

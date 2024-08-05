@@ -7,7 +7,7 @@ export default function Hamburger() {
   const t = useTranslations('')
 
   return (
-    <div className='flex items-center border-b border-gray-400 py-8 md:hidden mb-[-3.5vh]'>
+    <div className='mb-[-3.5vh] flex items-center border-b border-gray-400 py-8 md:hidden'>
       <div className='ml-8'>
         <a href='/'>
           <Image
@@ -53,7 +53,7 @@ export default function Hamburger() {
                 <line x1='6' y1='6' x2='18' y2='18' />
               </svg>
             </div>
-            <ul className='flex min-h-[250px] flex-col items-center justify-between text-3xl'>
+            <ul className='flex min-h-[250px] flex-col items-center justify-between text-center text-2xl'>
               <li className='my-8  border-gray-400 uppercase'>
                 <a
                   href='https://calendly.com/studs4students/15-min-free-intro-session'
@@ -61,38 +61,24 @@ export default function Hamburger() {
                 >
                   <span className='group'>
                     <span className='relative  px-1 group-hover:text-white'>
-                      <span className='relative z-10'>
-                        *LIMITED TIME* FREE CONSULTATION
-                      </span>
+                      <span className='relative z-10'>FREE CONSULTATION</span>
                       <span className='absolute bottom-0 left-0 z-0 h-0.5 w-full bg-text-secondary transition-all group-hover:h-full '></span>
                     </span>
                   </span>
                 </a>
               </li>
               <li className='my-8 border-b border-gray-400 uppercase'>
-                <a href={t('about_link')}>About</a>
+                <a href={'/en/about'}>About</a>
               </li>
               <li className='my-8 border-b border-gray-400 uppercase'>
-                <a href={t('programs_link')}>Programs</a>
+                <a href={'/en/programs'}>Programs</a>
               </li>
               <li className='my-8 border-b border-gray-400 uppercase'>
-                <a href={t('gallery_link')}>Gallery</a>
+                <a href={'/en/gallery'}>Gallery</a>
               </li>
             </ul>
           </div>
         </section>
-
-        <ul className='DESKTOP-MENU mr-4 hidden space-x-8 lg:flex'>
-          <li>
-            <a href={t('about_link')}>About</a>
-          </li>
-          <li>
-            <a href={t('programs_link')}>Programs</a>
-          </li>
-          <li>
-            <a href={t('gallery_link')}>Contact</a>
-          </li>
-        </ul>
       </nav>
       <style>{`
       .hideMenuNav {

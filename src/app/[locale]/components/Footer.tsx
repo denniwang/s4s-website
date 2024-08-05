@@ -38,38 +38,40 @@ export const Footer = () => {
             </a>
           </div>
         </div>
-        <div className='flex flex-col'>
-          <Link href={t('programs_link')}>
+        <div className='flex flex-col gap-1'>
+          <Link href={'/en/programs'}>
             <h2 className='text-3xl font-bold transition-colors duration-200 hover:text-button'>
               Programs
             </h2>
           </Link>
 
-          <Link href={`${t('programs_link')}#BL`}>
+          <Link href='/en/programs#BL'>
             <p className='text-lg transition-colors duration-200 hover:text-button'>
               Big Little Program
             </p>
           </Link>
 
-          <Link href={`${t('programs_link')}#PJ`}>
-            <p className='text-lg transition-colors duration-200 hover:text-button'>
+          <Link href={`/en/programs#PJ`}>
+            <p className='mb-2 text-lg transition-colors duration-200 hover:text-button'>
               Project Jam
             </p>
           </Link>
-          <Link href={t('gallery_link')}>
-            <h2 className='text-3xl font-bold transition-colors duration-200 hover:text-button'>
+          <Link href={'/en/gallery'}>
+            <h2 className='mb-2 text-3xl font-bold transition-colors duration-200 hover:text-button'>
               Gallery
             </h2>
           </Link>
-          <Link href={t('about_link')}>
-            <h2 className='text-3xl font-bold transition-colors duration-200 hover:text-button'>
+          <Link href={'/en/about'}>
+            <h2 className='mb-4 text-3xl font-bold transition-colors duration-200 hover:text-button'>
               About
             </h2>
           </Link>
         </div>
         <div className='flex flex-col'>
           <div className='flex-grow'></div>
-          <p className='text-lg'>&quot;Real college help. From students, for students&quot;</p>
+          <p className='text-lg'>
+            &quot;Real college help. From students, for students&quot;
+          </p>
         </div>
       </div>
     </div>

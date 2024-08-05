@@ -113,6 +113,7 @@ export default function DashboardPage({}) {
           <a
             href='https://calendly.com/studs4students/15-min-free-intro-session'
             target='_blank'
+            className='hidden md:inline'
           >
             <span className='group'>
               <span className='relative  px-1 group-hover:text-white'>
@@ -123,6 +124,18 @@ export default function DashboardPage({}) {
           </a>
         </p>
       </div>
+      <a
+        href='https://calendly.com/studs4students/15-min-free-intro-session'
+        target='_blank'
+        className='mt-[-30px] inline'
+      >
+        <span className='group'>
+          <span className='relative  px-1 group-hover:text-white'>
+            <span className='relative z-10'>Book a free consultation!</span>
+            <span className='absolute bottom-0 left-0 z-0 h-0.5 w-full bg-primary transition-all group-hover:h-full '></span>
+          </span>
+        </span>
+      </a>
       <div data-aos='flip-up'>
         <Spotlight />
       </div>
