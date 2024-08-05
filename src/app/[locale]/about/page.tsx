@@ -177,14 +177,14 @@ export default function About() {
       <div className='flex w-11/12 flex-col justify-center gap-8 lg:w-4/5'>
         <h1 className='mt-10 text-center text-5xl font-bold'>About S4S</h1>
 
-        <h2 className='text-4xl font-bold'>101 - Who Are We?</h2>
+        <h2 className='text-2xl font-bold md:text-4xl'>101 - Who Are We?</h2>
         <div className='flex flex-col justify-center gap-5 lg:flex-row'>
           <div className='flex flex-col items-center justify-center lg:w-2/5'>
             <p className=' md:text-xl'>
               <span>
                 {' '}
                 &bull; S4S was founded by FIVE{' '}
-                <span className='transform font-bold transition-all duration-300 hover:text-2xl  hover:text-button hover:underline'>
+                <span className='transform font-bold transition-all duration-300 hover:text-button  hover:underline md:hover:text-2xl'>
                   successful
                 </span>{' '}
                 university students!
@@ -194,7 +194,7 @@ export default function About() {
               <span>
                 &bull; We want to help high schoolers get into their dream
                 colleges by providing{' '}
-                <span className='transform font-bold transition-all duration-300 hover:text-2xl  hover:text-button hover:underline'>
+                <span className='transform font-bold transition-all duration-300 hover:text-button  hover:underline md:hover:text-2xl'>
                   relevant, up-to-date advice, specific resources, and diverse
                   networking.
                 </span>
@@ -204,7 +204,7 @@ export default function About() {
               <span>
                 &bull; College admissions are incredibly tough, especially for
                 first-generation students, and we&apos;re here to help you{' '}
-                <span className='transform font-bold transition-all duration-300 hover:text-2xl hover:text-button hover:underline'>
+                <span className='transform font-bold transition-all duration-300 hover:text-button hover:underline md:hover:text-2xl'>
                   ace
                 </span>{' '}
                 the process!
@@ -232,7 +232,7 @@ export default function About() {
           <span className='text-bold text-6xl'>&quot;</span>
         </div>
 
-        <h2 className='text-4xl font-bold'>
+        <h2 className='text-2xl font-bold md:text-4xl'>
           102 - What makes us... different?
         </h2>
         <div className='flex flex-col items-center justify-center gap-8 lg:flex-row'>
@@ -249,16 +249,37 @@ export default function About() {
           </div>
           <div className='flex flex-col justify-center lg:w-1/2'>
             <p className=' md:text-xl'>
-              At Students4Students, we&apos;re more than just college
-              counselors. Our mission is to help students discover their unique
-              passions and use them to craft their best possible applications.
-              We take a comprehensive approach, guiding students through every
-              aspect of the college admissions process—clubs, extracurriculars,
-              essays, academics, and anything else that might impact their
-              journey. Our mentors have recently navigated this process
-              themselves and are determined to share their experiences and
-              insights. When join join we guarantee that you&apos;ll feel
-              confident in your path.
+              <span>
+                {' '}
+                &bull; We&apos;re{' '}
+                <span className='transform font-bold transition-all duration-300 hover:text-button  hover:underline md:hover:text-2xl'>
+                  more
+                </span>{' '}
+                than just college counselors!
+              </span>
+              <br></br>
+              <br></br>
+              <span>
+                &bull; Our mission: help students discover their unique passions
+                through their{' '}
+                <span className='transform font-bold transition-all duration-300 hover:text-button  hover:underline md:hover:text-2xl'>
+                  local opportunities{' '}
+                </span>
+                and ours and use them to craft their best possible applications.
+              </span>
+              <br></br>
+              <br></br>
+              <span>
+                &bull; Our mentors have recently navigated this process
+                themselves and are determined to share their{' '}
+                <span className='transform font-bold transition-all duration-300 hover:text-button hover:underline md:hover:text-2xl'>
+                  experiences
+                </span>{' '}
+                and{' '}
+                <span className='transform font-bold transition-all duration-300 hover:text-button hover:underline md:hover:text-2xl'>
+                  insights!
+                </span>{' '}
+              </span>
             </p>
           </div>
         </div>
