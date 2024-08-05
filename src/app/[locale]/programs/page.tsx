@@ -318,7 +318,7 @@ export default function About() {
             <table
               className=' rounded-lg text-left text-lg text-gray-500 shadow-lg dark:text-gray-400 lg:w-1/2 rtl:text-right'
               data-aos='flip-right'
-              ata-aos-anchor='#WWANCHOR'
+              data-aos-anchor='#WWANCHOR'
             >
               <thead className='bg-gray-100 text-xs uppercase text-gray-700 dark:bg-gray-700 dark:text-gray-400'>
                 <tr>
