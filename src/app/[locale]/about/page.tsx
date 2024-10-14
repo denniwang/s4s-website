@@ -224,7 +224,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className='flex flex-row justify-center '>
+        <div className='flex flex-row justify-center py-10 '>
           <span className='text-bold text-6xl '>&ldquo;</span>
           <p className='pt-4 text-center text-3xl'>
             Our approach in one word? Comprehensive.
@@ -283,10 +283,10 @@ export default function About() {
             </p>
           </div>
         </div>
-        <h2 className='text-center text-6xl font-bold'>TL;DR</h2>
+        <h2 className='mt-10 text-center text-6xl font-bold'>TL;DR</h2>
         <Table />
 
-        <h2 className='text-4xl font-bold'>
+        <h2 className='pt-10 text-4xl font-bold'>
           103 - Ok but... who are we <span className='underline'>REALLY</span>?
         </h2>
         <div className='flex flex-col items-center justify-center gap-5 md:flex-row md:items-start'>

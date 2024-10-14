@@ -39,9 +39,12 @@ export default function RootLayout({
   return (
     <>
       <title>Students 4 Students</title>
-      <meta content='Students 4 Students' property='og:title' />
       <meta
-        content='Real college help. From students, for students.'
+        content='Students 4 Students - Free College Help Today!'
+        property='og:title'
+      />
+      <meta
+        content='Getting ready to apply to college or need help wrapping up your essays? Get real college help. By students, for students.'
         property='og:description'
       />
       <link rel='icon' href='/favicon.ico' />
