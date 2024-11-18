@@ -184,7 +184,7 @@ export default function About() {
               <span>
                 {' '}
                 &bull; S4S was founded by FIVE{' '}
-                <span className='transform font-bold transition-all duration-300 hover:text-button  hover:underline md:hover:text-2xl'>
+                <span className='transform font-bold transition-all duration-300 hover:text-button  hover:underline '>
                   successful
                 </span>{' '}
                 university students!
@@ -194,7 +194,7 @@ export default function About() {
               <span>
                 &bull; We want to help high schoolers get into their dream
                 colleges by providing{' '}
-                <span className='transform font-bold transition-all duration-300 hover:text-button  hover:underline md:hover:text-2xl'>
+                <span className='transform font-bold transition-all duration-300 hover:text-button  hover:underline '>
                   relevant, up-to-date advice, specific resources, and diverse
                   networking.
                 </span>
@@ -204,7 +204,7 @@ export default function About() {
               <span>
                 &bull; College admissions are incredibly tough, especially for
                 first-generation students, and we&apos;re here to help you{' '}
-                <span className='transform font-bold transition-all duration-300 hover:text-button hover:underline md:hover:text-2xl'>
+                <span className='transform font-bold transition-all duration-300 hover:text-button hover:underline'>
                   ace
                 </span>{' '}
                 the process!
@@ -252,7 +252,7 @@ export default function About() {
               <span>
                 {' '}
                 &bull; We&apos;re{' '}
-                <span className='transform font-bold transition-all duration-300 hover:text-button  hover:underline md:hover:text-2xl'>
+                <span className='transform font-bold transition-all duration-300 hover:text-button  hover:underline'>
                   more
                 </span>{' '}
                 than just college counselors!
@@ -262,7 +262,7 @@ export default function About() {
               <span>
                 &bull; Our mission: help students discover their unique passions
                 through their{' '}
-                <span className='transform font-bold transition-all duration-300 hover:text-button  hover:underline md:hover:text-2xl'>
+                <span className='transform font-bold transition-all duration-300 hover:text-button  hover:underline '>
                   local opportunities{' '}
                 </span>
                 and ours and use them to craft their best possible applications.
@@ -272,11 +272,11 @@ export default function About() {
               <span>
                 &bull; Our mentors have recently navigated this process
                 themselves and are determined to share their{' '}
-                <span className='transform font-bold transition-all duration-300 hover:text-button hover:underline md:hover:text-2xl'>
+                <span className='transform font-bold transition-all duration-300 hover:text-button hover:underline '>
                   experiences
                 </span>{' '}
                 and{' '}
-                <span className='transform font-bold transition-all duration-300 hover:text-button hover:underline md:hover:text-2xl'>
+                <span className='transform font-bold transition-all duration-300 hover:text-button hover:underline'>
                   insights!
                 </span>{' '}
               </span>
