@@ -34,15 +34,15 @@ export default function DashboardPage({}) {
   const [showModal, setShowModal] = React.useState(false)
   useEffect(() => {
     AOS.init({ duration: 1000 })
-    console.log('AOS init')
+    //console.log('AOS init')
   }, [])
 
   useEffect(() => {
     if (sessionStorage.getItem('modal') != 'false') {
       setShowModal(true)
-      console.log('stopped showing modal')
+      //console.log('stopped showing modal')
     }
-    console.log('finished checking modal')
+    //console.log('finished checking modal')
   }, [])
   return (
     <main className='mt-10 flex flex-col self-center overflow-hidden text-center md:mt-1'>

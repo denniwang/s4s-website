@@ -40,7 +40,7 @@ export default function RootLayout({
     <>
       <title>Students 4 Students</title>
       <meta
-        content='Students 4 Students - Free College Help Today!'
+        content='Students 4 Students - College help for students, by students.'
         property='og:title'
       />
       <meta
