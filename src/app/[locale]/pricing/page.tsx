@@ -28,11 +28,10 @@ export default function Pricing() {
     <main className='flex min-h-screen flex-col items-center px-4 py-16'>
       <div className='container mx-auto max-w-6xl'>
         <div className='mb-10 text-center'>
-          <h1 className='mb-4 text-4xl font-bold md:text-5xl'>
-            Pricing
-          </h1>
+          <h1 className='mb-4 text-4xl font-bold md:text-5xl'>Pricing</h1>
           <p className='mx-auto max-w-2xl text-lg text-gray-600'>
-            Simple, transparent pricing for our services. Zelle and Venmo accepted.
+            Simple, transparent pricing for our services. Zelle and Venmo
+            accepted.
           </p>
         </div>
 
@@ -103,7 +102,8 @@ export default function Pricing() {
                   </Button>
                 </a>
                 <p className='text-center text-sm text-gray-500'>
-                  No commitment required. See if we're the right fit for you.
+                  No commitment required. See if we&apos;re the right fit for
+                  you.
                 </p>
               </div>
             </div>
@@ -112,7 +112,7 @@ export default function Pricing() {
 
         <div className='mt-16 text-center'>
           <p className='text-text text-lg font-medium'>
-            "Real college help. From students, for students"
+            &quot;Real college help. From students, for students&quot;
           </p>
         </div>
       </div>
