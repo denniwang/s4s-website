@@ -58,7 +58,7 @@ export default function Hamburger() {
               {routes.map(item => (
                 <li key={item.label} className='my-8 border-gray-400 uppercase'>
                   <a
-                    href={item.href}
+                    href={item.href.toString()}
                     target={item.isExternal ? '_blank' : undefined}
                   >
                     {item.isExternal ? (

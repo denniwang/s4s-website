@@ -1,4 +1,12 @@
-export const routes = [
+import { type pathnames } from '@/src/navigation'
+
+type Route = {
+  href: typeof pathnames | string
+  label: string
+  isExternal: boolean
+}
+
+export const routes: Route[] = [
   {
     href: 'https://calendly.com/studs4students/15-min-free-intro-session',
     label: 'FREE CONSULTATION',
@@ -24,4 +32,4 @@ export const routes = [
     label: 'Pricing',
     isExternal: false
   }
-] as const
+]

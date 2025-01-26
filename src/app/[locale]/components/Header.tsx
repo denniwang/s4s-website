@@ -39,7 +39,11 @@ export const Header: FC<Props> = ({ locale }) => {
             <nav className='mr-10 inline-flex gap-5'>
               {routes.map(item =>
                 item.isExternal ? (
-                  <a key={item.label} href={item.href} target='_blank'>
+                  <a
+                    key={item.label}
+                    href={item.href.toString()}
+                    target='_blank'
+                  >
                     <span className='group'>
                       <span className='relative px-1 group-hover:text-white'>
                         <span className='z-10 hidden lg:relative lg:inline'>
@@ -53,11 +57,7 @@ export const Header: FC<Props> = ({ locale }) => {
                     </span>
                   </a>
                 ) : (
-                  <Link
-                    key={item.label}
-                    lang={locale}
-                    href={item.href.replace('/en', '')}
-                  >
+                  <Link key={item.label} lang={locale} href={item.href as any}>
                     {t(item.label)}
                   </Link>
                 )
