@@ -29,7 +29,9 @@ export default function Modal({
               <div className='relative flex w-full flex-col rounded-lg border-0 bg-white shadow-lg outline-none focus:outline-none'>
                 {/*header*/}
                 <div className='border-blueGray-200 flex items-start justify-between rounded-t border-b border-solid p-5'>
-                  <h3 className='text-3xl font-semibold'>LIMITED TIME OFFERS</h3>
+                  <h3 className='text-3xl font-semibold'>
+                    LIMITED TIME OFFERS
+                  </h3>
                   <button
                     className='float-right ml-auto border-0 bg-transparent p-1 text-3xl font-semibold leading-none text-black opacity-5 outline-none focus:outline-none'
                     onClick={() => setShowModal(false)}
@@ -43,8 +45,11 @@ export default function Modal({
                 <div className='relative flex-auto p-6'>
                   <p className='text-blueGray-500 text-md leading-relaxed md:my-4 md:text-lg'>
                     Want to get started early with college apps before the
-                    school year? Book a <span className='font-bold'>free 15-minute consultation </span>or get <span className='font-bold'>free essay intro editing</span> on us
-                    today!
+                    school year? Book a{' '}
+                    <span className='font-bold'>
+                      free 15-minute consultation{' '}
+                    </span>{' '}
+                    on us today!
                   </p>
                 </div>
                 {/*footer*/}
@@ -57,19 +62,6 @@ export default function Modal({
                     Miss out
                   </button>
                   <a
-                    href='https://forms.gle/WqadQX49QTmNBqUMA'
-                    target='_blank'
-                  >
-                    <Button
-                      rounded
-                      className='duration-400 transform border transition-all hover:scale-110 hover:shadow-lg mr-6'
-                    >
-                      <p className='text-md md:text-xl'>
-                        Free Essay Intro Editing
-                      </p>
-                    </Button>
-                  </a>
-                  <a
                     href='https://calendly.com/studs4students/15-min-free-intro-session'
                     target='_blank'
                   >
@@ -77,9 +69,7 @@ export default function Modal({
                       rounded
                       className='duration-400 transform border transition-all hover:scale-110 hover:shadow-lg'
                     >
-                      <p className='text-md md:text-xl'>
-                        Free Consultation
-                      </p>
+                      <p className='text-md md:text-xl'>Free Consultation</p>
                     </Button>
                   </a>
                 </div>

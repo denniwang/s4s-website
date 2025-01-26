@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { useState } from 'react'
+import { routes } from '@/src/routes'
 
 export default function Hamburger() {
   const [isNavOpen, setIsNavOpen] = useState(false)
@@ -54,28 +55,25 @@ export default function Hamburger() {
               </svg>
             </div>
             <ul className='flex min-h-[250px] flex-col items-center justify-between text-center text-2xl'>
-              <li className='my-8  border-gray-400 uppercase'>
-                <a
-                  href='https://calendly.com/studs4students/15-min-free-intro-session'
-                  target='_blank'
-                >
-                  <span className='group'>
-                    <span className='relative  px-1 group-hover:text-white'>
-                      <span className='relative z-10'>FREE CONSULTATION</span>
-                      <span className='absolute bottom-0 left-0 z-0 h-0.5 w-full bg-text-secondary transition-all group-hover:h-full '></span>
-                    </span>
-                  </span>
-                </a>
-              </li>
-              <li className='my-8 border-b border-gray-400 uppercase'>
-                <a href={'/en/about'}>About</a>
-              </li>
-              <li className='my-8 border-b border-gray-400 uppercase'>
-                <a href={'/en/programs'}>Programs</a>
-              </li>
-              <li className='my-8 border-b border-gray-400 uppercase'>
-                <a href={'/en/gallery'}>Gallery</a>
-              </li>
+              {routes.map(item => (
+                <li key={item.label} className='my-8 border-gray-400 uppercase'>
+                  <a
+                    href={item.href}
+                    target={item.isExternal ? '_blank' : undefined}
+                  >
+                    {item.isExternal ? (
+                      <span className='group'>
+                        <span className='relative px-1 group-hover:text-white'>
+                          <span className='relative z-10'>{item.label}</span>
+                          <span className='absolute bottom-0 left-0 z-0 h-0.5 w-full bg-text-secondary transition-all group-hover:h-full'></span>
+                        </span>
+                      </span>
+                    ) : (
+                      item.label
+                    )}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </section>
