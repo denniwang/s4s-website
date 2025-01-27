@@ -3,12 +3,12 @@ import { useTranslations } from 'next-intl'
 import Button from './components/Button'
 import Link from 'next/link'
 import Image from 'next/image'
+import Testimony from './components/Testimony'
 import Spotlight from './components/Spotlight'
 import Modal from './components/Modal'
 import React, { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import { motion } from 'framer-motion'
 
 export default function DashboardPage({}) {
   function Card({
@@ -49,69 +49,23 @@ export default function DashboardPage({}) {
       <section className='flex w-full flex-col items-center bg-background pb-12  md:h-1/2 '>
         <div className='pl-15 flex h-full w-full flex-col-reverse items-center justify-between align-bottom lg:flex-row'>
           <div className='flex flex-col items-center gap-5 lg:w-1/2'>
-            <div className='h-[5rem] overflow-hidden'>
-              <motion.h1
-                initial={{ y: '150%' }}
-                animate={{ y: 0 }}
-                transition={{ duration: 0.5, ease: [0.33, 1, 0.68, 1] }}
-                className='max-w-2xl text-center text-6xl font-extrabold leading-tight md:text-6xl xl:text-7xl '
+            <h1 className='max-w-2xl text-center text-6xl font-extrabold leading-tight md:text-6xl xl:text-7xl'>
+              Real college help. <span className='underline'>From</span>{' '}
+              students, <span className='underline'>for</span> students.{' '}
+            </h1>
+            <p className='mx-10 w-3/4 text-3xl'>
+              Get help with the whole admissions process, from start to finish.
+            </p>
+
+            <Link href='/en/about'>
+              <Button
+                rounded
+                size='large'
+                className='duration-400 transform border transition-all hover:scale-110 hover:shadow-lg '
               >
-                Real college help.
-              </motion.h1>
-            </div>
-
-            <div className=' mt-[-1rem] h-[5rem] overflow-hidden'>
-              <motion.h1
-                initial={{ y: '170%' }}
-                animate={{ y: 0 }}
-                transition={{
-                  duration: 0.5,
-                  ease: [0.33, 1, 0.68, 1],
-                  delay: 0.1
-                }}
-                className='max-w-2xl text-center text-6xl font-extrabold leading-tight md:text-6xl xl:text-7xl '
-              >
-                <span className='underline'>From</span> students,{' '}
-                <span className='underline'>for</span>.{' '}
-              </motion.h1>
-            </div>
-
-            <div className=' mt-[-1rem] h-[5rem] overflow-hidden'>
-              <motion.h1
-                initial={{ y: '180%' }}
-                animate={{ y: 0 }}
-                transition={{
-                  duration: 0.5,
-                  ease: [0.33, 1, 0.68, 1],
-                  delay: 0.2
-                }}
-                className='max-w-2xl text-center text-6xl font-extrabold leading-tight md:text-6xl xl:text-7xl '
-              >
-                students
-              </motion.h1>
-            </div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 120 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.7 }}
-              className='flex flex-col items-center justify-center'
-            >
-              <p className='mx-10 w-3/4 pb-5 text-3xl'>
-                Get help with the whole admissions process, from start to
-                finish.
-              </p>
-
-              <Link href='/en/about'>
-                <Button
-                  rounded
-                  size='large'
-                  className='duration-400 transform border transition-all hover:scale-110 hover:shadow-lg '
-                >
-                  <p className='text-3xl'>Learn More</p>
-                </Button>
-              </Link>
-            </motion.div>
+                <p className='text-3xl'>Learn More</p>
+              </Button>
+            </Link>
           </div>
           <Modal showModal={showModal} setShowModal={setShowModal} />
           <div className='w-full flex-col lg:w-6/12 '>
