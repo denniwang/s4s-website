@@ -29,13 +29,21 @@ export const metadata: Metadata = {
   description: 'Real college help. From students, for students.'
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params: { locale }
 }: {
   children: React.ReactNode
   params: { locale: string }
 }) {
+  let messages;
+  try {
+    messages = (await import(`../../../messages/${locale}.json`)).default;
+  } catch (error) {
+    // If a message file for the locale is not found, fallback to English
+    messages = (await import(`../../../messages/en.json`)).default;
+  }
+
   return (
     <>
       <title>Students 4 Students</title>
@@ -64,7 +72,7 @@ export default function RootLayout({
             defaultTheme='light'
             themes={['light', 'dark']}
           >
-            <NextIntlClientProvider locale={locale}>
+            <NextIntlClientProvider messages={messages} locale={locale}>
               <NextTopLoader
                 initialPosition={0.08}
                 crawlSpeed={200}
