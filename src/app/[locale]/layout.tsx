@@ -11,6 +11,7 @@ import { Header } from './components/Header'
 import './globals.css'
 import { PopupWidget } from 'react-calendly'
 import { Footer } from './components/Footer'
+import 'aos/dist/aos.css'
 
 const inter = Inter({
   subsets: ['latin'],

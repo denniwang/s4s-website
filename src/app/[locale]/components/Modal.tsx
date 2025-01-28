@@ -1,30 +1,55 @@
-import React, { useEffect } from 'react'
+'use client'
+import React, { useEffect, useState } from 'react'
 import Button from './Button'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
-export default function Modal({
-  showModal,
-  setShowModal
-}: {
-  showModal: boolean
-  setShowModal: React.Dispatch<React.SetStateAction<boolean>>
-}) {
+export default function Modal() {
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    // Initialize AOS
+    AOS.init({
+      duration: 1000,
+      once: true
+    })
+
+    // Check if user has previously dismissed the modal
+    const hasSeenModal = sessionStorage.getItem('modal') === 'false'
+    
+    if (!hasSeenModal) {
+      const timer = setTimeout(() => {
+        setIsVisible(true)
+      }, 5000)
+      
+      return () => clearTimeout(timer)
+    }
+  }, [])
+
+  if (!isVisible) return null
+
   function noModal() {
-    setShowModal(false)
+    setIsVisible(false)
     sessionStorage.setItem('modal', 'false')
   }
+
   return (
     <>
       <button
         className='mb-1 mr-1 hidden rounded bg-pink-500 px-6 py-3 text-sm font-bold uppercase text-white shadow outline-none transition-all duration-150 ease-linear hover:shadow-lg focus:outline-none active:bg-pink-600'
         type='button'
-        onClick={() => setShowModal(true)}
+        onClick={() => setIsVisible(true)}
       >
         Open regular modal
       </button>
-      {showModal ? (
+      {isVisible ? (
         <>
           <div className='fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden outline-none focus:outline-none'>
-            <div className='relative mx-auto my-6 w-auto max-w-3xl'>
+            <div 
+              className='relative mx-auto my-6 w-auto max-w-3xl'
+              data-aos="fade-up"
+              data-aos-duration="800"
+            >
               {/*content*/}
               <div className='relative flex w-full flex-col rounded-lg border-0 bg-white shadow-lg outline-none focus:outline-none'>
                 {/*header*/}
@@ -34,7 +59,7 @@ export default function Modal({
                   </h3>
                   <button
                     className='float-right ml-auto border-0 bg-transparent p-1 text-3xl font-semibold leading-none text-black opacity-5 outline-none focus:outline-none'
-                    onClick={() => setShowModal(false)}
+                    onClick={() => setIsVisible(false)}
                   >
                     <span className='block h-6 w-6 bg-transparent text-2xl text-black opacity-5 outline-none focus:outline-none'>
                       ×
