@@ -46,7 +46,9 @@ const config = {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         typing: 'typing 5s steps(20) infinite alternate, blink .9s infinite',
-        'slide-in': 'slide-in 1s forwards'
+        'slide-in': 'slide-in 1s forwards',
+        scroll:
+          'scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite'
       },
       keyframes: {
         typing: {
@@ -72,6 +74,11 @@ const config = {
         'slide-in': {
           '0%': { transform: 'translateX(-100%)', opacity: '0' },
           '100%': { transform: 'translateX(0)', opacity: '1' }
+        },
+        scroll: {
+          to: {
+            transform: 'translate(calc(-50% - 0.5rem))'
+          }
         }
       }
     }

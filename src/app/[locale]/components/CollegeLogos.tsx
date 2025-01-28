@@ -15,7 +15,7 @@ export const CollegeLogos = () => {
   return (
     <div className='w-full bg-white py-4 md:py-7'>
       <motion.div
-        className='flex w-full justify-end'
+        className='flex w-full justify-center overflow-hidden'
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.2 }}

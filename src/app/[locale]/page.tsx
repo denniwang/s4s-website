@@ -130,7 +130,9 @@ export default function DashboardPage({}) {
         <div className='text-center text-xl'>
           Get help from our experts, securing your place in top universities
         </div>
-        <CollegeLogos />
+        <div className='flex w-full flex-row justify-center'>
+          <CollegeLogos />
+        </div>
       </section>
       <div className='flex w-full flex-row justify-center'>
         <p className='relative m-6 w-max py-10 text-center text-3xl '>
