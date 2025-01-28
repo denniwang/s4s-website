@@ -126,8 +126,8 @@ export default function DashboardPage({}) {
           </div>
         </div>
       </section>
-      <section className='mt-24 flex flex-col items-center justify-center'>
-        <div className='w-full'>
+      <section className='mt-24 flex w-full flex-col items-center justify-center'>
+        <div className='text-center text-xl'>
           Get help from our experts, securing your place in top universities
         </div>
         <CollegeLogos />
