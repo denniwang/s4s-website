@@ -9,6 +9,7 @@ import React, { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { motion } from 'framer-motion'
+import { CollegeLogos } from './components/CollegeLogos'
 
 export default function DashboardPage({}) {
   function Card({
@@ -125,33 +126,11 @@ export default function DashboardPage({}) {
           </div>
         </div>
       </section>
-      <section className='mt-24 flex flex-row justify-center'>
-        <div className='flex flex-col items-center justify-center gap-12 lg:flex-row'>
-          <Card stat='80%' index={1}>
-            <p className='text-2xl'>
-              of high school grads <span className='underline'>WISH</span> they
-              started applications earlier
-            </p>
-          </Card>
-          <Card stat='' index={2}>
-            <h2 className='m-4 text-8xl font-extrabold'>
-              4<span className='text-7xl'>x</span>
-            </h2>
-            <p className='text-2xl'>
-              students&apos; chances of getting accepted into top schools.{' '}
-              <span>GUARANTEED</span>{' '}
-            </p>
-          </Card>
-          <Card stat='' index={3}>
-            <h2 className='m-4 text-8xl font-extrabold'>
-              9<span className='text-5xl'>/10</span>
-            </h2>
-            <p className='text-2xl'>
-              of all competitive applications have done academic research or
-              personal projects
-            </p>
-          </Card>
+      <section className='mt-24 flex flex-col items-center justify-center'>
+        <div className='w-full'>
+          Get help from our experts, securing your place in top universities
         </div>
+        <CollegeLogos />
       </section>
       <div className='flex w-full flex-row justify-center'>
         <p className='relative m-6 w-max py-10 text-center text-3xl '>
