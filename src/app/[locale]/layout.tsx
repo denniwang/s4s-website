@@ -94,6 +94,7 @@ export default async function RootLayout({
         content='Getting ready to apply to college or need help wrapping up your essays? Get real college help. By students, for students.'
         property='og:description'
       />
+      <meta name="google-site-verification" content="Kyq6mLWPWAdtLSuILhIQHjbL2XvlQbrCSuia6hlS8UU" />
       <link rel='icon' href='/favicon.ico' />
       <meta content='https://stu4stu.org/en' property='og:url' />
       <meta content='https://embed.com/embedimage.png' property='og:image' />
