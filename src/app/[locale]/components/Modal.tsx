@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Button from './Button'
 
 // Add props interface so the Modal can be controlled by its parent
@@ -9,22 +9,24 @@ interface ModalProps {
 }
 
 export default function Modal({ showModal, setShowModal }: ModalProps) {
+  const [delayDone, setDelayDone] = useState(false)
+
   useEffect(() => {
     // Check if the user has already dismissed the modal in this session.
     if (sessionStorage.getItem('modal') === 'false') {
-      // If dismissed, do nothing.
       return
     }
 
-    // Otherwise, show the modal after a 5‑second delay.
+    // Otherwise, delay showing the modal for 5 seconds.
     const timer = setTimeout(() => {
+      setDelayDone(true)
       setShowModal(true)
     }, 5000)
 
     return () => clearTimeout(timer)
   }, [setShowModal])
 
-  if (!showModal) return null
+  if (!delayDone || !showModal) return null
 
   function noModal() {
     setShowModal(false)
