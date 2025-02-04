@@ -142,8 +142,8 @@ export default async function RootLayout({
                   {
                     '@type': 'ListItem',
                     position: 2,
-                    name: 'Programs',
-                    item: 'https://stu4stu.org/programs'
+                    name: 'Pricing',
+                    item: 'https://stu4stu.org/pricing'
                   }
                 ]
               })
