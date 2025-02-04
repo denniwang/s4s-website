@@ -4,16 +4,19 @@ import Button from './Button'
 
 // Add props interface so the Modal can be controlled by its parent
 interface ModalProps {
-  showModal: boolean;
-  setShowModal: React.Dispatch<React.SetStateAction<boolean>>;
+  showModal: boolean
+  setShowModal: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 export default function Modal({ showModal, setShowModal }: ModalProps) {
   useEffect(() => {
-    // Do not initialize AOS here!
-    // Use global initialization from _app.tsx only.
+    // Check if the user has already dismissed the modal in this session.
+    if (sessionStorage.getItem('modal') === 'false') {
+      // If dismissed, do nothing.
+      return
+    }
 
-    // Always show modal after a 5‑second delay
+    // Otherwise, show the modal after a 5‑second delay.
     const timer = setTimeout(() => {
       setShowModal(true)
     }, 5000)
@@ -64,7 +67,8 @@ export default function Modal({ showModal, setShowModal }: ModalProps) {
                 {/* Body */}
                 <div className='relative flex-auto p-6'>
                   <p className='text-blueGray-500 text-md leading-relaxed md:my-4 md:text-lg'>
-                    Want to get started early with college apps before the school year? Book a{' '}
+                    Want to get started early with college apps before the
+                    school year? Book a{' '}
                     <span className='font-bold'>
                       free 15-minute consultation{' '}
                     </span>{' '}
