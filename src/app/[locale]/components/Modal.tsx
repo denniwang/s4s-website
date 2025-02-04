@@ -14,16 +14,12 @@ export default function Modal() {
       once: true
     })
 
-    // Check if user has previously dismissed the modal
-    const hasSeenModal = sessionStorage.getItem('modal') === 'false'
-    
-    if (!hasSeenModal) {
-      const timer = setTimeout(() => {
-        setIsVisible(true)
-      }, 5000)
-      
-      return () => clearTimeout(timer)
-    }
+    // Always show modal after a 5‑second delay
+    const timer = setTimeout(() => {
+      setIsVisible(true)
+    }, 5000)
+
+    return () => clearTimeout(timer)
   }, [])
 
   if (!isVisible) return null
@@ -45,10 +41,10 @@ export default function Modal() {
       {isVisible ? (
         <>
           <div className='fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden outline-none focus:outline-none'>
-            <div 
+            <div
               className='relative mx-auto my-6 w-auto max-w-3xl'
-              data-aos="fade-up"
-              data-aos-duration="800"
+              data-aos='fade-up'
+              data-aos-duration='800'
             >
               {/*content*/}
               <div className='relative flex w-full flex-col rounded-lg border-0 bg-white shadow-lg outline-none focus:outline-none'>
