@@ -1,31 +1,30 @@
 'use client'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import Button from './Button'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
 
-export default function Modal() {
-  const [isVisible, setIsVisible] = useState(false)
+// Add props interface so the Modal can be controlled by its parent
+interface ModalProps {
+  showModal: boolean;
+  setShowModal: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
+export default function Modal({ showModal, setShowModal }: ModalProps) {
   useEffect(() => {
-    // Initialize AOS
-    AOS.init({
-      duration: 1000,
-      once: true
-    })
+    // Do not initialize AOS here!
+    // Use global initialization from _app.tsx only.
 
     // Always show modal after a 5‑second delay
     const timer = setTimeout(() => {
-      setIsVisible(true)
+      setShowModal(true)
     }, 5000)
 
     return () => clearTimeout(timer)
-  }, [])
+  }, [setShowModal])
 
-  if (!isVisible) return null
+  if (!showModal) return null
 
   function noModal() {
-    setIsVisible(false)
+    setShowModal(false)
     sessionStorage.setItem('modal', 'false')
   }
 
@@ -34,11 +33,11 @@ export default function Modal() {
       <button
         className='mb-1 mr-1 hidden rounded bg-pink-500 px-6 py-3 text-sm font-bold uppercase text-white shadow outline-none transition-all duration-150 ease-linear hover:shadow-lg focus:outline-none active:bg-pink-600'
         type='button'
-        onClick={() => setIsVisible(true)}
+        onClick={() => setShowModal(true)}
       >
         Open regular modal
       </button>
-      {isVisible ? (
+      {showModal && (
         <>
           <div className='fixed inset-0 z-50 flex items-center justify-center overflow-y-auto overflow-x-hidden outline-none focus:outline-none'>
             <div
@@ -46,34 +45,33 @@ export default function Modal() {
               data-aos='fade-up'
               data-aos-duration='800'
             >
-              {/*content*/}
+              {/* Modal content */}
               <div className='relative flex w-full flex-col rounded-lg border-0 bg-white shadow-lg outline-none focus:outline-none'>
-                {/*header*/}
+                {/* Header */}
                 <div className='border-blueGray-200 flex items-start justify-between rounded-t border-b border-solid p-5'>
                   <h3 className='text-3xl font-semibold'>
                     LIMITED TIME OFFERS
                   </h3>
                   <button
                     className='float-right ml-auto border-0 bg-transparent p-1 text-3xl font-semibold leading-none text-black opacity-5 outline-none focus:outline-none'
-                    onClick={() => setIsVisible(false)}
+                    onClick={() => setShowModal(false)}
                   >
                     <span className='block h-6 w-6 bg-transparent text-2xl text-black opacity-5 outline-none focus:outline-none'>
                       ×
                     </span>
                   </button>
                 </div>
-                {/*body*/}
+                {/* Body */}
                 <div className='relative flex-auto p-6'>
                   <p className='text-blueGray-500 text-md leading-relaxed md:my-4 md:text-lg'>
-                    Want to get started early with college apps before the
-                    school year? Book a{' '}
+                    Want to get started early with college apps before the school year? Book a{' '}
                     <span className='font-bold'>
                       free 15-minute consultation{' '}
                     </span>{' '}
                     on us today!
                   </p>
                 </div>
-                {/*footer*/}
+                {/* Footer */}
                 <div className='border-blueGray-200 flex items-center justify-end rounded-b border-t border-solid p-2 md:p-6'>
                   <button
                     className='background-transparent mb-1 mr-1 px-6 text-sm font-bold uppercase text-red-500 outline-none transition-all duration-150 ease-linear focus:outline-none md:py-2'
@@ -99,7 +97,7 @@ export default function Modal() {
           </div>
           <div className='fixed inset-0 z-40 bg-black opacity-25'></div>
         </>
-      ) : null}
+      )}
     </>
   )
 }
