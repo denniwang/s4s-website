@@ -86,7 +86,12 @@ export default async function RootLayout({
       />
       <link rel='icon' href='/favicon.ico' />
       <meta content='https://stu4stu.org/en' property='og:url' />
-      <meta content='https://embed.com/embedimage.png' property='og:image' />
+      <meta
+        property='og:image'
+        content='https://stu4stu.org/s4s-website-header.png'
+      />
+      <meta property='og:image:width' content='1200' />
+      <meta property='og:image:height' content='630' />
       <meta content='#43B581' data-react-helmet='true' name='theme-color' />
       <meta name='viewport' content='width=device-width, initial-scale=1' />
       <html

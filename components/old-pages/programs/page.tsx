@@ -8,13 +8,12 @@ import { FaRegLightbulb } from 'react-icons/fa'
 import { FaHeartCircleBolt } from 'react-icons/fa6'
 import { FaSmileWink } from 'react-icons/fa'
 import { IconContext } from 'react-icons'
-import Button from '../components/Button'
+import Button from '../../../src/app/components/Button'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { useEffect } from 'react'
 
-export default function About() {
-
+function Programs() {
   function PJCard({
     desc,
     children,
@@ -382,3 +381,5 @@ export default function About() {
     </>
   )
 }
+
+//export default Programs;

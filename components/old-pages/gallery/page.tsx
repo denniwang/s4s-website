@@ -1,8 +1,7 @@
 import { EmblaOptionsType } from 'embla-carousel'
-import ProjectCarousel from '../components/ProjectCarousel'
+import ProjectCarousel from '../../../src/app/components/ProjectCarousel'
 
-export default function About() {
-
+function Gallery() {
   const OPTIONS: EmblaOptionsType = { loop: true }
   const SLIDES = [
     {
@@ -30,3 +29,5 @@ export default function About() {
     </main>
   )
 }
+
+export default Gallery
