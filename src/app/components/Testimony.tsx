@@ -1,7 +1,5 @@
-import { useTranslations } from 'next-intl'
 
 export default function Testimony() {
-  const t = useTranslations('')
   return (
     <section className='bg-background-secondary py-20 max-lg:py-10'>
       <div className='mx-auto grid max-w-screen-lg grid-cols-3 gap-9 px-8 py-5 max-lg:max-w-fit max-lg:grid-cols-1 max-lg:gap-10'>

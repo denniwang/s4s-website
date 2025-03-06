@@ -1,11 +1,9 @@
-import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { useState } from 'react'
 import { routes } from '@/src/routes'
 
 export default function Hamburger() {
   const [isNavOpen, setIsNavOpen] = useState(false)
-  const t = useTranslations('')
 
   return (
     <div className='mb-[-3.5vh] flex items-center border-b border-gray-400 py-8 md:hidden'>

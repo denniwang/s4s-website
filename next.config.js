@@ -1,7 +1,3 @@
-const createNextIntlPlugin = require('next-intl/plugin')
-
-const withNextIntl = createNextIntlPlugin()
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   async headers() {
@@ -17,16 +13,7 @@ const nextConfig = {
         ]
       }
     ]
-  },
-  async redirects() {
-    return [
-      {
-        source: '/en/:path*',
-        destination: '/:path*',
-        permanent: true // 301 redirect
-      }
-    ]
   }
 }
 
-module.exports = withNextIntl(nextConfig)
+module.exports = nextConfig

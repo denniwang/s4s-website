@@ -1,7 +1,5 @@
-import { type pathnames } from '@/src/navigation'
-
 type Route = {
-  href: typeof pathnames | string
+  href: string
   label: string
   isExternal: boolean
 }

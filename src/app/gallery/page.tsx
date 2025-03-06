@@ -1,9 +1,7 @@
-import { useTranslations } from 'next-intl'
 import { EmblaOptionsType } from 'embla-carousel'
 import ProjectCarousel from '../components/ProjectCarousel'
 
 export default function About() {
-  const t = useTranslations('')
 
   const OPTIONS: EmblaOptionsType = { loop: true }
   const SLIDES = [

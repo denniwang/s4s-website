@@ -1,18 +1,12 @@
-import { ThemeProvider } from '@/src/app/[locale]/components/ThemeProvider'
 import type { Metadata } from 'next'
-import {
-  AbstractIntlMessages,
-  NextIntlClientProvider,
-  useMessages
-} from 'next-intl'
 import { Inter, Rubik, Space_Grotesk } from 'next/font/google'
 import NextTopLoader from 'nextjs-toploader'
 import { Header } from './components/Header'
 import './globals.css'
-import { PopupWidget } from 'react-calendly'
 import { Footer } from './components/Footer'
 import 'aos/dist/aos.css'
 import Script from 'next/script'
+import { ThemeProvider } from './components/ThemeProvider'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -70,18 +64,10 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({
   children,
-  params: { locale }
 }: {
   children: React.ReactNode
   params: { locale: string }
 }) {
-  let messages
-  try {
-    messages = (await import(`../../../messages/${locale}.json`)).default
-  } catch (error) {
-    // If a message file for the locale is not found, fallback to English
-    messages = (await import(`../../../messages/en.json`)).default
-  }
 
   return (
     <>
@@ -101,8 +87,6 @@ export default async function RootLayout({
       <meta content='#43B581' data-react-helmet='true' name='theme-color' />
       <meta name='viewport' content='width=device-width, initial-scale=1' />
       <html
-        lang={locale}
-        dir={locale === 'ar' || locale == 'fa' ? 'rtl' : 'ltr'}
         className={`${space_grotesk.variable} ${rubik.variable} scroll-smooth`}
         suppressHydrationWarning
       >
@@ -157,7 +141,6 @@ export default async function RootLayout({
             defaultTheme='light'
             themes={['light', 'dark']}
           >
-            <NextIntlClientProvider messages={messages} locale={locale}>
               <NextTopLoader
                 initialPosition={0.08}
                 crawlSpeed={200}
@@ -169,10 +152,9 @@ export default async function RootLayout({
                 color='var(--primary)'
                 showSpinner={false}
               />
-              <Header locale={locale} />
+              <Header />
               <main className='mx-auto '>{children}</main>
               <Footer />
-            </NextIntlClientProvider>
           </ThemeProvider>
         </body>
       </html>

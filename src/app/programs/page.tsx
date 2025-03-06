@@ -1,5 +1,4 @@
 'use client'
-import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { MdWorkHistory } from 'react-icons/md'
 import { FaHandHoldingHand } from 'react-icons/fa6'
@@ -15,7 +14,6 @@ import 'aos/dist/aos.css'
 import { useEffect } from 'react'
 
 export default function About() {
-  const t = useTranslations('')
 
   function PJCard({
     desc,

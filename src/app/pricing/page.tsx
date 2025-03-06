@@ -1,5 +1,4 @@
 'use client'
-import { useTranslations } from 'next-intl'
 import { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
@@ -7,8 +6,6 @@ import Button from '../components/Button'
 import Image from 'next/image'
 
 export default function Pricing() {
-  const t = useTranslations('')
-
   useEffect(() => {
     AOS.init({ duration: 1000 })
   }, [])
