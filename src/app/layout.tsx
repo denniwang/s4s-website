@@ -7,7 +7,7 @@ import { Footer } from './components/Footer'
 import 'aos/dist/aos.css'
 import Script from 'next/script'
 import { ThemeProvider } from './components/ThemeProvider'
-import { Analytics } from '@vercel/analytics/next';
+import { Analytics } from '@vercel/analytics/next'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -64,12 +64,11 @@ export const metadata: Metadata = {
 }
 
 export default async function RootLayout({
-  children,
+  children
 }: {
   children: React.ReactNode
   params: { locale: string }
 }) {
-
   return (
     <>
       <title>Students 4 Students</title>
@@ -81,7 +80,10 @@ export default async function RootLayout({
         content='Getting ready to apply to college or need help wrapping up your essays? Get real college help. By students, for students.'
         property='og:description'
       />
-      <meta name="google-site-verification" content="Kyq6mLWPWAdtLSuILhIQHjbL2XvlQbrCSuia6hlS8UU" />
+      <meta
+        name='google-site-verification'
+        content='Kyq6mLWPWAdtLSuILhIQHjbL2XvlQbrCSuia6hlS8UU'
+      />
       <link rel='icon' href='/favicon.ico' />
       <meta content='https://stu4stu.org/en' property='og:url' />
       <meta content='https://embed.com/embedimage.png' property='og:image' />
@@ -142,21 +144,23 @@ export default async function RootLayout({
             defaultTheme='light'
             themes={['light', 'dark']}
           >
-              <NextTopLoader
-                initialPosition={0.08}
-                crawlSpeed={200}
-                height={3}
-                crawl={true}
-                easing='ease'
-                speed={200}
-                shadow='0 0 10px #2299DD,0 0 5px #2299DD'
-                color='var(--primary)'
-                showSpinner={false}
-              />
-              <Header />
-              <main className='mx-auto '>{children}</main>
+            <NextTopLoader
+              initialPosition={0.08}
+              crawlSpeed={200}
+              height={3}
+              crawl={true}
+              easing='ease'
+              speed={200}
+              shadow='0 0 10px #2299DD,0 0 5px #2299DD'
+              color='var(--primary)'
+              showSpinner={false}
+            />
+            <Header />
+            <main className='mx-auto '>
+              {children}
               <Analytics />
-              <Footer />
+            </main>
+            <Footer />
           </ThemeProvider>
         </body>
       </html>
