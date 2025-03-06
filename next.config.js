@@ -17,15 +17,6 @@ const nextConfig = {
         ]
       }
     ]
-  },
-  async redirects() {
-    return [
-      {
-        source: '/en/:path*',
-        destination: '/:path*',
-        permanent: true // 301 redirect
-      }
-    ]
   }
 }
 
