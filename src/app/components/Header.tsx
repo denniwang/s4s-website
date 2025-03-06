@@ -1,26 +1,19 @@
 'use client'
-import { Link } from '@/src/navigation'
-import { useTranslations } from 'next-intl'
 import { FC } from 'react'
-import LangSwitcher from './LangSwitcher'
-import ThemeSwitch from './ThemeSwitch'
 import Image from 'next/image'
 import Hamburger from './Hamburger'
 import { routes } from '@/src/routes'
+import Link from 'next/link'
 
-interface Props {
-  locale: string
-}
+interface Props {}
 
-export const Header: FC<Props> = ({ locale }) => {
-  const t = useTranslations('')
-
+export const Header: FC<Props> = () => {
   return (
     <>
       <Hamburger />
       <div className='sticky top-0 z-20 mx-auto hidden w-full items-center justify-between bg-gradient-to-t from-background to-background-secondary px-2 pb-1 pt-2 shadow-md shadow-background md:block'>
         <div className='flex flex-row'>
-          <Link lang={locale} href='/'>
+          <Link href='/'>
             <div className='align-center flex flex-row items-center'>
               <Image
                 alt='logo'
@@ -57,8 +50,8 @@ export const Header: FC<Props> = ({ locale }) => {
                     </span>
                   </a>
                 ) : (
-                  <Link key={item.label} lang={locale} href={item.href as any}>
-                    {t(item.label)}
+                  <Link key={item.label} href={item.href as any}>
+                    {item.label}
                   </Link>
                 )
               )}

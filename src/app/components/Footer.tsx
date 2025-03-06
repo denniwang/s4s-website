@@ -2,9 +2,7 @@ import Link from 'next/link'
 import { FaInstagram } from 'react-icons/fa'
 import { SiLinktree } from 'react-icons/si'
 import { FaTiktok } from 'react-icons/fa'
-import { useTranslations } from 'next-intl'
 export const Footer = () => {
-  const t = useTranslations('')
   return (
     <div className='footer mt-10 flex flex-row justify-center bg-gradient-to-t from-background-secondary to-background pb-12'>
       <div className='my-5 flex w-3/4 flex-col justify-around lg:flex-row'>
