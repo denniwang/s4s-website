@@ -37,29 +37,13 @@ export const Footer = () => {
           </div>
         </div>
         <div className='flex flex-col gap-1'>
-          <Link href={'/en/programs'}>
+          <Link href={'/pricing'}>
             <h2 className='text-3xl font-bold transition-colors duration-200 hover:text-button'>
-              Programs
+              Pricing
             </h2>
           </Link>
 
-          <Link href='/en/programs#BL'>
-            <p className='text-lg transition-colors duration-200 hover:text-button'>
-              Big Little Program
-            </p>
-          </Link>
-
-          <Link href={`/en/programs#PJ`}>
-            <p className='mb-2 text-lg transition-colors duration-200 hover:text-button'>
-              Project Jam
-            </p>
-          </Link>
-          <Link href={'/en/gallery'}>
-            <h2 className='mb-2 text-3xl font-bold transition-colors duration-200 hover:text-button'>
-              Gallery
-            </h2>
-          </Link>
-          <Link href={'/en/about'}>
+          <Link href={'/about'}>
             <h2 className='mb-4 text-3xl font-bold transition-colors duration-200 hover:text-button'>
               About
             </h2>

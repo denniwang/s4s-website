@@ -102,7 +102,7 @@ export default function DashboardPage({}) {
                 finish.
               </p>
 
-              <Link href='/en/about'>
+              <Link href='/about'>
                 <Button
                   rounded
                   size='large'
