@@ -29,11 +29,7 @@ export const metadata: Metadata = {
   keywords:
     'college mentorship, college counseling, college admissions, student mentorship, college guidance',
   alternates: {
-    canonical: 'https://stu4stu.org/',
-    languages: {
-      en: 'https://stu4stu.org/en'
-      // Add other languages here if applicable.
-    }
+    canonical: 'https://stu4stu.org/'
   },
   openGraph: {
     title:
@@ -85,7 +81,7 @@ export default async function RootLayout({
         content='Kyq6mLWPWAdtLSuILhIQHjbL2XvlQbrCSuia6hlS8UU'
       />
       <link rel='icon' href='/favicon.ico' />
-      <meta content='https://stu4stu.org/en' property='og:url' />
+      <meta content='https://stu4stu.org/' property='og:url' />
       <meta
         property='og:image'
         content='https://stu4stu.org/s4s-website-header.png'
