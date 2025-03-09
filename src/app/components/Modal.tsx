@@ -69,12 +69,15 @@ export default function Modal({ showModal, setShowModal }: ModalProps) {
                 {/* Body */}
                 <div className='relative flex-auto p-6'>
                   <p className='text-blueGray-500 text-md leading-relaxed md:my-4 md:text-lg'>
-                    Want to get started early with college apps before the
-                    school year? Book a{' '}
+                    Want to get a competitve edge in the college application
+                    process? Book a{' '}
                     <span className='font-bold'>
                       free 15-minute consultation{' '}
                     </span>{' '}
-                    on us today!
+                    on us today!{' '}
+                    <span className='font-bold'>Match with a mentor </span>who
+                    has been through the process and can help you get into your
+                    dream school.{' '}
                   </p>
                 </div>
                 {/* Footer */}
@@ -86,6 +89,14 @@ export default function Modal({ showModal, setShowModal }: ModalProps) {
                   >
                     Miss out
                   </button>
+                  <a href='https://tinyurl.com/s4smentor' target='_blank'>
+                    <Button
+                      rounded
+                      className='duration-400 mr-3 transform border transition-all hover:scale-110 hover:shadow-lg'
+                    >
+                      <p className='text-md md:text-xl'>Find a Mentor!</p>
+                    </Button>
+                  </a>
                   <a
                     href='https://calendly.com/studs4students/15-min-free-intro-session'
                     target='_blank'
