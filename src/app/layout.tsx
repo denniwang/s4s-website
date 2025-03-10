@@ -28,9 +28,6 @@ export const metadata: Metadata = {
     'Discover top-tier college mentorship and personalized guidance on college admissions, brought to you by real students. Get insider tips to gain admission to your dream college.',
   keywords:
     'college mentorship, college counseling, college admissions, student mentorship, college guidance',
-  alternates: {
-    canonical: 'https://stu4stu.org/'
-  },
   openGraph: {
     title:
       'College Mentorship | Real College Help. From Students, For Students',
