@@ -139,7 +139,7 @@ export default function DashboardPage({}) {
         </p>
       </div>
       <a
-        href='https://calendly.com/studs4students/15-min-free-intro-session'
+        href='https://calendly.com/studs4students/15-min-free-trial'
         target='_blank'
         className='mt-[-30px] inline'
       >

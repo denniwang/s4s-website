@@ -98,7 +98,7 @@ export default function Modal({ showModal, setShowModal }: ModalProps) {
                     </Button>
                   </a>
                   <a
-                    href='https://calendly.com/studs4students/15-min-free-intro-session'
+                    href='https://calendly.com/studs4students/15-min-free-trial'
                     target='_blank'
                   >
                     <Button

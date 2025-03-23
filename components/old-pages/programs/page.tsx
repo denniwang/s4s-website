@@ -102,7 +102,7 @@ function Programs() {
   function ConsultationButton() {
     return (
       <a
-        href='https://calendly.com/studs4students/15-min-free-intro-session'
+        href='https://calendly.com/studs4students/15-min-free-trial'
         target='_blank'
       >
         <Button

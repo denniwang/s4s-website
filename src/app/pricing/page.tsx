@@ -46,7 +46,7 @@ export default function Pricing() {
     ],
     image: '/s4s-trans.png',
     buttonText: 'Book Free Consultation',
-    buttonLink: 'https://calendly.com/studs4students/15-min-free-intro-session',
+    buttonLink: 'https://calendly.com/studs4students/15-min-free-trial',
     note: "No commitment required. See if we're the right fit for you."
   }
 
@@ -245,7 +245,7 @@ export default function Pricing() {
             <div className='flex flex-col items-center gap-6 md:w-72'>
               {icon ? (
                 <div className='bg-background-secondary/20 flex h-36 w-36 items-center justify-center rounded-full'>
-                  <div className='text-text text-8xl'>{icon}</div>
+                  <div className='text-text text-7xl'>{icon}</div>
                 </div>
               ) : service.image ? (
                 <div className='relative h-48 w-48 overflow-hidden rounded-xl'>
@@ -261,7 +261,7 @@ export default function Pricing() {
                 <Button
                   rounded
                   size='large'
-                  className='w-full transform text-lg transition-all duration-300 hover:scale-105'
+                  className='w- transform text-lg transition-all duration-300 hover:scale-105'
                 >
                   {service.buttonText}
                 </Button>
