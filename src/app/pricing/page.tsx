@@ -161,7 +161,7 @@ export default function Pricing() {
               <a href={service.buttonLink} target='_blank' className='block'>
                 <Button
                   rounded
-                  size='large'
+                  size='medium'
                   className='w-full transform text-lg transition-all duration-300 hover:scale-105'
                 >
                   {service.buttonText}
@@ -260,8 +260,8 @@ export default function Pricing() {
               <a href={service.buttonLink} target='_blank' className='w-full'>
                 <Button
                   rounded
-                  size='large'
-                  className='w- transform text-lg transition-all duration-300 hover:scale-105'
+                  size='medium'
+                  className='w-full px-3 transform text-lg transition-all duration-300 hover:scale-105'
                 >
                   {service.buttonText}
                 </Button>
