@@ -66,7 +66,7 @@ export default function Pricing() {
     buttonText: 'Request Essay Review',
     buttonLink:
       'https://docs.google.com/forms/d/e/1FAIpQLSf71EVuxrz1iulyUxIAdJVfmUOYDj7KBwwadCaWyqkb2I2R_g/viewform',
-    //note: 'Professional feedback to strengthen your college essays.'
+    note: ''
   }
 
   const liveWritingHelp = {
@@ -82,7 +82,7 @@ export default function Pricing() {
     buttonText: 'Schedule Live Session',
     buttonLink:
       'https://docs.google.com/forms/d/e/1FAIpQLSf71EVuxrz1iulyUxIAdJVfmUOYDj7KBwwadCaWyqkb2I2R_g/viewform',
-    //note: 'Interactive sessions to improve your essays with immediate feedback.'
+    note: ''
   }
   // Service Card Component
   const ServiceCard = ({
