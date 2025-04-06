@@ -36,13 +36,6 @@ export default function About() {
       desc: 'Dennis is a CS + Business major at NEU, he loves to play tennis and participate in hackathons. He aspires to be retired by 30.',
       delay: 300
     },
-    {
-      img: '/kashish.jpg',
-      name: 'Kashish Sachdeva',
-      school: "UCLA '27",
-      desc: 'Kashish is a Pre-Law student at UCLA, she is an expert in the college admissions process and loves to help students express themselves through writing.',
-      delay: 400
-    }
   ]
   function PersonCard({
     img,
