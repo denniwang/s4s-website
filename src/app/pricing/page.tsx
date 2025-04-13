@@ -45,7 +45,7 @@ export default function Pricing() {
       'Portfolio Development'
     ],
     image: '/s4s-trans.png',
-    buttonText: 'Book Free Consultation',
+    buttonText: 'Book Free Trial',
     buttonLink: 'https://calendly.com/studs4students/15-min-free-trial',
     note: "No commitment required. See if we're the right fit for you."
   }
@@ -74,10 +74,7 @@ export default function Pricing() {
     //subtitle: 'Real-time essay assistance',
     price: '25',
     period: '/hour',
-    features: [
-      'Real-time feedback and guidance',
-      'Brainstorming assistance',
-    ],
+    features: ['Real-time feedback and guidance', 'Brainstorming assistance'],
     image: '/sync-writing.png',
     buttonText: 'Schedule Live Session',
     buttonLink:
@@ -110,7 +107,9 @@ export default function Pricing() {
             {/* Header */}
             <div className='mb-6 flex flex-col items-center md:flex-row md:justify-between'>
               <div className='mb-4 md:mb-0'>
-                <h2 className='text-text text-3xl font-bold'>{service.title}</h2>
+                <h2 className='text-text text-3xl font-bold'>
+                  {service.title}
+                </h2>
                 <div className='mt-2 flex items-baseline gap-2'>
                   <span className='text-4xl font-bold text-button'>
                     {service.price}
@@ -129,7 +128,7 @@ export default function Pricing() {
                 />
               </div>
             </div>
-            
+
             {/* Features */}
             {service.features && (
               <ul className='mb-8 grid gap-4 md:grid-cols-2'>
@@ -155,7 +154,7 @@ export default function Pricing() {
                 ))}
               </ul>
             )}
-            
+
             {/* Button */}
             <div className='mt-auto'>
               <a href={service.buttonLink} target='_blank' className='block'>
@@ -167,7 +166,9 @@ export default function Pricing() {
                   {service.buttonText}
                 </Button>
               </a>
-              <p className='mt-3 text-center text-sm text-gray-500'>{service.note}</p>
+              <p className='mt-3 text-center text-sm text-gray-500'>
+                {service.note}
+              </p>
             </div>
           </div>
         ) : (
@@ -175,7 +176,9 @@ export default function Pricing() {
           <div className='flex flex-col items-center justify-between gap-8 md:flex-row md:items-start'>
             <div className='flex-1 space-y-6'>
               <div className='space-y-2'>
-                <h2 className='text-text text-2xl font-bold'>{service.title}</h2>
+                <h2 className='text-text text-2xl font-bold'>
+                  {service.title}
+                </h2>
                 {service.subtitle && (
                   <p className='italic text-gray-500'>{service.subtitle}</p>
                 )}
@@ -261,12 +264,14 @@ export default function Pricing() {
                 <Button
                   rounded
                   size='medium'
-                  className='w-full px-3 transform text-lg transition-all duration-300 hover:scale-105'
+                  className='w-full transform px-3 text-lg transition-all duration-300 hover:scale-105'
                 >
                   {service.buttonText}
                 </Button>
               </a>
-              <p className='text-center text-sm text-gray-500'>{service.note}</p>
+              <p className='text-center text-sm text-gray-500'>
+                {service.note}
+              </p>
             </div>
           </div>
         )}

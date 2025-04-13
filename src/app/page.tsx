@@ -145,7 +145,7 @@ export default function DashboardPage({}) {
       >
         <span className='group'>
           <span className='relative  px-1 group-hover:text-white'>
-            <span className='relative z-10'>Book a free consultation!</span>
+            <span className='relative z-10'>Book a free trial!</span>
             <span className='absolute bottom-0 left-0 z-0 h-0.5 w-full bg-primary transition-all group-hover:h-full '></span>
           </span>
         </span>

@@ -71,10 +71,8 @@ export default function Modal({ showModal, setShowModal }: ModalProps) {
                   <p className='text-blueGray-500 text-md leading-relaxed md:my-4 md:text-lg'>
                     Want to get a competitve edge in the college application
                     process? Book a{' '}
-                    <span className='font-bold'>
-                      free 15-minute consultation{' '}
-                    </span>{' '}
-                    on us today!{' '}
+                    <span className='font-bold'>free 15-minute trial </span> on
+                    us today!{' '}
                     <span className='font-bold'>Match with a mentor </span>who
                     has been through the process and can help you get into your
                     dream school.{' '}
@@ -105,7 +103,7 @@ export default function Modal({ showModal, setShowModal }: ModalProps) {
                       rounded
                       className='duration-400 transform border transition-all hover:scale-110 hover:shadow-lg'
                     >
-                      <p className='text-md md:text-xl'>Free Consultation</p>
+                      <p className='text-md md:text-xl'>Free Trial</p>
                     </Button>
                   </a>
                 </div>

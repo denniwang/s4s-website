@@ -99,7 +99,7 @@ function Programs() {
     }
   ]
 
-  function ConsultationButton() {
+  function FreeTrialButton() {
     return (
       <a
         href='https://calendly.com/studs4students/15-min-free-trial'
@@ -110,7 +110,7 @@ function Programs() {
           size='large'
           className='duration-400 transform border transition-all hover:scale-110 hover:shadow-lg'
         >
-          Book consultation now!
+          Book free trial now!
         </Button>
       </a>
     )
@@ -201,9 +201,9 @@ function Programs() {
               <div className='hidden w-auto flex-col items-center justify-center gap-5 text-center underline md:flex md:text-xl'>
                 <p className='mb-4'>
                   {' '}
-                  Book a consultation below to get started!
+                  Book a free trial below to get started!
                 </p>
-                <ConsultationButton />
+                <FreeTrialButton />
               </div>
             </div>
             <div className='mb-4 block h-0.5 w-[30vw] bg-background-card md:hidden'></div>
@@ -239,8 +239,8 @@ function Programs() {
           </div>
 
           <div className='flex w-auto flex-col items-center justify-center gap-8 text-center underline md:hidden md:text-xl'>
-            <p className='mb-4'> Book a consultation below to get started!</p>
-            <ConsultationButton />
+            <p className='mb-4'> Book a free trial below to get started!</p>
+            <FreeTrialButton />
           </div>
 
           <div className='h-[50vh]  w-full md:w-[75vw] '>
@@ -285,9 +285,9 @@ function Programs() {
             </IconContext.Provider>
           </div>
           <p className='px-2 text-center'>
-            Get started today by booking a consultation below!
+            Get started today by booking a free trial below!
           </p>
-          <ConsultationButton />
+          <FreeTrialButton />
         </section>
 
         <div id='WW' className='h-2'></div>
@@ -310,7 +310,7 @@ function Programs() {
                 )
               })}
 
-              <ConsultationButton />
+              <FreeTrialButton />
             </div>
 
             <table
