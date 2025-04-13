@@ -16,11 +16,11 @@ export const routes: Route[] = [
   //   label: 'Programs',
   //   isExternal: false
   // },
-  // {
-  //   href: '/gallery',
-  //   label: 'Gallery',
-  //   isExternal: false
-  // },
+  {
+    href: '/student-success',
+    label: 'Student Success',
+    isExternal: false
+  },
   {
     href: '/about',
     label: 'About',

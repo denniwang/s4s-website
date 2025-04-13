@@ -7,14 +7,14 @@ import { useEffect } from 'react'
 export default function About() {
   const team = [
     {
-      img: '/andrew.jpg',
+      img: 'Andrew.jpg',
       name: 'Andrew Chen',
       school: "UW Seattle '27",
       desc: "Andrew is a computer science TA and an applied math major at the University of Washington. Ever laughed or cringed at any of our TikToks? He's the guy to blame.",
       delay: 0
     },
     {
-      img: '/keyon.jpg',
+      img: 'Keyon.jpg',
       name: 'Keyon Jazayeri',
       school: "UC Irvine '27",
       desc: 'Keyon is a stellar student at UCI, majoring in Computer Science. He loves to work on startups and practices jiu jitsu in his free time.',
@@ -22,7 +22,7 @@ export default function About() {
     },
 
     {
-      img: '/darsh.jpg',
+      img: 'Darsh.jpg',
       name: 'Darsh Verma',
       school: "UCLA '27",
       desc: 'Darsh is a math and CS major at UCLA, and loves working out, playing cricket, and cooking in his free time. He is on track to solving the Riemann Hypothesis by the end of his career.',
@@ -30,12 +30,12 @@ export default function About() {
     },
 
     {
-      img: '/dennis.jpg',
+      img: 'Dennis.jpg',
       name: 'Dennis Wang',
       school: "Northeastern University '27",
       desc: 'Dennis is a CS + Business major at NEU, he loves to play tennis and participate in hackathons. He aspires to be retired by 30.',
       delay: 300
-    },
+    }
   ]
   function PersonCard({
     img,
@@ -58,7 +58,7 @@ export default function About() {
       >
         <div className='shadow-md'>
           <Image
-            src={img}
+            src={'/people/' + img}
             width={500}
             height={200}
             alt={name}
