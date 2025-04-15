@@ -32,7 +32,7 @@ export default function About() {
     {
       img: 'Dennis.jpg',
       name: 'Dennis Wang',
-      school: "Northeastern University '27",
+      school: "Northeastern University'27",
       desc: 'Dennis is a CS + Business major at NEU, he loves to play tennis and participate in hackathons. He aspires to be retired by 30.',
       delay: 300
     }

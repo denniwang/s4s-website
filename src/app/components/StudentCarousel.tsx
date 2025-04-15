@@ -14,10 +14,11 @@ import { VscTriangleRight } from 'react-icons/vsc'
 export type SlideType = {
   title: string
   img: string
-  subtitle: string
   desc: string
   big: string
-  // Add other properties as needed
+  year: string
+  school: string
+  schoolLogo: string
 }
 
 type PropType = {
@@ -67,9 +68,26 @@ const EmblaCarousel: React.FC<PropType> = props => {
               </div>
               <div className='flex w-5/6 flex-col gap-3 md:w-3/4'>
                 <h2 className='text-4xl font-bold'>{slide.title}</h2>
-                <p className='italic'>{slide.subtitle}</p>
-                <br></br>
                 <p className=''>{slide.desc}</p>
+                {slide.school != '' && (
+                  <div className='flex flex-col gap-3 bg-buttonSecondary p-3 text-left'>
+                    <div className='flex flex-row items-center gap-2'>
+                      <div className='h-10 w-10 overflow-hidden mt-3'>
+                        <Image
+                          src={`/logos/${slide.schoolLogo}.png`}
+                          width={50}
+                          height={50}
+                          alt={slide.school}
+                        />
+                      </div>
+                      <p>
+                        <span className='font-extrabold'>
+                          {slide.school}, {slide.year}
+                        </span>{' '}
+                      </p>
+                    </div>
+                  </div>
+                )}
                 {slide.big != '' && (
                   <div className='flex flex-col gap-3 bg-buttonSecondary p-3 text-left'>
                     <div className='flex flex-row items-center gap-2'>

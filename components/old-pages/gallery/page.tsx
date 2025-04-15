@@ -1,5 +1,5 @@
 import { EmblaOptionsType } from 'embla-carousel'
-import ProjectCarousel from '../../../src/app/components/ProjectCarousel'
+import ProjectCarousel from '../../../src/app/components/StudentCarousel'
 
 function Gallery() {
   const OPTIONS: EmblaOptionsType = { loop: true }
