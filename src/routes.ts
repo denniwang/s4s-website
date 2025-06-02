@@ -5,11 +5,11 @@ type Route = {
 }
 
 export const routes: Route[] = [
-  {
-    href: '/pricing',
-    label: 'Pricing',
-    isExternal: false
-  },
+  //{
+    //href: '/pricing',
+    //label: 'Pricing',
+    //isExternal: false
+  //},
 
   // {
   //   href: '/programs',

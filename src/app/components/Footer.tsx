@@ -37,11 +37,6 @@ export const Footer = () => {
           </div>
         </div>
         <div className='flex flex-col gap-1'>
-          <Link href={'/pricing'}>
-            <h2 className='text-3xl font-bold transition-colors duration-200 hover:text-button'>
-              Pricing
-            </h2>
-          </Link>
 
           <Link href={'/about'}>
             <h2 className='mb-4 text-3xl font-bold transition-colors duration-200 hover:text-button'>

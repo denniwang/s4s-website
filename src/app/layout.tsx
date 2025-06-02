@@ -124,12 +124,12 @@ export default async function RootLayout({
                     name: 'Home',
                     item: 'https://stu4stu.org/'
                   },
-                  {
-                    '@type': 'ListItem',
-                    position: 2,
-                    name: 'Pricing',
-                    item: 'https://stu4stu.org/pricing'
-                  }
+                  //{
+                    //'@type': 'ListItem',
+                    //position: 2,
+                    //name: 'Pricing',
+                    //item: 'https://stu4stu.org/pricing'
+                  //}
                 ]
               })
             }}
