@@ -2,7 +2,7 @@
 import { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import Button from '../components/Button'
+import Button from '@/src/app/components/Button'
 import Image from 'next/image'
 import { IoVideocamOutline } from 'react-icons/io5'
 import { HiOutlinePencilSquare } from 'react-icons/hi2'
